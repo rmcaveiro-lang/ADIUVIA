@@ -1,0 +1,427 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Adiuvia · Orçamento proposto</title>
+<meta name="description" content="Orçamento proposto da Adiuvia: mês 1, ano 1 linha a linha e projeção de 4 anos em três cenários.">
+<meta name="robots" content="noindex, nofollow">
+<link rel="icon" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9Ii0zMCAtMzAgODgwIDcyNCIgd2lkdGg9IjE3NjAiIGhlaWdodD0iMTQ0OCI+PGcgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMC4wMCwwLjAwKSBzY2FsZSgxLjAwMDAwKSIgZmlsbD0iIzg3NjIzMyI+PHBhdGggZD0iTTM2NC4wLDAuMCBMNDU2LjAsMC4wIEw3NjQuMCw2NjQuMCBMNjMyLjAsNjY0LjAgTDQxMC4wLDE4MC4wIEwxODkuMCw2NjQuMCBMNTYuMCw2NjQuMCBaIi8+PHBhdGggZD0iTTI5LjAsNDkyLjAgUTQxMC4wLDI1NC4wIDc5MS4wLDQ5Mi4wIiBmaWxsPSJub25lIiBzdHJva2U9IiM4NzYyMzMiIHN0cm9rZS13aWR0aD0iNTgiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIvPjwvZz48L3N2Zz4=">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --navy:#16394B;--navy-2:#1F4A5F;--gold:#876233;--gold-l:#C9A877;--cream:#F6F3EC;--paper:#FBFAF7;--sand:#EEE8DD;--row:#ECE5D8;
+  --line:#DDD5C6;--ink:#16394B;--muted:#4A5A63;--faint:#6B7A82;--on-navy:#D9D3C7;
+  --s-pess:#7A93A0;--s-cons:#16394B;--s-otim:#B08A55;
+  --serif:'Cormorant Garamond',Georgia,serif;--sans:Manrope,Arial,sans-serif;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-snap-type:y proximity}
+body{background:var(--cream);color:var(--ink);font-family:var(--sans);font-size:17px;line-height:1.5;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+/* navegação */
+#nav{position:fixed;left:0;top:0;bottom:0;width:248px;background:var(--navy);color:var(--on-navy);display:flex;flex-direction:column;padding:28px 0 20px;z-index:20}
+#nav .brand{padding:0 28px 24px;display:flex;flex-direction:column;gap:10px}
+#nav .brand img{width:150px;height:auto}
+#nav .brand span{font-size:12px;letter-spacing:3px;text-transform:uppercase;color:var(--gold-l)}
+#nav ol{list-style:none;flex:1;overflow:auto}
+#nav li a{display:flex;gap:12px;align-items:baseline;padding:10px 28px;text-decoration:none;font-size:15px;border-left:3px solid transparent;transition:background .15s}
+#nav li a:hover{background:rgba(255,255,255,.05)}
+#nav li a b{font-weight:600;font-size:12px;color:var(--gold-l);min-width:20px;font-variant-numeric:tabular-nums}
+#nav li a.on{background:rgba(201,168,119,.12);border-left-color:var(--gold-l);color:#F6F3EC}
+#nav .keys{padding:16px 28px 0;font-size:12px;color:#9FB3BD;line-height:1.7;border-top:1px solid rgba(255,255,255,.08)}
+kbd{display:inline-block;min-width:22px;text-align:center;border:1px solid rgba(255,255,255,.25);border-radius:4px;padding:0 5px;font:600 11px var(--sans);margin-right:4px}
+main{margin-left:248px}
+section.page{min-height:100vh;padding:72px 72px 88px;scroll-snap-align:start;display:flex;flex-direction:column;gap:32px;max-width:1500px}
+section.page+section.page{border-top:1px solid var(--line)}
+.kicker{font-size:13px;font-weight:600;letter-spacing:3.5px;text-transform:uppercase;color:var(--gold)}
+h1,h2{font-family:var(--serif);font-weight:500;line-height:1.12;color:var(--navy)}
+h1{font-size:clamp(40px,5vw,72px)}
+h2{font-size:clamp(32px,3.4vw,52px)}
+h3{font-size:15px;font-weight:600;letter-spacing:2.5px;text-transform:uppercase;color:var(--gold)}
+.lead{font-size:19px;color:var(--muted);max-width:900px}
+.head{display:flex;flex-direction:column;gap:12px}
+.note{font-size:14px;color:var(--faint)}
+/* tiles */
+.tiles{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:16px}
+.tile{background:var(--paper);border:1px solid var(--line);border-radius:14px;padding:22px 24px;display:flex;flex-direction:column;gap:4px}
+.tile .v{font-family:var(--serif);font-size:44px;font-weight:500;line-height:1.1;color:var(--navy);font-variant-numeric:tabular-nums}
+.tile .l{font-size:15px;color:var(--muted)}
+.tile .s{font-size:13px;color:var(--faint)}
+.tile.dark{background:var(--navy);border-color:var(--navy)}
+.tile.dark .v{color:#F6F3EC}.tile.dark .l{color:var(--on-navy)}.tile.dark .s{color:var(--gold-l)}
+.card{background:var(--paper);border:1px solid var(--line);border-radius:14px;padding:24px 28px}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+/* tabelas */
+.tbl-wrap{overflow-x:auto;-webkit-overflow-scrolling:touch}
+table{width:100%;border-collapse:collapse;font-variant-numeric:tabular-nums}
+th{font-size:12px;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;color:var(--faint);text-align:left;padding:10px 12px;border-bottom:2px solid var(--navy);white-space:nowrap}
+td{padding:11px 12px;border-bottom:1px solid var(--line);vertical-align:top}
+td.n,th.n{text-align:right;white-space:nowrap}
+tr.sub td{font-weight:700;background:var(--row)}
+tr.hl td{background:var(--row);font-weight:700}
+tr.neg td:first-child{padding-left:28px;color:var(--muted)}
+td .why{display:block;font-size:13px;color:var(--faint);margin-top:2px}
+.pill{display:inline-block;font-size:12px;font-weight:600;padding:2px 10px;border-radius:999px;background:var(--sand);color:var(--navy);white-space:nowrap}
+.pill.alta{background:#E7DCC8;color:#6B4C24}
+/* controles */
+.seg{display:inline-flex;background:var(--sand);border-radius:999px;padding:4px;gap:2px;flex-wrap:wrap}
+.seg button{border:0;background:transparent;font:600 14px var(--sans);color:var(--muted);padding:8px 18px;border-radius:999px;cursor:pointer}
+.seg button.on{background:var(--navy);color:#F6F3EC}
+.controls{display:flex;gap:16px;align-items:center;flex-wrap:wrap}
+.controls .lbl{font-size:13px;color:var(--faint)}
+/* barras */
+.bars{display:flex;flex-direction:column;gap:10px}
+.bar{display:grid;grid-template-columns:230px 1fr 120px;gap:14px;align-items:center;font-size:15px}
+.bar .track{height:22px;position:relative}
+.bar .fill{position:absolute;left:0;top:0;bottom:0;background:var(--navy);border-radius:0 4px 4px 0;min-width:3px;transition:width .5s ease}
+.bar .val{text-align:right;font-variant-numeric:tabular-nums;font-weight:600}
+.bar .val small{display:block;font-weight:400;color:var(--faint);font-size:12px}
+.bar.res .fill{background:var(--gold)}
+.bar:hover .fill{filter:brightness(1.25)}
+/* acordeão ano 1 */
+.acc{display:flex;flex-direction:column;gap:12px}
+.acc details{background:var(--paper);border:1px solid var(--line);border-radius:14px;overflow:hidden}
+.acc summary{list-style:none;cursor:pointer;display:grid;grid-template-columns:1fr auto auto 28px;gap:20px;align-items:center;padding:18px 24px}
+.acc summary::-webkit-details-marker{display:none}
+.acc summary .t{font-weight:600;font-size:18px}
+.acc summary .t small{display:block;font-weight:400;font-size:13px;color:var(--faint)}
+.acc summary .pc{font-size:14px;color:var(--faint);font-variant-numeric:tabular-nums}
+.acc summary .v{font-family:var(--serif);font-size:32px;font-weight:500;font-variant-numeric:tabular-nums}
+.acc summary .ch{width:28px;height:28px;border-radius:50%;background:var(--sand);display:grid;place-items:center;transition:transform .2s;font-size:14px}
+.acc details[open] .ch{transform:rotate(90deg)}
+.acc .body{padding:0 24px 18px}
+.mini{height:6px;background:var(--sand);border-radius:3px;margin-top:6px;overflow:hidden}
+.mini i{display:block;height:100%;background:var(--gold-l)}
+.owner-total{font-size:15px;color:var(--muted)}
+.owner-total b{color:var(--navy)}
+/* gráfico svg */
+.chart{width:100%;height:auto;display:block}
+.chart text{font-family:var(--sans);font-size:14px;fill:var(--muted)}
+.chart .lab{font-weight:600;fill:var(--navy)}
+.legend{display:flex;gap:20px;flex-wrap:wrap;font-size:14px;color:var(--muted)}
+.legend i{display:inline-block;width:12px;height:12px;border-radius:3px;margin-right:6px;vertical-align:-1px}
+#tip{position:fixed;pointer-events:none;background:var(--navy);color:#F6F3EC;font-size:13px;padding:8px 12px;border-radius:8px;opacity:0;transition:opacity .1s;z-index:50;max-width:280px;box-shadow:0 6px 20px rgba(0,0,0,.18)}
+#tip b{color:var(--gold-l);font-weight:600}
+/* lista de validação */
+.checks{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:16px}
+.check{background:var(--paper);border:1px solid var(--line);border-left:4px solid var(--gold);border-radius:12px;padding:18px 22px;display:flex;flex-direction:column;gap:6px}
+.check .who{font-size:12px;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:var(--gold)}
+.check .what{font-weight:600}
+.check .when{font-size:14px;color:var(--faint)}
+.risk{background:var(--navy);color:#F6F3EC;border-radius:14px;padding:24px 28px;display:flex;flex-direction:column;gap:10px}
+.risk h3{color:var(--gold-l)}
+.risk p{color:var(--on-navy)}
+.risk .big{font-family:var(--serif);font-size:48px;color:#F6F3EC;line-height:1.1}
+footer{margin-left:248px;padding:28px 72px;font-size:13px;color:var(--faint);border-top:1px solid var(--line)}
+/* celular */
+#menu-btn{display:none}
+@media (max-width:980px){
+  #nav{transform:translateX(-100%);transition:transform .25s;width:270px}
+  body.menu #nav{transform:none}
+  #menu-btn{display:flex;position:fixed;top:12px;right:12px;z-index:30;background:var(--navy);color:#F6F3EC;border:0;border-radius:10px;padding:10px 14px;font:600 14px var(--sans);gap:8px;align-items:center}
+  main,footer{margin-left:0}
+  section.page{padding:64px 16px 56px;min-height:auto}
+  footer{padding:24px 16px}
+  .grid2{grid-template-columns:1fr}
+  .bar{grid-template-columns:1fr 96px;gap:4px 10px}
+  .bar .name{grid-column:1/-1}
+  .bar .track{grid-column:1}
+  .acc summary{grid-template-columns:1fr auto 24px;gap:10px;padding:16px}
+  .acc summary .pc{display:none}
+  .acc .body{padding:0 12px 14px}
+  .tile .v{font-size:30px}
+  .tiles{grid-template-columns:1fr 1fr;gap:10px}
+  .tile{padding:16px}
+}
+@media print{
+  #nav,#menu-btn,#tip{display:none}
+  main,footer{margin-left:0}
+  section.page{min-height:auto;page-break-inside:avoid;padding:32px}
+  .acc details{break-inside:avoid}
+}
+</style>
+</head>
+<body>
+<button id="menu-btn" aria-label="Abrir menu">☰ Seções</button>
+<nav id="nav" aria-label="Seções do orçamento">
+  <div class="brand"><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9Ii04IC04IDUwMS43IDg4LjAiIHdpZHRoPSI0MDEzIiBoZWlnaHQ9IjcwNCI+PGcgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMC4wMCw1LjA0KSBzY2FsZSgwLjEwMDg0KSIgZmlsbD0iI0IwOEE1NSI+PHBhdGggZD0iTTM2NC4wLDAuMCBMNDU2LjAsMC4wIEw3NjQuMCw2NjQuMCBMNjMyLjAsNjY0LjAgTDQxMC4wLDE4MC4wIEwxODkuMCw2NjQuMCBMNTYuMCw2NjQuMCBaIi8+PHBhdGggZD0iTTI5LjAsNDkyLjAgUTQxMC4wLDI1NC4wIDc5MS4wLDQ5Mi4wIiBmaWxsPSJub25lIiBzdHJva2U9IiNCMDhBNTUiIHN0cm9rZS13aWR0aD0iNTgiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIvPjwvZz48cGF0aCBkPSJNMTQzLjkwNjYwMjQwOTYzODU3IDczLjVRMTM3Ljg1NjYwMjQwOTYzODU1IDczLjUgMTMzLjc4MTYwMjQwOTYzODU0IDcxLjI3NVExMjkuNzA2NjAyNDA5NjM4NTUgNjkuMDUgMTI3LjYzMTYwMjQwOTYzODU2IDY1LjRRMTI1LjU1NjYwMjQwOTYzODU2IDYxLjc1IDEyNS41NTY2MDI0MDk2Mzg1NiA1Ny40UTEyNS41NTY2MDI0MDk2Mzg1NiA1My4xNSAxMjcuMTgxNjAyNDA5NjM4NTcgNTAuMDI1UTEyOC44MDY2MDI0MDk2Mzg1NyA0Ni45IDEzMS43NTY2MDI0MDk2Mzg1NiA0NC44MjVRMTM0LjcwNjYwMjQwOTYzODU1IDQyLjc1IDEzOC44MDY2MDI0MDk2Mzg1NyA0MS41NVExNDIuNjU2NjAyNDA5NjM4NTcgNDAuNSAxNDcuNDMxNjAyNDA5NjM4NTcgMzkuNzI0OTk5OTk5OTk5OTk0UTE1Mi4yMDY2MDI0MDk2Mzg1NSAzOC45NDk5OTk5OTk5OTk5OTYgMTU3LjEwNjYwMjQwOTYzODU1IDM4LjNRMTYyLjAwNjYwMjQwOTYzODU2IDM3LjY1IDE2Ni4yNTY2MDI0MDk2Mzg1NiAzNy4wNUwxNjMuMDU2NjAyNDA5NjM4NTcgMzguOVExNjMuMjA2NjAyNDA5NjM4NTUgMzEuNjk5OTk5OTk5OTk5OTk2IDE2MC4xODE2MDI0MDk2Mzg1NyAyOC4yNDk5OTk5OTk5OTk5OTZRMTU3LjE1NjYwMjQwOTYzODU3IDI0Ljc5OTk5OTk5OTk5OTk5NyAxNDkuNzU2NjAyNDA5NjM4NTYgMjQuNzk5OTk5OTk5OTk5OTk3UTE0NC44NTY2MDI0MDk2Mzg1NSAyNC43OTk5OTk5OTk5OTk5OTcgMTQxLjE4MTYwMjQwOTYzODU3IDI3LjAyNVExMzcuNTA2NjAyNDA5NjM4NTYgMjkuMjUgMTM2LjAwNjYwMjQwOTYzODU2IDM0LjI1TDEyNy41NTY2MDI0MDk2Mzg1NiAzMS42OTk5OTk5OTk5OTk5OTZRMTI5LjUwNjYwMjQwOTYzODU2IDI0LjU5OTk5OTk5OTk5OTk5NCAxMzUuMTA2NjAyNDA5NjM4NTUgMjAuNTQ5OTk5OTk5OTk5OTk3UTE0MC43MDY2MDI0MDk2Mzg1NSAxNi41IDE0OS44NTY2MDI0MDk2Mzg1NSAxNi41UTE1Ny4yMDY2MDI0MDk2Mzg1NSAxNi41IDE2Mi40ODE2MDI0MDk2Mzg1NSAxOS4xMjVRMTY3Ljc1NjYwMjQwOTYzODU2IDIxLjc1IDE3MC4wNTY2MDI0MDk2Mzg1NyAyNy4wNDk5OTk5OTk5OTk5OTdRMTcxLjIwNjYwMjQwOTYzODU1IDI5LjU0OTk5OTk5OTk5OTk5NyAxNzEuNTA2NjAyNDA5NjM4NTYgMzIuNDc0OTk5OTk5OTk5OTk0UTE3MS44MDY2MDI0MDk2Mzg1NyAzNS40IDE3MS44MDY2MDI0MDk2Mzg1NyAzOC42VjcyLjBIMTYzLjkwNjYwMjQwOTYzODU3VjU5LjA1TDE2NS43NTY2MDI0MDk2Mzg1NiA2MC4yNVExNjIuNzA2NjAyNDA5NjM4NTUgNjYuOCAxNTcuMjMxNjAyNDA5NjM4NTUgNzAuMTVRMTUxLjc1NjYwMjQwOTYzODU2IDczLjUgMTQzLjkwNjYwMjQwOTYzODU3IDczLjVaTTE0NS4yNTY2MDI0MDk2Mzg1NiA2Ni4wNVExNTAuMDU2NjAyNDA5NjM4NTcgNjYuMDUgMTUzLjU4MTYwMjQwOTYzODU1IDY0LjMyNVExNTcuMTA2NjAyNDA5NjM4NTUgNjIuNiAxNTkuMjU2NjAyNDA5NjM4NTYgNTkuNzc1MDAwMDAwMDAwMDA2UTE2MS40MDY2MDI0MDk2Mzg1NyA1Ni45NSAxNjIuMDU2NjAyNDA5NjM4NTcgNTMuNTk5OTk5OTk5OTk5OTk0UTE2Mi44MDY2MDI0MDk2Mzg1NyA1MS4wOTk5OTk5OTk5OTk5OTQgMTYyLjg4MTYwMjQwOTYzODU2IDQ4LjAyNVExNjIuOTU2NjAyNDA5NjM4NTUgNDQuOTUgMTYyLjk1NjYwMjQwOTYzODU1IDQzLjNMMTY2LjA1NjYwMjQwOTYzODU3IDQ0LjY1UTE2MS43MDY2MDI0MDk2Mzg1NSA0NS4yNSAxNTcuNTA2NjAyNDA5NjM4NTYgNDUuOFExNTMuMzA2NjAyNDA5NjM4NTcgNDYuMzQ5OTk5OTk5OTk5OTk0IDE0OS41NTY2MDI0MDk2Mzg1NyA0Ni45NzQ5OTk5OTk5OTk5OTRRMTQ1LjgwNjYwMjQwOTYzODU3IDQ3LjU5OTk5OTk5OTk5OTk5NCAxNDIuODA2NjAyNDA5NjM4NTcgNDguNDVRMTQwLjYwNjYwMjQwOTYzODU1IDQ5LjE1IDEzOC42ODE2MDI0MDk2Mzg1NyA1MC4yNVExMzYuNzU2NjAyNDA5NjM4NTYgNTEuMzQ5OTk5OTk5OTk5OTk0IDEzNS41ODE2MDI0MDk2Mzg1NSA1My4wNzQ5OTk5OTk5OTk5OTZRMTM0LjQwNjYwMjQwOTYzODU3IDU0LjggMTM0LjQwNjYwMjQwOTYzODU3IDU3LjM1UTEzNC40MDY2MDI0MDk2Mzg1NyA1OS41NSAxMzUuNTMxNjAyNDA5NjM4NTcgNjEuNTVRMTM2LjY1NjYwMjQwOTYzODU3IDYzLjU1IDEzOS4wMzE2MDI0MDk2Mzg1NyA2NC44UTE0MS40MDY2MDI0MDk2Mzg1NyA2Ni4wNSAxNDUuMjU2NjAyNDA5NjM4NTYgNjYuMDVaIiBmaWxsPSIjRjZGM0VDIi8+PHBhdGggZD0iTTIwNi4wMDY2MDI0MDk2Mzg1NiA3My41UTE5OC40NTY2MDI0MDk2Mzg1OCA3My41IDE5My4wNTY2MDI0MDk2Mzg1NyA2OS43MjVRMTg3LjY1NjYwMjQwOTYzODU3IDY1Ljk1IDE4NC43MzE2MDI0MDk2Mzg1OCA1OS41UTE4MS44MDY2MDI0MDk2Mzg1NyA1My4wNSAxODEuODA2NjAyNDA5NjM4NTcgNDQuOTVRMTgxLjgwNjYwMjQwOTYzODU3IDM2Ljg1IDE4NC43MzE2MDI0MDk2Mzg1OCAzMC40UTE4Ny42NTY2MDI0MDk2Mzg1NyAyMy45NDk5OTk5OTk5OTk5OTYgMTkzLjA1NjYwMjQwOTYzODU3IDIwLjIyNDk5OTk5OTk5OTk5OFExOTguNDU2NjAyNDA5NjM4NTggMTYuNSAyMDUuOTU2NjAyNDA5NjM4NTggMTYuNVEyMTMuNjA2NjAyNDA5NjM4NTggMTYuNSAyMTguODA2NjAyNDA5NjM4NTcgMjAuMlEyMjQuMDA2NjAyNDA5NjM4NTYgMjMuOSAyMjYuNjgxNjAyNDA5NjM4NTcgMzAuMzQ5OTk5OTk5OTk5OTk4UTIyOS4zNTY2MDI0MDk2Mzg1OCAzNi44IDIyOS4zNTY2MDI0MDk2Mzg1OCA0NC45NVEyMjkuMzU2NjAyNDA5NjM4NTggNTMuMCAyMjYuNjgxNjAyNDA5NjM4NTcgNTkuNDc1UTIyNC4wMDY2MDI0MDk2Mzg1NiA2NS45NSAyMTguODA2NjAyNDA5NjM4NTcgNjkuNzI1UTIxMy42MDY2MDI0MDk2Mzg1OCA3My41IDIwNi4wMDY2MDI0MDk2Mzg1NiA3My41Wk0yMDcuMTA2NjAyNDA5NjM4NTggNjUuMzVRMjEyLjU1NjYwMjQwOTYzODU3IDY1LjM1IDIxNi4wNTY2MDI0MDk2Mzg1NyA2Mi43MjQ5OTk5OTk5OTk5OTRRMjE5LjU1NjYwMjQwOTYzODU3IDYwLjEgMjIxLjIzMTYwMjQwOTYzODU4IDU1LjQ3NDk5OTk5OTk5OTk5NFEyMjIuOTA2NjAyNDA5NjM4NTcgNTAuODQ5OTk5OTk5OTk5OTk0IDIyMi45MDY2MDI0MDk2Mzg1NyA0NC45NVEyMjIuOTA2NjAyNDA5NjM4NTcgMzguOTQ5OTk5OTk5OTk5OTk2IDIyMS4yMzE2MDI0MDk2Mzg1OCAzNC4zNzVRMjE5LjU1NjYwMjQwOTYzODU3IDI5Ljc5OTk5OTk5OTk5OTk5NyAyMTYuMTA2NjAyNDA5NjM4NTggMjcuMjI0OTk5OTk5OTk5OTk4UTIxMi42NTY2MDI0MDk2Mzg1NyAyNC42NSAyMDcuMzU2NjAyNDA5NjM4NTggMjQuNjVRMjAxLjg1NjYwMjQwOTYzODU4IDI0LjY1IDE5OC4yODE2MDI0MDk2Mzg2IDI3LjM0OTk5OTk5OTk5OTk5OFExOTQuNzA2NjAyNDA5NjM4NTggMzAuMDQ5OTk5OTk5OTk5OTk3IDE5Mi45ODE2MDI0MDk2Mzg1OCAzNC42NVExOTEuMjU2NjAyNDA5NjM4NTYgMzkuMjUgMTkxLjI1NjYwMjQwOTYzODU2IDQ0Ljk1UTE5MS4yNTY2MDI0MDk2Mzg1NiA1MC43IDE5My4wMDY2MDI0MDk2Mzg1NiA1NS4zMjVRMTk0Ljc1NjYwMjQwOTYzODU2IDU5Ljk1IDE5OC4yODE2MDI0MDk2Mzg1NyA2Mi42NVEyMDEuODA2NjAyNDA5NjM4NTcgNjUuMzUgMjA3LjEwNjYwMjQwOTYzODU4IDY1LjM1Wk0yMjIuOTA2NjAyNDA5NjM4NTcgNzIuMFYzMi4yNUgyMjEuOTA2NjAyNDA5NjM4NTdWMC4wSDIzMC44NTY2MDI0MDk2Mzg1OFY3Mi4wWiIgZmlsbD0iI0Y2RjNFQyIvPjxwYXRoIGQ9Ik0yNDUuODU2NjAyNDA5NjM4NTggOC40NDk5OTk5OTk5OTk5OTZWLTAuNzVIMjU0Ljc1NjYwMjQwOTYzODZWOC40NDk5OTk5OTk5OTk5OTZaTTI0NS44NTY2MDI0MDk2Mzg1OCA3Mi4wVjE4LjBIMjU0Ljc1NjYwMjQwOTYzODZWNzIuMFoiIGZpbGw9IiNGNkYzRUMiLz48cGF0aCBkPSJNMjkwLjI1NjYwMjQwOTYzODU2IDczLjRRMjg1LjA1NjYwMjQwOTYzODYgNzMuNCAyODEuMzMxNjAyNDA5NjM4NTUgNzEuNzVRMjc3LjYwNjYwMjQwOTYzODYgNzAuMSAyNzUuMTU2NjAyNDA5NjM4NiA2Ny4zNVEyNzIuNzA2NjAyNDA5NjM4NTUgNjQuNiAyNzEuMzA2NjAyNDA5NjM4NiA2MS4yNVEyNjkuOTA2NjAyNDA5NjM4NTQgNTcuOSAyNjkuMzMxNjAyNDA5NjM4NTUgNTQuNFEyNjguNzU2NjAyNDA5NjM4NTYgNTAuOSAyNjguNzU2NjAyNDA5NjM4NTYgNDcuODQ5OTk5OTk5OTk5OTk0VjE4LjBIMjc3Ljc1NjYwMjQwOTYzODU2VjQ1LjA1UTI3Ny43NTY2MDI0MDk2Mzg1NiA0OC44NDk5OTk5OTk5OTk5OTQgMjc4LjQ1NjYwMjQwOTYzODU1IDUyLjRRMjc5LjE1NjYwMjQwOTYzODU0IDU1Ljk1IDI4MC44MzE2MDI0MDk2Mzg1NSA1OC44UTI4Mi41MDY2MDI0MDk2Mzg1NiA2MS42NSAyODUuMzMxNjAyNDA5NjM4NTUgNjMuM1EyODguMTU2NjAyNDA5NjM4NTQgNjQuOTUgMjkyLjQwNjYwMjQwOTYzODU0IDY0Ljk1UTI5NS43NTY2MDI0MDk2Mzg1NiA2NC45NSAyOTguNTA2NjAyNDA5NjM4NTYgNjMuOFEzMDEuMjU2NjAyNDA5NjM4NTYgNjIuNjUgMzAzLjIwNjYwMjQwOTYzODU1IDYwLjM3NVEzMDUuMTU2NjAyNDA5NjM4NiA1OC4xIDMwNi4yMDY2MDI0MDk2Mzg1NSA1NC41OTk5OTk5OTk5OTk5OTRRMzA3LjI1NjYwMjQwOTYzODU2IDUxLjA5OTk5OTk5OTk5OTk5NCAzMDcuMjU2NjAyNDA5NjM4NTYgNDYuNDVMMzEzLjEwNjYwMjQwOTYzODYgNDguMjVRMzEzLjEwNjYwMjQwOTYzODYgNTYuMDUgMzEwLjI4MTYwMjQwOTYzODYgNjEuNjk5OTk5OTk5OTk5OTk2UTMwNy40NTY2MDI0MDk2Mzg1NSA2Ny4zNSAzMDIuMzMxNjAyNDA5NjM4NTUgNzAuMzc1UTI5Ny4yMDY2MDI0MDk2Mzg1NSA3My40IDI5MC4yNTY2MDI0MDk2Mzg1NiA3My40Wk0zMDguMjU2NjAyNDA5NjM4NTYgNzIuMFY1Ny41NUgzMDcuMjU2NjAyNDA5NjM4NTZWMTguMEgzMTYuMjA2NjAyNDA5NjM4NTVWNzIuMFoiIGZpbGw9IiNGNkYzRUMiLz48cGF0aCBkPSJNMzQ0LjgwNjYwMjQwOTYzODYgNzIuMCAzMjUuMjA2NjAyNDA5NjM4NTUgMTguMEgzMzQuMjA2NjAyNDA5NjM4NTVMMzQ5LjM1NjYwMjQwOTYzODUgNjAuNjVMMzY0LjQ1NjYwMjQwOTYzODU1IDE4LjBIMzczLjUwNjYwMjQwOTYzODU2TDM1My45MDY2MDI0MDk2Mzg1NCA3Mi4wWiIgZmlsbD0iI0Y2RjNFQyIvPjxwYXRoIGQ9Ik0zODMuNTA2NjAyNDA5NjM4NTYgOC40NDk5OTk5OTk5OTk5OTZWLTAuNzVIMzkyLjQwNjYwMjQwOTYzODU0VjguNDQ5OTk5OTk5OTk5OTk2Wk0zODMuNTA2NjAyNDA5NjM4NTYgNzIuMFYxOC4wSDM5Mi40MDY2MDI0MDk2Mzg1NFY3Mi4wWiIgZmlsbD0iI0Y2RjNFQyIvPjxwYXRoIGQ9Ik00MjIuNzU2NjAyNDA5NjM4NTYgNzMuNVE0MTYuNzA2NjAyNDA5NjM4NTUgNzMuNSA0MTIuNjMxNjAyNDA5NjM4NSA3MS4yNzVRNDA4LjU1NjYwMjQwOTYzODUgNjkuMDUgNDA2LjQ4MTYwMjQwOTYzODUgNjUuNFE0MDQuNDA2NjAyNDA5NjM4NTQgNjEuNzUgNDA0LjQwNjYwMjQwOTYzODU0IDU3LjRRNDA0LjQwNjYwMjQwOTYzODU0IDUzLjE1IDQwNi4wMzE2MDI0MDk2Mzg1NCA1MC4wMjVRNDA3LjY1NjYwMjQwOTYzODU0IDQ2LjkgNDEwLjYwNjYwMjQwOTYzODUgNDQuODI1UTQxMy41NTY2MDI0MDk2Mzg1IDQyLjc1IDQxNy42NTY2MDI0MDk2Mzg1NCA0MS41NVE0MjEuNTA2NjAyNDA5NjM4NTYgNDAuNSA0MjYuMjgxNjAyNDA5NjM4NTQgMzkuNzI0OTk5OTk5OTk5OTk0UTQzMS4wNTY2MDI0MDk2Mzg1IDM4Ljk0OTk5OTk5OTk5OTk5NiA0MzUuOTU2NjAyNDA5NjM4NTUgMzguM1E0NDAuODU2NjAyNDA5NjM4NSAzNy42NSA0NDUuMTA2NjAyNDA5NjM4NSAzNy4wNUw0NDEuOTA2NjAyNDA5NjM4NTQgMzguOVE0NDIuMDU2NjAyNDA5NjM4NiAzMS42OTk5OTk5OTk5OTk5OTYgNDM5LjAzMTYwMjQwOTYzODYgMjguMjQ5OTk5OTk5OTk5OTk2UTQzNi4wMDY2MDI0MDk2Mzg1NiAyNC43OTk5OTk5OTk5OTk5OTcgNDI4LjYwNjYwMjQwOTYzODUgMjQuNzk5OTk5OTk5OTk5OTk3UTQyMy43MDY2MDI0MDk2Mzg1NSAyNC43OTk5OTk5OTk5OTk5OTcgNDIwLjAzMTYwMjQwOTYzODU0IDI3LjAyNVE0MTYuMzU2NjAyNDA5NjM4NSAyOS4yNSA0MTQuODU2NjAyNDA5NjM4NSAzNC4yNUw0MDYuNDA2NjAyNDA5NjM4NTQgMzEuNjk5OTk5OTk5OTk5OTk2UTQwOC4zNTY2MDI0MDk2Mzg1IDI0LjU5OTk5OTk5OTk5OTk5NCA0MTMuOTU2NjAyNDA5NjM4NTUgMjAuNTQ5OTk5OTk5OTk5OTk3UTQxOS41NTY2MDI0MDk2Mzg1IDE2LjUgNDI4LjcwNjYwMjQwOTYzODU1IDE2LjVRNDM2LjA1NjYwMjQwOTYzODUgMTYuNSA0NDEuMzMxNjAyNDA5NjM4NTUgMTkuMTI1UTQ0Ni42MDY2MDI0MDk2Mzg1IDIxLjc1IDQ0OC45MDY2MDI0MDk2Mzg1NCAyNy4wNDk5OTk5OTk5OTk5OTdRNDUwLjA1NjYwMjQwOTYzODYgMjkuNTQ5OTk5OTk5OTk5OTk3IDQ1MC4zNTY2MDI0MDk2Mzg1IDMyLjQ3NDk5OTk5OTk5OTk5NFE0NTAuNjU2NjAyNDA5NjM4NTQgMzUuNCA0NTAuNjU2NjAyNDA5NjM4NTQgMzguNlY3Mi4wSDQ0Mi43NTY2MDI0MDk2Mzg1NlY1OS4wNUw0NDQuNjA2NjAyNDA5NjM4NSA2MC4yNVE0NDEuNTU2NjAyNDA5NjM4NiA2Ni44IDQzNi4wODE2MDI0MDk2Mzg1NSA3MC4xNVE0MzAuNjA2NjAyNDA5NjM4NSA3My41IDQyMi43NTY2MDI0MDk2Mzg1NiA3My41Wk00MjQuMTA2NjAyNDA5NjM4NSA2Ni4wNVE0MjguOTA2NjAyNDA5NjM4NTQgNjYuMDUgNDMyLjQzMTYwMjQwOTYzODYgNjQuMzI1UTQzNS45NTY2MDI0MDk2Mzg1NSA2Mi42IDQzOC4xMDY2MDI0MDk2Mzg1IDU5Ljc3NTAwMDAwMDAwMDAwNlE0NDAuMjU2NjAyNDA5NjM4NTYgNTYuOTUgNDQwLjkwNjYwMjQwOTYzODU0IDUzLjU5OTk5OTk5OTk5OTk5NFE0NDEuNjU2NjAyNDA5NjM4NTQgNTEuMDk5OTk5OTk5OTk5OTk0IDQ0MS43MzE2MDI0MDk2Mzg1IDQ4LjAyNVE0NDEuODA2NjAyNDA5NjM4NiA0NC45NSA0NDEuODA2NjAyNDA5NjM4NiA0My4zTDQ0NC45MDY2MDI0MDk2Mzg1NCA0NC42NVE0NDAuNTU2NjAyNDA5NjM4NiA0NS4yNSA0MzYuMzU2NjAyNDA5NjM4NSA0NS44UTQzMi4xNTY2MDI0MDk2Mzg1NCA0Ni4zNDk5OTk5OTk5OTk5OTQgNDI4LjQwNjYwMjQwOTYzODU0IDQ2Ljk3NDk5OTk5OTk5OTk5NFE0MjQuNjU2NjAyNDA5NjM4NTQgNDcuNTk5OTk5OTk5OTk5OTk0IDQyMS42NTY2MDI0MDk2Mzg1NCA0OC40NVE0MTkuNDU2NjAyNDA5NjM4NTUgNDkuMTUgNDE3LjUzMTYwMjQwOTYzODU0IDUwLjI1UTQxNS42MDY2MDI0MDk2Mzg1IDUxLjM0OTk5OTk5OTk5OTk5NCA0MTQuNDMxNjAyNDA5NjM4NiA1My4wNzQ5OTk5OTk5OTk5OTZRNDEzLjI1NjYwMjQwOTYzODU2IDU0LjggNDEzLjI1NjYwMjQwOTYzODU2IDU3LjM1UTQxMy4yNTY2MDI0MDk2Mzg1NiA1OS41NSA0MTQuMzgxNjAyNDA5NjM4NTYgNjEuNTVRNDE1LjUwNjYwMjQwOTYzODU2IDYzLjU1IDQxNy44ODE2MDI0MDk2Mzg1NiA2NC44UTQyMC4yNTY2MDI0MDk2Mzg1NiA2Ni4wNSA0MjQuMTA2NjAyNDA5NjM4NSA2Ni4wNVoiIGZpbGw9IiNGNkYzRUMiLz48cGF0aCBkPSJNNDY3LjI1NjYwMjQwOTYzODU2IDcyLjBWNjIuMkg0NzcuMDU2NjAyNDA5NjM4NVY3Mi4wWiIgZmlsbD0iI0IwOEE1NSIvPjwvc3ZnPg==" alt="Adiuvia"><span>Orçamento proposto</span></div>
+  <ol id="nav-list"></ol>
+  <a href="index.html" style="margin:0 28px 14px;display:block;text-align:center;border:1px solid rgba(201,168,119,.5);border-radius:8px;padding:9px;font-size:14px;font-weight:600;color:#F6F3EC;text-decoration:none">Ver a apresentação</a>
+  <div class="keys"><kbd>↑</kbd><kbd>↓</kbd>muda de seção<br><kbd>F</kbd>tela cheia</div>
+</nav>
+<main id="main">
+
+<section class="page" id="resumo" data-nav="Resumo">
+  <div class="head">
+    <p class="kicker">Adiuvia · Orçamento proposto · 29 out 2026</p>
+    <h1>R$ 10,4 mil para começar. R$ 719 mil de gastos no ano 1, sobre R$ 1 milhão de receita.</h1>
+    <p class="lead">Este é o orçamento que levamos à reunião de sócios: o que entra no mês 1, para onde vai cada real do primeiro ano e o que esperar até o ano 4. Cenário conservador por padrão; os outros dois estão na projeção.</p>
+  </div>
+  <div class="tiles" id="resumo-tiles"></div>
+  <div class="grid2">
+    <div class="card"><h3 style="margin-bottom:16px">Ano 1 por categoria</h3><div class="bars" id="resumo-bars"></div></div>
+    <div class="card"><h3 style="margin-bottom:12px">Como ler</h3>
+      <p style="color:var(--muted);margin-bottom:12px">Mês 1 é o que precisamos aportar em novembro, antes da receita. O ano 1 vai de novembro de 2026 a outubro de 2027 e já se paga com a receita dos clientes.</p>
+      <p style="color:var(--muted);margin-bottom:12px">Tecnologia é calculada por casa ativa, pelo uso real, e não como percentual da receita. Pró-labore só começa quando a receita bate os gatilhos.</p>
+      <p class="note">Fonte: planilha Adiuvia_Orcamento_e_Projecoes.xlsx. Todos os números desta página saem dela.</p>
+    </div>
+  </div>
+</section>
+
+<section class="page" id="mes1" data-nav="Mês 1">
+  <div class="head">
+    <p class="kicker">01 · Orçamento do mês 1 · novembro de 2026</p>
+    <h2 id="mes1-title"></h2>
+    <p class="lead">Fase 1 do plano: preparar. Valores estimados, a substituir por cotações reais. Tecnologia a validar com o Marco.</p>
+  </div>
+  <div class="tiles" id="mes1-tiles"></div>
+  <div class="controls"><span class="lbl">Filtrar por área</span><div class="seg" id="mes1-filter"></div></div>
+  <div class="card tbl-wrap"><table id="mes1-table"></table></div>
+</section>
+
+<section class="page" id="ano1" data-nav="Ano 1 · categorias">
+  <div class="head">
+    <p class="kicker">02 · Para onde vai o dinheiro · ano 1 conservador</p>
+    <h2>Sete categorias de gasto e o que fica no caixa.</h2>
+    <p class="lead">Percentuais sobre a receita total do ano 1. Passe o mouse nas barras para ver o detalhe; a próxima seção abre cada linha.</p>
+  </div>
+  <div class="tiles" id="ano1-tiles"></div>
+  <div class="card"><div class="bars" id="ano1-bars"></div></div>
+</section>
+
+<section class="page" id="linhas" data-nav="Ano 1 · linha a linha">
+  <div class="head">
+    <p class="kicker">03 · Ano 1 linha a linha</p>
+    <h2>Cada gasto com fórmula e dono.</h2>
+    <p class="lead">Clique numa categoria para abrir. Filtre por dono para ver quanto do orçamento cada sócio administra.</p>
+  </div>
+  <div class="controls"><span class="lbl">Dono</span><div class="seg" id="dono-filter"></div><span class="owner-total" id="dono-total"></span></div>
+  <div class="acc" id="acc"></div>
+</section>
+
+<section class="page" id="custo" data-nav="Custo por cliente">
+  <div class="head">
+    <p class="kicker">04 · Custo de tecnologia por casa ativa</p>
+    <h2 id="custo-title"></h2>
+    <p class="lead">Conta de baixo para cima, pelo uso de um restaurante com 600 conversas por mês (40% da franquia do Profissional). Números a confirmar no Charllu até 13 de novembro.</p>
+  </div>
+  <div class="grid2">
+    <div class="card"><h3 style="margin-bottom:16px">Composição por mês</h3><div class="bars" id="custo-bars"></div></div>
+    <div style="display:flex;flex-direction:column;gap:20px">
+      <div class="risk" id="custo-risk"></div>
+      <div class="card tbl-wrap"><h3 style="margin-bottom:8px">Premissas de uso</h3><table id="custo-uso"></table></div>
+    </div>
+  </div>
+</section>
+
+<section class="page" id="projecao" data-nav="Projeção 4 anos">
+  <div class="head">
+    <p class="kicker">05 · Projeção dos anos 1 a 4</p>
+    <h2 id="proj-title"></h2>
+  </div>
+  <div class="controls"><span class="lbl">Cenário</span><div class="seg" id="proj-scn"></div></div>
+  <div class="tiles" id="proj-tiles"></div>
+  <div style="display:flex;flex-direction:column;gap:24px">
+    <div class="card"><h3 style="margin-bottom:10px">Receita e resultado por ano</h3><div class="legend"><span><i style="background:var(--navy)"></i>Receita total</span><span><i style="background:var(--gold)"></i>Resultado após variável</span></div><div id="proj-chart"></div></div>
+    <div class="card tbl-wrap"><table id="proj-table"></table></div>
+  </div>
+  <p class="note">Ano 1 = nov/2026 a out/2027. Acima de R$ 4,8 milhões de faturamento no ano a empresa sai do Simples e o imposto sobe, por isso a margem do ano 3 cresce menos.</p>
+</section>
+
+<section class="page" id="cenarios" data-nav="Cenários lado a lado">
+  <div class="head">
+    <p class="kicker">06 · Três cenários lado a lado</p>
+    <h2>Mesmo o pessimista fecha positivo em todos os anos.</h2>
+  </div>
+  <div class="controls"><span class="lbl">Indicador</span><div class="seg" id="cmp-ind"></div></div>
+  <div class="card"><div class="legend"><span><i style="background:var(--s-pess)"></i>Pessimista</span><span><i style="background:var(--s-cons)"></i>Conservador</span><span><i style="background:var(--s-otim)"></i>Otimista</span></div><div id="cmp-chart"></div></div>
+  <div class="card tbl-wrap"><table id="cmp-table"></table></div>
+</section>
+
+<section class="page" id="premissas" data-nav="Premissas">
+  <div class="head">
+    <p class="kicker">07 · Premissas</p>
+    <h2>As alavancas de cada cenário.</h2>
+    <p class="lead">Tudo o que muda entre pessimista, conservador e otimista. Na planilha, esta é a única aba que precisa ser editada.</p>
+  </div>
+  <div class="card tbl-wrap"><table id="prem-table"></table></div>
+  <div class="grid2">
+    <div class="card tbl-wrap"><h3 style="margin-bottom:8px">Premissas comuns</h3><table id="premc-table"></table></div>
+    <div class="card tbl-wrap"><h3 style="margin-bottom:8px">Régua de pró-labore</h3><table id="regua-table"></table><p class="note" style="margin-top:10px">Aplicada pela receita recorrente mensal. Abaixo do primeiro gatilho, ninguém recebe.</p></div>
+  </div>
+</section>
+
+<section class="page" id="validar" data-nav="Pontos a validar">
+  <div class="head">
+    <p class="kicker">08 · Antes de aprovar</p>
+    <h2>O que precisa de confirmação, com dono e prazo.</h2>
+  </div>
+  <div class="checks">
+    <div class="check"><span class="who">Marco · até 6 nov</span><span class="what">Taxa de provedor de IA da Meta</span><span>Se valer para a Adiuvia, o custo por casa vai de cerca de R$ 200 para R$ 1.301 por mês e o modelo de cobrança precisa mudar.</span></div>
+    <div class="check"><span class="who">Marco · até 13 nov</span><span class="what">Uso real no Charllu</span><span>Conversas por mês, mensagens por conversa e custo do modelo de IA, que fecham o custo por casa.</span></div>
+    <div class="check"><span class="who">Sócios · até 20 nov</span><span class="what">Jurídico</span><span>R$ 3.500 para acordo de sócios e contrato de cliente; buscar outras cotações.</span></div>
+    <div class="check"><span class="who">Contador</span><span class="what">Alíquota de impostos</span><span>8% efetivo no Simples e cerca de 15% acima de R$ 4,8 milhões são estimativas.</span></div>
+    <div class="check"><span class="who">Sócios · proposta</span><span class="what">Contratação dos analistas</span><span>Só contratar o 1º (fev) e o 2º (jun) se a meta de clientes do trimestre for batida.</span></div>
+    <div class="check"><span class="who">Sócios · proposta</span><span class="what">Reserva para imprevistos</span><span>10% dos itens no mês 1 e o saldo da verba de estrutura no ano 1 (R$ 9,9 mil).</span></div>
+  </div>
+  <p class="note">Fora desta conta: aporte de R$ 50 mil do Diego (R$ 25 mil para o caixa e R$ 25 mil ao Marco pela ferramenta já desenvolvida).</p>
+</section>
+
+<section class="page" id="clinicas" data-nav="Anexo · clínicas">
+  <div class="head">
+    <p class="kicker">Anexo · expansão a partir do mês 13</p>
+    <h2>Clínicas odontológicas e de estética, em conta separada.</h2>
+    <p class="lead">Não soma às projeções de restaurantes. Contribuição antes de pró-labore e estrutura central, já descontado o investimento de entrada de R$ 180 mil no ano 2.</p>
+  </div>
+  <div class="card tbl-wrap"><table id="clin-table"></table></div>
+</section>
+
+</main>
+<footer>Adiuvia · Orçamento proposto para a reunião de sócios de 29 de outubro de 2026 · Valores em R$, cenário conservador salvo indicação.</footer>
+<div id="tip"></div>
+<script>
+const D={"mes1": {"itens": [{"area": "Tecnologia", "dono": "Marco", "item": "API oficial do WhatsApp via provedor (BSP), mensalidade da plataforma", "tipo": "Recorrente", "valor": 300, "prio": "Alta", "porque": "Base do produto; confirmar no mesmo contato se a taxa de provedor de IA se aplica. Valores de tecnologia a validar com o Marco"}, {"area": "Tecnologia", "dono": "Marco", "item": "Mensagens da Meta (serviço e utilidade) para Charllu e demo", "tipo": "Recorrente", "valor": 150, "prio": "Alta", "porque": "1.000 mensagens de serviço grátis por número; o restante a R$ 0,035"}, {"area": "Tecnologia", "dono": "Marco", "item": "Consumo de modelo de IA (Charllu, demo e testes)", "tipo": "Recorrente", "valor": 400, "prio": "Alta", "porque": "Medir o custo real por conversa"}, {"area": "Tecnologia", "dono": "Marco", "item": "Infraestrutura em nuvem e banco de dados", "tipo": "Recorrente", "valor": 500, "prio": "Alta", "porque": "Adiuvia OS e painel de receita recuperada"}, {"area": "Tecnologia", "dono": "Marco", "item": "Linha de WhatsApp para a demo ao vivo", "tipo": "Recorrente", "valor": 60, "prio": "Alta", "porque": "Substitui a lista de espera do site"}, {"area": "Tecnologia", "dono": "Marco", "item": "Ferramentas de desenvolvimento e monitoramento", "tipo": "Recorrente", "valor": 250, "prio": "Média", "porque": "Disponibilidade de 99,5% é meta da área"}, {"area": "Comercial", "dono": "Diego", "item": "CRM para o funil de vendas (3 usuários)", "tipo": "Recorrente", "valor": 350, "prio": "Alta", "porque": "Medir reuniões, propostas e fechamentos desde o início"}, {"area": "Comercial", "dono": "Diego", "item": "Deslocamento para visitas a casas-alvo", "tipo": "Recorrente", "valor": 800, "prio": "Alta", "porque": "Venda presencial é o canal principal da fase de fundadores; lista de casas-alvo feita com IA, sem custo"}, {"area": "Marketing", "dono": "Rafael", "item": "Conversas com 10 donos da rede do Diego e do Charllu (validação de preço)", "tipo": "Único", "valor": 0, "prio": "Alta", "porque": "Sem custo: contrapartida é a condição de fundador, não dinheiro"}, {"area": "Marketing", "dono": "Rafael", "item": "Anúncios no Instagram levando à demo ao vivo", "tipo": "Recorrente", "valor": 2000, "prio": "Alta", "porque": "Medir custo por reunião antes de escalar em janeiro"}, {"area": "Marketing", "dono": "Rafael", "item": "Domínio e e-mail profissional (site no GitHub Pages, sem custo de hospedagem)", "tipo": "Recorrente", "valor": 300, "prio": "Média", "porque": "Valor definido pelos sócios em 29 out"}, {"area": "Administrativo", "dono": "Sócios", "item": "Advogado: acordo de sócios e contrato de cliente (valor a rever)", "tipo": "Único", "valor": 3500, "prio": "Alta", "porque": "Acordo assinado até 20 nov; buscar outras cotações"}, {"area": "Administrativo", "dono": "Sócios", "item": "Ajuste do contrato social e registros", "tipo": "Único", "valor": 1000, "prio": "Alta", "porque": "Refletir a participação acordada"}, {"area": "Administrativo", "dono": "Sócios", "item": "Contador (mensalidade)", "tipo": "Recorrente", "valor": 500, "prio": "Alta", "porque": "Pró-labore, notas fiscais e impostos"}, {"area": "Administrativo", "dono": "Sócios", "item": "Ferramentas de gestão e colaboração (3 contas)", "tipo": "Recorrente", "valor": 150, "prio": "Média", "porque": "Painel compartilhado de indicadores"}, {"area": "Administrativo", "dono": "Sócios", "item": "Reserva para imprevistos", "tipo": "Único", "valor": 1026, "prio": "Média", "porque": "Percentual definido em Premissas do mês, abaixo"}], "areas": [{"area": "Tecnologia", "dono": "Marco", "rec": 1660, "uni": 0, "total": 1660}, {"area": "Comercial", "dono": "Diego", "rec": 1150, "uni": 0, "total": 1150}, {"area": "Marketing", "dono": "Rafael", "rec": 2300, "uni": 0, "total": 2300}, {"area": "Administrativo", "dono": "Sócios", "rec": 650, "uni": 5526, "total": 6176}], "total": 11286, "rec": 5760, "uni": 5526, "receita": 890, "aporte": 10396, "porSocio": 3465.33333333333, "reserva": 0.1}, "ano1_gastos": 718909.73, "ano1_receita": 1017180, "ano1_resultado": 298270.27, "ano1": [{"cat": "Tecnologia e operação", "itens": [{"item": "Mensagens da IA na Meta", "calc": "R$ 91 por casa ativa por mês × casas-mês", "dono": "Marco", "valor": 71526}, {"item": "Confirmações e lembretes de reserva", "calc": "R$ 10,50 por casa por mês × casas-mês", "dono": "Marco", "valor": 8253}, {"item": "Modelo de IA", "calc": "R$ 48 por casa por mês × casas-mês", "dono": "Marco", "valor": 37728}, {"item": "Provedor da API do WhatsApp", "calc": "R$ 30 por casa por mês × casas-mês", "dono": "Marco", "valor": 23580}, {"item": "Nuvem e banco de dados (variável)", "calc": "R$ 20 por casa por mês × casas-mês", "dono": "Marco", "valor": 15720}, {"item": "Servidores e ambientes base", "calc": "Metade da plataforma fixa", "dono": "Marco", "valor": 12000}, {"item": "Monitoramento e segurança", "calc": "Um quarto da plataforma fixa", "dono": "Marco", "valor": 6000}, {"item": "Ferramentas de desenvolvimento", "calc": "Um quarto da plataforma fixa", "dono": "Marco", "valor": 6000}, {"item": "Taxas de cobrança (cartão, Pix, boleto)", "calc": "3% da receita", "dono": "Diego", "valor": 30515.4}], "total": 211322.4}, {"cat": "Recursos humanos", "itens": [{"item": "Analista de implantação e suporte 1", "calc": "Fev a out: 9 meses × R$ 5.500 com encargos", "dono": "Marco", "valor": 49500}, {"item": "Analista de implantação e suporte 2", "calc": "Jun a out: 5 meses × R$ 5.500 com encargos", "dono": "Marco", "valor": 27500}], "total": 77000}, {"cat": "Marketing", "itens": [{"item": "Anúncios (Instagram e Google)", "calc": "60% da verba de marketing (15% da receita)", "dono": "Rafael", "valor": 91546.2}, {"item": "Conteúdo e produção (fotos, vídeos curtos, design)", "calc": "15% da verba de marketing (15% da receita)", "dono": "Rafael", "valor": 22886.55}, {"item": "Eventos e associações (Abrasel, feiras)", "calc": "15% da verba de marketing (15% da receita)", "dono": "Rafael", "valor": 22886.55}, {"item": "Ferramentas, site, domínio e e-mail", "calc": "10% da verba de marketing (15% da receita)", "dono": "Rafael", "valor": 15257.7}], "total": 152577}, {"cat": "Pró-labore dos sócios", "itens": [{"item": "Faixa 1: R$ 3 mil por sócio, mar a jun", "calc": "Gatilho de R$ 40 mil de receita mensal em março · 3 sócios × 4 meses", "dono": "Sócios", "valor": 36000}, {"item": "Faixa 2: R$ 6 mil por sócio, jul a out", "calc": "Gatilho de R$ 100 mil de receita mensal em julho · 3 sócios × 4 meses", "dono": "Sócios", "valor": 72000}], "total": 108000}, {"cat": "Impostos", "itens": [{"item": "Simples Nacional", "calc": "8% da receita", "dono": "Contador", "valor": 81374.4}], "total": 81374.4}, {"cat": "Estrutura e comercial", "itens": [{"item": "Contador", "calc": "R$ 500 por mês", "dono": "Sócios", "valor": 6000}, {"item": "Jurídico e societário", "calc": "Acordo de sócios e contratos (R$ 3.500, a rever) e contrato social (R$ 1.000)", "dono": "Sócios", "valor": 4500}, {"item": "CRM de vendas", "calc": "R$ 350 por mês", "dono": "Diego", "valor": 4200}, {"item": "Deslocamento para visitas", "calc": "R$ 800 por mês", "dono": "Diego", "valor": 9600}, {"item": "Ferramentas de gestão", "calc": "R$ 150 por mês", "dono": "Sócios", "valor": 1800}, {"item": "Reserva para imprevistos", "calc": "Saldo da verba de estrutura (R$ 3 mil por mês)", "dono": "Sócios", "valor": 9900}], "total": 36000}, {"cat": "Variável dos sócios", "itens": [{"item": "Fundo de variável por meta de área", "calc": "15% do resultado operacional, um terço por sócio", "dono": "Sócios", "valor": 52635.93}], "total": 52635.93}], "proj": {"pess": {"Clientes no início do ano": [1, 80, 180, 300], "Clientes no fim do ano": [80, 180, 300, 420], "Clientes médios no ano": [40.5, 130, 240, 360], "Mensalidade média (R$)": [1000, 1050, 1102.5, 1157.625], "Receita recorrente mensal no fim do ano (R$)": [80000, 189000, 330750, 486202.5], "Cancelamentos no ano": [19.44, 62.4, 115.2, 172.8], "Novos clientes brutos no ano": [98.44, 162.4, 235.2, 292.8], "Receita de mensalidades (R$)": [486000, 1638000, 3175200, 5000940], "Receita de setup (R$)": [88596, 146160, 211680, 263520], "Receita total (R$)": [574596, 1784160, 3386880, 5264460], "(-) Impostos (R$)": [45967.68, 142732.8, 270950.4, 789669], "Receita líquida (R$)": [528628.32, 1641427.2, 3115929.6, 4474791], "Tecnologia variável: casas ativas × custo por cliente (R$)": [116640, 363168, 650350.08, 946259.3664], "Plataforma fixa (R$)": [24000, 38400, 61440, 98304], "Taxas de cobrança (R$)": [17237.88, 53524.8, 101606.4, 157933.8], "(-) Tecnologia e operação, total (R$)": [157877.88, 455092.8, 813396.48, 1202497.1664], "(-) Marketing (R$)": [86189.4, 267624, 508032, 789669], "(-) Estrutura de gestão, vendas e administrativo (R$)": [0, 178416, 338688, 526446], "(-) Equipe de implantação e suporte (R$)": [49500, 198000, 330000, 528000], "Analistas na equipe": [1, 3, 5, 8], "(-) Pró-labore dos sócios (R$)": [108000, 216000, 360000, 540000], "(-) Outros custos fixos (R$)": [36000, 50400, 70560, 98784], "Resultado operacional (R$)": [91061.0399999999, 275894.4, 695253.12, 789394.8336], "Margem operacional sobre a receita total": [0.158478374370862, 0.154635458703255, 0.205278344671202, 0.149947921268278], "(-) Fundo de variável dos sócios (R$)": [13659.156, 41384.16, 104287.968, 118409.22504], "Resultado após variável (R$)": [77401.8839999999, 234510.24, 590965.152, 670985.60856]}, "cons": {"Clientes no início do ano": [1, 130, 330, 600], "Clientes no fim do ano": [130, 330, 600, 900], "Clientes médios no ano": [65.5, 230, 465, 750], "Mensalidade média (R$)": [1100, 1188, 1283.04, 1385.6832], "Receita recorrente mensal no fim do ano (R$)": [143000, 392040, 769824, 1247114.88], "Cancelamentos no ano": [23.58, 82.8, 167.4, 270], "Novos clientes brutos no ano": [152.58, 282.8, 437.4, 570], "Receita de mensalidades (R$)": [864600, 3278880, 7159363.2, 12471148.8], "Receita de setup (R$)": [152580, 282800, 437400, 570000], "Receita total (R$)": [1017180, 3561680, 7596763.2, 13041148.8], "(-) Impostos (R$)": [81374.4, 284934.4, 1139514.48, 1956172.32], "Receita líquida (R$)": [935805.6, 3276745.6, 6457248.72, 11084976.48], "Tecnologia variável: casas ativas × custo por cliente (R$)": [156807, 523089, 1004672.025, 1539416.8125], "Plataforma fixa (R$)": [24000, 38400, 61440, 98304], "Taxas de cobrança (R$)": [30515.4, 106850.4, 227902.896, 391234.464], "(-) Tecnologia e operação, total (R$)": [211322.4, 668339.4, 1294014.921, 2028955.2765], "(-) Marketing (R$)": [152577, 534252, 1139514.48, 1956172.32], "(-) Estrutura de gestão, vendas e administrativo (R$)": [0, 427401.6, 911611.584, 1564937.856], "(-) Equipe de implantação e suporte (R$)": [77000, 330000, 660000, 990000], "Analistas na equipe": [2, 5, 10, 15], "(-) Pró-labore dos sócios (R$)": [108000, 360000, 540000, 540000], "(-) Outros custos fixos (R$)": [36000, 50400, 70560, 98784], "Resultado operacional (R$)": [350906.2, 906352.6, 1841547.735, 3906127.0275], "Margem operacional sobre a receita total": [0.344979452997503, 0.254473338424564, 0.242412154560774, 0.299523231227912], "(-) Fundo de variável dos sócios (R$)": [52635.93, 135952.89, 276232.16025, 585919.054125], "Resultado após variável (R$)": [298270.27, 770399.71, 1565315.57475, 3320207.973375]}, "otim": {"Clientes no início do ano": [1, 180, 500, 950], "Clientes no fim do ano": [180, 500, 950, 1500], "Clientes médios no ano": [90.5, 340, 725, 1225], "Mensalidade média (R$)": [1150, 1265, 1391.5, 1530.65], "Receita recorrente mensal no fim do ano (R$)": [207000, 632500, 1321925, 2295975], "Cancelamentos no ano": [21.72, 81.6, 174, 294], "Novos clientes brutos no ano": [200.72, 401.6, 624, 844], "Receita de mensalidades (R$)": [1248900, 5161200, 12106050, 22500555], "Receita de setup (R$)": [240864, 481920, 748800, 1012800], "Receita total (R$)": [1489764, 5643120, 12854850, 23513355], "(-) Impostos (R$)": [119181.12, 846468, 1928227.5, 3527003.25], "Receita líquida (R$)": [1370582.88, 4796652, 10926622.5, 19986351.75], "Tecnologia variável: casas ativas × custo por cliente (R$)": [195480, 682992, 1354433.4, 2128328.622], "Plataforma fixa (R$)": [24000, 43200, 77760, 139968], "Taxas de cobrança (R$)": [37244.1, 141078, 321371.25, 587833.875], "(-) Tecnologia e operação, total (R$)": [256724.1, 867270, 1753564.65, 2856130.497], "(-) Marketing (R$)": [223464.6, 846468, 1928227.5, 3527003.25], "(-) Estrutura de gestão, vendas e administrativo (R$)": [0, 677174.4, 1542582, 2821602.6], "(-) Equipe de implantação e suporte (R$)": [99000, 462000, 990000, 1650000], "Analistas na equipe": [2, 7, 15, 25], "(-) Pró-labore dos sócios (R$)": [216000, 540000, 540000, 540000], "(-) Outros custos fixos (R$)": [36000, 50400, 70560, 98784], "Resultado operacional (R$)": [539394.18, 1353339.6, 4101688.35, 8492831.403], "Margem operacional sobre a receita total": [0.362066864281859, 0.239821162761026, 0.319077107084097, 0.361191816437935], "(-) Fundo de variável dos sócios (R$)": [80909.127, 203000.94, 615253.2525, 1273924.71045], "Resultado após variável (R$)": [458485.053, 1150338.66, 3486435.0975, 7218906.69255]}}, "custo": {"uso": [{"k": "Conversas por casa por mês", "v": 600, "obs": "Uso médio estimado de 40% da franquia do Profissional (1.500); medir no Charllu"}, {"k": "Mensagens da IA por conversa", "v": 6, "obs": "Respostas enviadas pela IA em cada atendimento"}, {"k": "Mensagens de serviço grátis por número/mês", "v": 1000, "obs": "Franquia gratuita da Meta por número"}, {"k": "Preço por mensagem de serviço ou utilidade (R$)", "v": 0.035, "obs": "Tabela da Meta para o Brasil desde 1 out 2026"}, {"k": "Confirmações e lembretes enviados por mês", "v": 300, "obs": "150 reservas × 2 mensagens de utilidade"}, {"k": "Modelo de IA por conversa (R$)", "v": 0.08, "obs": "Estimativa para um modelo de porte médio; medir no Charllu"}, {"k": "Provedor da API (BSP) por número/mês (R$)", "v": 30, "obs": "Parte por casa do custo do provedor"}, {"k": "Nuvem e banco de dados por casa/mês (R$)", "v": 20, "obs": "Parte variável da infraestrutura"}], "partes": [{"k": "Mensagens da IA (Meta)", "v": 91}, {"k": "Confirmações e lembretes (Meta)", "v": 10.5}, {"k": "Modelo de IA", "v": 48}, {"k": "Provedor da API", "v": 30}, {"k": "Nuvem e banco de dados", "v": 20}], "total": 199.5, "peso": 0.181363636363636, "taxa": 0.0625, "cambio": 5.3, "totalRisco": 1301, "pesoRisco": 1.18272727272727}, "prem": [{"k": "Clientes ativos no fim do ano 1", "p": 80, "c": 130, "o": 180, "obs": "Só bares e restaurantes em São Paulo; 20 fundadores até jan 2027"}, {"k": "Clientes ativos no fim do ano 2", "p": 180, "c": 330, "o": 500, "obs": "Grande São Paulo e primeira capital fora de SP"}, {"k": "Clientes ativos no fim do ano 3", "p": 300, "c": 600, "o": 950, "obs": "Três capitais além de São Paulo"}, {"k": "Clientes ativos no fim do ano 4", "p": 420, "c": 900, "o": 1500, "obs": "Cerca de 1% a 5% do recorte endereçável de restaurantes (30 a 40 mil casas)"}, {"k": "Mensalidade média no ano 1 (R$)", "p": 1000, "c": 1100, "o": 1150, "obs": "Inclui 20 fundadores a R$ 890; tabela de R$ 690 a R$ 2.490"}, {"k": "Aumento anual da mensalidade média", "p": 0.05, "c": 0.08, "o": 0.1, "obs": "Fim do desconto de fundador, upgrades de plano e reajuste"}, {"k": "Cancelamento mensal", "p": 0.04, "c": 0.03, "o": 0.02, "obs": "Meta do plano: abaixo de 3%; média SaaS PME LatAm perto de 8%"}, {"k": "Setup médio por novo cliente (R$)", "p": 900, "c": 1000, "o": 1200, "obs": "Setup de R$ 990 (Essencial) e R$ 1.490 (Profissional); fundadores a R$ 490"}, {"k": "Impostos sobre faturamento", "p": 0.08, "c": 0.08, "o": 0.08, "obs": "Alíquota efetiva estimada de Simples Nacional; confirmar com o contador"}, {"k": "Custo variável de tecnologia por cliente/mês no ano 1 (R$)", "p": 240, "c": 199.5, "o": 180, "obs": "Mensagens da Meta, modelo de IA, provedor e nuvem por casa ativa; detalhe na aba Custo por Cliente"}, {"k": "Marketing (% da receita)", "p": 0.15, "c": 0.15, "o": 0.15, "obs": "Business Plan: 15% da receita"}, {"k": "Estrutura de gestão, vendas e administrativo a partir do ano 2 (% da receita)", "p": 0.1, "c": 0.12, "o": 0.12, "obs": "Vendedores, sucesso do cliente, financeiro e liderança além dos sócios"}, {"k": "Redução anual do custo variável por cliente", "p": 0.03, "c": 0.05, "o": 0.07, "obs": "Preço de modelos de IA em queda e respostas mais eficientes"}, {"k": "Taxas de cobrança (% da receita)", "p": 0.03, "c": 0.03, "o": 0.025, "obs": "Gateway de cartão, Pix automático e boleto"}, {"k": "Custo fixo da plataforma no ano 1 (R$)", "p": 24000, "c": 24000, "o": 24000, "obs": "Ambientes, monitoramento, segurança e ferramentas de desenvolvimento"}, {"k": "Crescimento anual do custo fixo da plataforma", "p": 0.6, "c": 0.6, "o": 0.8, "obs": "Segurança, LGPD e redundância crescem com a base"}, {"k": "Meses de analista pagos no ano 1", "p": 9, "c": 14, "o": 18, "obs": "Conservador: 1º analista em fev (9 meses) e 2º em jun (5 meses); do ano 2 em diante, 1 analista a cada 50 casas"}], "premc": [{"k": "Clientes atendidos por analista de implantação e suporte", "v": 50, "obs": "Primeiro analista em fev 2027, segundo em jun 2027"}, {"k": "Custo mensal por analista com encargos (R$)", "v": 5500, "obs": "Plano: R$ 5 mil; ajustado para reajuste"}, {"k": "Outros custos fixos mensais no ano 1 (R$)", "v": 3000, "obs": "Contador, ferramentas, jurídico"}, {"k": "Crescimento anual dos outros custos fixos", "v": 0.4, "obs": "Escritório, ferramentas e gestão crescem com a equipe"}, {"k": "Fundo de variável dos sócios (% do resultado positivo)", "v": 0.15, "obs": "Business Plan: 15% do lucro operacional"}, {"k": "Número de sócios", "v": 3, "obs": "Marco, Diego e Rafael"}, {"k": "Teto anual de faturamento do Simples Nacional (R$)", "v": 4800000, "obs": "Acima disso a empresa muda de regime tributário"}, {"k": "Impostos acima do teto do Simples (alíquota efetiva)", "v": 0.15, "obs": "Estimativa para Lucro Presumido em serviços; confirmar com o contador"}], "regua": [{"f": "Faixa 0", "min": 0, "pl": 0, "obs": "Até o primeiro gatilho ninguém recebe"}, {"f": "Faixa 1", "min": 40000, "pl": 3000, "obs": "Business Plan"}, {"f": "Faixa 2", "min": 100000, "pl": 6000, "obs": "Business Plan"}, {"f": "Faixa 3", "min": 175000, "pl": 10000, "obs": "Business Plan"}, {"f": "Faixa 4", "min": 400000, "pl": 15000, "obs": "Extensão proposta para os anos 3 e 4"}], "clin": {"pess": {"Clínicas no início do ano": [0, 30, 80], "Clínicas no fim do ano": [30, 80, 150], "Clínicas médias no ano": [15, 55, 115], "Mensalidade média (R$)": [1100, 1155, 1212.75], "Receita recorrente mensal no fim do ano (R$)": [33000, 92400, 181912.5], "Cancelamentos no ano": [6.3, 23.1, 48.3], "Novas clínicas brutas no ano": [36.3, 73.1, 118.3], "Receita de mensalidades (R$)": [198000, 762300, 1673595], "Receita de setup (R$)": [54450, 109650, 177450], "Receita total (R$)": [252450, 871950, 1851045], "(-) Impostos (R$)": [20196, 69756, 148083.6], "(-) Custos diretos (R$)": [80784, 279024, 592334.4], "(-) Marketing e vendas (R$)": [50490, 174390, 370209], "(-) Investimento fixo do segmento (R$)": [180000, 120000, 120000], "Contribuição do segmento, antes de pró-labore e estrutura central (R$)": [-79020, 228780, 620418], "Margem sobre a receita": [-0.31301247771836, 0.262377429898503, 0.335171754333363]}, "cons": {"Clínicas no início do ano": [0, 60, 180], "Clínicas no fim do ano": [60, 180, 350], "Clínicas médias no ano": [30, 120, 265], "Mensalidade média (R$)": [1300, 1404, 1516.32], "Receita recorrente mensal no fim do ano (R$)": [78000, 252720, 530712], "Cancelamentos no ano": [9, 36, 79.5], "Novas clínicas brutas no ano": [69, 156, 249.5], "Receita de mensalidades (R$)": [468000, 2021760, 4821897.6], "Receita de setup (R$)": [124200, 280800, 449100], "Receita total (R$)": [592200, 2302560, 5270997.6], "(-) Impostos (R$)": [47376, 184204.8, 421679.808], "(-) Custos diretos (R$)": [159894, 621691.2, 1423169.352], "(-) Marketing e vendas (R$)": [106596, 414460.8, 948779.568], "(-) Investimento fixo do segmento (R$)": [180000, 120000, 120000], "Contribuição do segmento, antes de pró-labore e estrutura central (R$)": [98334, 962203.2, 2357368.872], "Margem sobre a receita": [0.166048632218845, 0.417884094225558, 0.447233911091138]}, "otim": {"Clínicas no início do ano": [0, 100, 300], "Clínicas no fim do ano": [100, 300, 600], "Clínicas médias no ano": [50, 200, 450], "Mensalidade média (R$)": [1450, 1595, 1754.5], "Receita recorrente mensal no fim do ano (R$)": [145000, 478500, 1052700], "Cancelamentos no ano": [12, 48, 108], "Novas clínicas brutas no ano": [112, 248, 408], "Receita de mensalidades (R$)": [870000, 3828000, 9474300], "Receita de setup (R$)": [224000, 496000, 816000], "Receita total (R$)": [1094000, 4324000, 10290300], "(-) Impostos (R$)": [87520, 345920, 823224], "(-) Custos diretos (R$)": [262560, 1037760, 2469672], "(-) Marketing e vendas (R$)": [164100, 648600, 1543545], "(-) Investimento fixo do segmento (R$)": [180000, 120000, 120000], "Contribuição do segmento, antes de pró-labore e estrutura central (R$)": [399820, 2171720, 5333859], "Margem sobre a receita": [0.365466179159049, 0.502247918593895, 0.518338532404303]}}};
+const $=s=>document.querySelector(s);
+const nf=(v,d=0)=>v.toLocaleString('pt-BR',{minimumFractionDigits:d,maximumFractionDigits:d});
+const brl=(v,d=0)=>'R$ '+nf(v,d);
+const mil=v=>Math.abs(v)>=1e6?'R$ '+nf(v/1e6,1)+' mi':'R$ '+nf(v/1e3,0)+' mil';
+const milP=v=>Math.abs(v)>=1e6?'R$ '+nf(v/1e6,2)+' mi':'R$ '+nf(v/1e3,1)+' mil';
+const pct=(v,d=0)=>nf(v*100,d)+'%';
+const esc=s=>String(s??'').replace(/[&<>]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;'}[c]));
+const tile=(v,l,s,dark)=>`<div class="tile${dark?' dark':''}"><span class="v">${v}</span><span class="l">${l}</span>${s?`<span class="s">${s}</span>`:''}</div>`;
+// tooltip
+const tip=$('#tip');
+document.addEventListener('mousemove',e=>{const t=e.target.closest('[data-tip]');if(!t){tip.style.opacity=0;return}tip.innerHTML=t.dataset.tip;tip.style.opacity=1;const x=Math.min(e.clientX+14,innerWidth-tip.offsetWidth-8);tip.style.left=x+'px';tip.style.top=(e.clientY+16)+'px'});
+function bars(el,rows,max){
+  max=max||Math.max(...rows.map(r=>r.v));
+  el.innerHTML=rows.map(r=>`<div class="bar${r.res?' res':''}" data-tip="${esc(r.tip||'')}"><span class="name">${esc(r.k)}</span><span class="track"><span class="fill" style="width:${Math.max(0,r.v)/max*100}%"></span></span><span class="val">${r.lab}${r.sub?`<small>${r.sub}</small>`:''}</span></div>`).join('');
+}
+const R=D.ano1_receita, G=D.ano1_gastos, RES=D.ano1_resultado;
+const shortCat={'Tecnologia e operação':'Tecnologia e operação','Recursos humanos':'Recursos humanos','Marketing':'Marketing','Pró-labore dos sócios':'Pró-labore','Impostos':'Impostos','Estrutura e comercial':'Estrutura e comercial','Variável dos sócios':'Variável dos sócios'};
+const catRows=()=>D.ano1.map(c=>({k:shortCat[c.cat]||c.cat,v:c.total,lab:mil(c.total),sub:pct(c.total/R)+' da receita',tip:`<b>${esc(c.cat)}</b><br>${c.itens.map(i=>esc(i.item)+': '+milP(i.valor)).join('<br>')}`}));
+
+// RESUMO
+$('#resumo-tiles').innerHTML=tile(brl(D.mes1.aporte),'aporte dos sócios no mês 1',brl(D.mes1.porSocio)+' por sócio')+tile(mil(G),'gastos no ano 1',pct(G/R)+' da receita')+tile('R$ '+nf(R/1e6,2)+' mi','receita no ano 1','130 clientes em outubro de 2027')+tile(mil(RES),'resultado no caixa',pct(RES/R)+' da receita',true);
+bars($('#resumo-bars'),[...catRows(),{k:'Resultado',v:RES,lab:mil(RES),sub:pct(RES/R)+' da receita',res:true,tip:'<b>Resultado do ano 1</b><br>Receita menos todos os gastos'}]);
+
+// MES 1
+const M=D.mes1;
+$('#mes1-title').textContent=`${brl(M.total)} no mês 1, dos quais ${brl(M.rec)} se repetem todo mês.`;
+$('#mes1-tiles').innerHTML=M.areas.map(a=>tile(brl(a.total),`${a.area} · ${a.dono}`,a.uni?`${brl(a.rec)} mensal + ${brl(a.uni)} único`:'tudo custo mensal')).join('')+tile(brl(M.aporte),'aporte necessário',`total ${brl(M.total)} menos ${brl(M.receita)} do Charllu · ${brl(M.porSocio)} por sócio`,true);
+const areas=['Todas',...M.areas.map(a=>a.area)];let fArea='Todas';
+function drawMes1(){
+  const its=M.itens.filter(i=>fArea==='Todas'||i.area===fArea);
+  const tot=its.reduce((s,i)=>s+i.valor,0);
+  $('#mes1-table').innerHTML=`<tr><th>Item</th><th>Área · dono</th><th>Tipo</th><th>Prioridade</th><th class="n">Valor</th></tr>`+its.map(i=>`<tr><td>${esc(i.item)}<span class="why">${esc(i.porque)}</span></td><td>${esc(i.area)} · ${esc(i.dono)}</td><td>${esc(i.tipo)}</td><td><span class="pill ${i.prio==='Alta'?'alta':''}">${esc(i.prio)}</span></td><td class="n">${brl(i.valor)}</td></tr>`).join('')+`<tr class="sub"><td colspan="4">Total ${fArea==='Todas'?'do mês 1':esc(fArea.toLowerCase())}</td><td class="n">${brl(tot)}</td></tr>`;
+  $('#mes1-filter').innerHTML=areas.map(a=>`<button class="${a===fArea?'on':''}" data-a="${esc(a)}">${esc(a)}</button>`).join('');
+}
+$('#mes1-filter').addEventListener('click',e=>{const b=e.target.closest('button');if(b){fArea=b.dataset.a;drawMes1()}});drawMes1();
+
+// ANO 1 categorias
+$('#ano1-tiles').innerHTML=tile('R$ '+nf(R/1e6,2)+' mi','receita total','mensalidades e setup')+tile(mil(G),'total de gastos',pct(G/R)+' da receita')+tile(mil(RES),'resultado no caixa',pct(RES/R)+' da receita',true);
+bars($('#ano1-bars'),[...catRows(),{k:'Resultado no caixa',v:RES,lab:mil(RES),sub:pct(RES/R)+' da receita',res:true,tip:'<b>Resultado</b><br>Caixa para o ano 2'}]);
+
+// LINHA A LINHA
+const donos=['Todos',...new Set(D.ano1.flatMap(c=>c.itens.map(i=>i.dono)))];let fDono='Todos';
+const openSet=new Set();
+function drawAcc(){
+  $('#dono-filter').innerHTML=donos.map(d=>`<button class="${d===fDono?'on':''}" data-d="${esc(d)}">${esc(d)}</button>`).join('');
+  let grand=0;
+  $('#acc').innerHTML=D.ano1.map((c,ci)=>{
+    const its=c.itens.filter(i=>fDono==='Todos'||i.dono===fDono);if(!its.length)return '';
+    const t=its.reduce((s,i)=>s+i.valor,0);grand+=t;
+    return `<details data-ci="${ci}" ${openSet.has(ci)?'open':''}><summary><span class="t">${esc(c.cat)}<small>${its.length} ${its.length>1?'itens':'item'}</small></span><span class="pc">${pct(t/R,1)} da receita</span><span class="v">${milP(t)}</span><span class="ch">›</span></summary><div class="body tbl-wrap"><table><tr><th>Item</th><th>Como é calculado</th><th>Dono</th><th class="n">Ano 1</th><th class="n">% receita</th></tr>${its.map(i=>`<tr><td>${esc(i.item)}<div class="mini"><i style="width:${i.valor/c.total*100}%"></i></div></td><td style="color:var(--muted)">${esc(i.calc)}</td><td>${esc(i.dono)}</td><td class="n">${brl(i.valor)}</td><td class="n">${pct(i.valor/R,1)}</td></tr>`).join('')}</table></div></details>`;
+  }).join('');
+  $('#dono-total').innerHTML=fDono==='Todos'?`Total: <b>${brl(grand)}</b> · resultado ${brl(RES)}`:`${esc(fDono)} responde por <b>${brl(grand)}</b> (${pct(grand/G)} dos gastos)`;
+  $('#acc').querySelectorAll('details').forEach(d=>d.addEventListener('toggle',()=>{const i=+d.dataset.ci;d.open?openSet.add(i):openSet.delete(i)}));
+}
+$('#dono-filter').addEventListener('click',e=>{const b=e.target.closest('button');if(b){fDono=b.dataset.d;drawAcc()}});drawAcc();
+
+// CUSTO
+const C=D.custo;
+$('#custo-title').textContent=`${brl(C.total,2)} por casa ao mês: ${pct(C.peso)} da mensalidade média.`;
+bars($('#custo-bars'),C.partes.map(p=>({k:p.k,v:p.v,lab:brl(p.v,2),sub:pct(p.v/C.total)+' do custo'})).concat([{k:'Total por casa ativa',v:C.total,lab:brl(C.total,2),sub:'mensalidade média R$ 1.100',res:true}]));
+$('#custo-risk').innerHTML=`<h3>Risco fora do modelo</h3><span class="big">${brl(C.totalRisco)} por casa</span><p>Se a taxa de provedor de IA da Meta (US$ ${nf(C.taxa,4)} por mensagem, câmbio R$ ${nf(C.cambio,2)}) se aplicar, o custo passa a ${pct(C.pesoRisco)} da mensalidade. Confirmação com o Marco até 6 de novembro.</p>`;
+$('#custo-uso').innerHTML=C.uso.map(u=>`<tr><td>${esc(u.k)}<span class="why">${esc(u.obs)}</span></td><td class="n">${u.v<1?'R$ '+nf(u.v,3):u.k.includes('R$')?brl(u.v):nf(u.v)}</td></tr>`).join('');
+
+// PROJECAO
+const SC={pess:'Pessimista',cons:'Conservador',otim:'Otimista'};let scn='cons';
+const L=(s,k)=>D.proj[s][k];
+function svgBars(groups,series,opts={}){
+  // groups: labels; series: [{name,color,vals}]
+  const W=opts.w||960,H=opts.h||300,pl=8,pb=34,pt=24,ch=H-pb-pt;
+  const max=Math.max(...series.flatMap(s=>s.vals))*1.08;
+  const gw=(W-pl*2)/groups.length,bw=Math.min(54,(gw-24)/series.length);
+  let g='';
+  for(let i=0;i<=4;i++){const y=pt+ch-ch*i/4;g+=`<line x1="${pl}" x2="${W-pl}" y1="${y}" y2="${y}" stroke="#DDD5C6" stroke-width="1"/>`}
+  groups.forEach((lab,gi)=>{
+    const x0=pl+gi*gw+(gw-bw*series.length-2*(series.length-1))/2;
+    series.forEach((s,si)=>{
+      const v=s.vals[gi],h=Math.max(1,v/max*ch),x=x0+si*(bw+2),y=pt+ch-h;
+      g+=`<path d="M${x},${pt+ch}V${y+4}Q${x},${y} ${x+4},${y}H${x+bw-4}Q${x+bw},${y} ${x+bw},${y+4}V${pt+ch}Z" fill="${s.color}" data-tip="<b>${esc(s.name)} · ${lab}</b><br>${opts.fmt?opts.fmt(v):mil(v)}"/>`;
+      if(opts.labelAll||series.length<=2)g+=`<text class="lab" x="${x+bw/2}" y="${y-6}" text-anchor="middle">${opts.short?opts.short(v):mil(v).replace('R$ ','')}</text>`;
+    });
+    g+=`<text x="${pl+gi*gw+gw/2}" y="${H-10}" text-anchor="middle">${lab}</text>`;
+  });
+  return `<svg class="chart" viewBox="0 0 ${W} ${H}" role="img">${g}</svg>`;
+}
+const YRS=['Ano 1','Ano 2','Ano 3','Ano 4'];
+function drawProj(){
+  $('#proj-scn').innerHTML=Object.entries(SC).map(([k,v])=>`<button class="${k===scn?'on':''}" data-s="${k}">${v}</button>`).join('');
+  const rec=L(scn,'Receita total (R$)'),res=L(scn,'Resultado após variável (R$)'),cli=L(scn,'Clientes no fim do ano'),mrr=L(scn,'Receita recorrente mensal no fim do ano (R$)');
+  $('#proj-title').textContent=`${SC[scn]}: de ${mil(rec[0])} no ano 1 a ${mil(rec[3])} no ano 4, só com restaurantes.`;
+  $('#proj-tiles').innerHTML=tile(nf(cli[3]),'clientes no fim do ano 4',`${nf(cli[0])} no fim do ano 1`)+tile(mil(mrr[3]),'receita recorrente mensal no ano 4',`${mil(mrr[0])} no fim do ano 1`)+tile(mil(rec.reduce((a,b)=>a+b,0)),'receita acumulada em 4 anos','')+tile(mil(res.reduce((a,b)=>a+b,0)),'resultado acumulado em 4 anos','após impostos, pró-labore e variável',true);
+  $('#proj-chart').innerHTML=svgBars(YRS,[{name:'Receita total',color:'#16394B',vals:rec},{name:'Resultado após variável',color:'#876233',vals:res}]);
+  const rows=[['Clientes no fim do ano','int'],['Mensalidade média (R$)','brl'],['Receita total (R$)','mil','hl'],['(-) Impostos (R$)','mil','neg'],['(-) Tecnologia e operação, total (R$)','mil','neg'],['(-) Marketing (R$)','mil','neg'],['(-) Estrutura de gestão, vendas e administrativo (R$)','mil','neg'],['(-) Equipe de implantação e suporte (R$)','mil','neg'],['(-) Pró-labore dos sócios (R$)','mil','neg'],['(-) Outros custos fixos (R$)','mil','neg'],['(-) Fundo de variável dos sócios (R$)','mil','neg'],['Resultado após variável (R$)','mil','hl'],['Margem operacional sobre a receita total','pct']];
+  const lbl=k=>k.replace(/^\(-\) /,'').replace(' (R$)','').replace(', total','').replace('Estrutura de gestão, vendas e administrativo','Gestão, vendas e adm.').replace('Equipe de implantação e suporte','Equipe de implantação').replace('Margem operacional sobre a receita total','Margem operacional');
+  const f={int:v=>nf(v),brl:v=>brl(v),mil:v=>v===0?'R$ 0':milP(v),pct:v=>pct(v)};
+  $('#proj-table').innerHTML=`<tr><th></th>${YRS.map(y=>`<th class="n">${y}</th>`).join('')}</tr>`+rows.map(([k,t,c])=>`<tr class="${c||''}"><td>${lbl(k)}</td>${L(scn,k).map(v=>`<td class="n">${f[t](v)}</td>`).join('')}</tr>`).join('');
+}
+$('#proj-scn').addEventListener('click',e=>{const b=e.target.closest('button');if(b){scn=b.dataset.s;drawProj()}});drawProj();
+
+// CENARIOS
+const IND={'Resultado após variável (R$)':'Resultado','Receita total (R$)':'Receita','Clientes no fim do ano':'Clientes'};let ind='Resultado após variável (R$)';
+const COL={pess:'#7A93A0',cons:'#16394B',otim:'#B08A55'};
+function drawCmp(){
+  $('#cmp-ind').innerHTML=Object.entries(IND).map(([k,v])=>`<button class="${k===ind?'on':''}" data-i="${esc(k)}">${v}</button>`).join('');
+  const isCli=ind.startsWith('Clientes');
+  $('#cmp-chart').innerHTML=svgBars(YRS,Object.keys(SC).map(s=>({name:SC[s],color:COL[s],vals:L(s,ind)})),{fmt:isCli?v=>nf(v)+' clientes':mil,labelAll:true,short:isCli?v=>nf(v):v=>Math.abs(v)>=1e6?nf(v/1e6,1)+' mi':nf(v/1e3,0)+' mil'});
+  const ks=['Clientes no fim do ano','Receita total (R$)','Resultado após variável (R$)','Margem operacional sobre a receita total'];
+  $('#cmp-table').innerHTML=`<tr><th>Cenário</th><th>Indicador</th>${YRS.map(y=>`<th class="n">${y}</th>`).join('')}</tr>`+Object.keys(SC).map(s=>ks.map((k,i)=>`<tr class="${s==='cons'?'hl':''}" style="${s==='cons'?'':'font-weight:400'}"><td>${i?'':SC[s]}</td><td>${k.replace(' (R$)','').replace(' sobre a receita total','').replace('Resultado após variável','Resultado')}</td>${L(s,k).map(v=>`<td class="n">${k.startsWith('Clientes')?nf(v):k.startsWith('Margem')?pct(v):milP(v)}</td>`).join('')}</tr>`).join('')).join('');
+}
+$('#cmp-ind').addEventListener('click',e=>{const b=e.target.closest('button');if(b){ind=b.dataset.i;drawCmp()}});drawCmp();
+
+// PREMISSAS
+const fp=(k,v)=>v==null?'':(typeof v==='number'?(v<1&&!k.includes('(R$)')?pct(v,v*100%1?1:0):k.includes('(R$)')?brl(v,v%1?2:0):nf(v)):esc(v));
+$('#prem-table').innerHTML=`<tr><th>Premissa</th><th class="n">Pessimista</th><th class="n">Conservador</th><th class="n">Otimista</th></tr>`+D.prem.map(p=>`<tr><td>${esc(p.k)}<span class="why">${esc(p.obs)}</span></td><td class="n">${fp(p.k,p.p)}</td><td class="n" style="font-weight:700">${fp(p.k,p.c)}</td><td class="n">${fp(p.k,p.o)}</td></tr>`).join('');
+$('#premc-table').innerHTML=D.premc.map(p=>`<tr><td>${esc(p.k)}<span class="why">${esc(p.obs)}</span></td><td class="n">${fp(p.k,p.v)}</td></tr>`).join('');
+$('#regua-table').innerHTML=`<tr><th>Faixa</th><th class="n">Receita mensal a partir de</th><th class="n">Por sócio</th></tr>`+D.regua.map(r=>`<tr><td>${esc(r.f)}</td><td class="n">${brl(r.min)}</td><td class="n">${brl(r.pl)}</td></tr>`).join('');
+
+// CLINICAS
+const ck=[['Clínicas no fim do ano','int'],['Mensalidade média (R$)','brl'],['Receita total (R$)','mil'],['(-) Investimento fixo do segmento (R$)','mil'],['Contribuição do segmento, antes de pró-labore e estrutura central (R$)','mil'],['Margem sobre a receita','pct']];
+$('#clin-table').innerHTML=`<tr><th>Cenário</th><th>Indicador</th><th class="n">Ano 2</th><th class="n">Ano 3</th><th class="n">Ano 4</th></tr>`+Object.keys(SC).map(s=>ck.map(([k,t],i)=>`<tr class="${s==='cons'?'hl':''}" style="${s==='cons'?'':'font-weight:400'}"><td>${i?'':SC[s]}</td><td>${k.replace(/^\(-\) /,'').replace(' (R$)','').replace(', antes de pró-labore e estrutura central','')}</td>${D.clin[s][k].map(v=>`<td class="n">${t==='int'?nf(v):t==='brl'?brl(v):t==='pct'?pct(v):milP(v)}</td>`).join('')}</tr>`).join('')).join('');
+
+// NAVEGAÇÃO
+const pages=[...document.querySelectorAll('section.page')];
+$('#nav-list').innerHTML=pages.map((p,i)=>`<li><a href="#${p.id}" data-i="${i}"><b>${String(i).padStart(2,'0')}</b>${p.dataset.nav}</a></li>`).join('');
+const links=[...document.querySelectorAll('#nav-list a')];
+let curP=0;
+const io=new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting){curP=pages.indexOf(e.target);links.forEach((l,i)=>l.classList.toggle('on',i===curP))}})},{rootMargin:'-45% 0px -50% 0px'});
+pages.forEach(p=>io.observe(p));
+links.forEach(l=>l.addEventListener('click',()=>document.body.classList.remove('menu')));
+$('#menu-btn').onclick=()=>document.body.classList.toggle('menu');
+const goP=i=>{i=Math.max(0,Math.min(pages.length-1,i));pages[i].scrollIntoView({behavior:'smooth'});history.replaceState(null,'','#'+pages[i].id)};
+addEventListener('keydown',e=>{
+  if(e.metaKey||e.ctrlKey||e.altKey||/input|textarea/i.test(e.target.tagName))return;
+  if(['ArrowDown','ArrowRight','PageDown'].includes(e.key)){e.preventDefault();goP(curP+1)}
+  else if(['ArrowUp','ArrowLeft','PageUp'].includes(e.key)){e.preventDefault();goP(curP-1)}
+  else if(e.key==='Home'){e.preventDefault();goP(0)}
+  else if(e.key==='End'){e.preventDefault();goP(pages.length-1)}
+  else if(e.key==='f'||e.key==='F'){document.fullscreenElement?document.exitFullscreen():document.documentElement.requestFullscreen().catch(()=>{})}
+});
+</script>
+</body>
+</html>

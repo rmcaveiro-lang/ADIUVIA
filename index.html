@@ -1,0 +1,749 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Adiuvia · Business Plan 2026-2027</title>
+<meta name="description" content="Plano de negócio da Adiuvia para 2026-2027: mercado, oferta, papéis dos sócios, orçamento e projeções.">
+<meta name="robots" content="noindex, nofollow">
+<link rel="icon" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9Ii0zMCAtMzAgODgwIDcyNCIgd2lkdGg9IjE3NjAiIGhlaWdodD0iMTQ0OCI+PGcgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMC4wMCwwLjAwKSBzY2FsZSgxLjAwMDAwKSIgZmlsbD0iIzg3NjIzMyI+PHBhdGggZD0iTTM2NC4wLDAuMCBMNDU2LjAsMC4wIEw3NjQuMCw2NjQuMCBMNjMyLjAsNjY0LjAgTDQxMC4wLDE4MC4wIEwxODkuMCw2NjQuMCBMNTYuMCw2NjQuMCBaIi8+PHBhdGggZD0iTTI5LjAsNDkyLjAgUTQxMC4wLDI1NC4wIDc5MS4wLDQ5Mi4wIiBmaWxsPSJub25lIiBzdHJva2U9IiM4NzYyMzMiIHN0cm9rZS13aWR0aD0iNTgiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIvPjwvZz48L3N2Zz4=">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,500&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--navy:#16394B;--gold:#876233;--gold-l:#C9A877;--cream:#F6F3EC;--ink:#0B1D27}
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{height:100%;background:var(--ink);overflow:hidden;font-family:Manrope,Arial,sans-serif;color:var(--navy)}
+#viewport{position:fixed;inset:0;display:flex;align-items:center;justify-content:center}
+#stage{position:relative;width:1920px;height:1080px;transform-origin:center center;flex:none}
+.slide{position:absolute;inset:0;width:1920px;height:1080px;overflow:hidden;opacity:0;visibility:hidden;transition:opacity .35s ease,visibility .35s;color:#16394B;font-family:Manrope,Arial,sans-serif}
+.slide.active{opacity:1;visibility:visible}
+.slide h1,.slide h2,.slide h3,.slide p{margin:0}
+.slide ul{padding-left:1.15em;list-style:disc}
+.slide ul li{margin:0 0 .25em}
+.slide ul li::marker{color:#876233}
+.slide table{border-collapse:collapse;width:100%}
+.slide th{text-align:left;font-weight:600;padding:8px 10px;border-bottom:2px solid currentColor}
+.slide td{padding:8px 10px;border-bottom:1px solid color-mix(in srgb,currentColor 16%,transparent);vertical-align:middle}
+.slide x-shape{display:block}
+.slide x-connector{position:absolute;inset:0;pointer-events:none;border:0 !important}
+.slide x-connector svg{position:absolute;inset:0;width:100%;height:100%;overflow:visible}
+/* chrome */
+#bar{position:fixed;left:0;bottom:0;height:4px;background:var(--gold-l);transition:width .35s ease;z-index:5}
+#hud{position:fixed;right:20px;bottom:16px;display:flex;gap:8px;align-items:center;z-index:6;font-size:14px;color:#D9D3C7;opacity:.25;transition:opacity .2s}
+#hud:hover,body.ui #hud{opacity:1}
+#hud button{background:rgba(22,57,75,.85);color:#F6F3EC;border:1px solid rgba(201,168,119,.5);border-radius:8px;padding:8px 12px;font:600 14px Manrope,Arial,sans-serif;cursor:pointer}
+#hud button:hover{background:#876233}
+#count{min-width:64px;text-align:center;font-variant-numeric:tabular-nums}
+#notes{position:fixed;left:0;right:0;bottom:0;max-height:34vh;overflow:auto;background:rgba(11,29,39,.96);color:#EDE6D8;border-top:2px solid var(--gold-l);padding:20px 28px 56px;font-size:18px;line-height:1.55;z-index:4;transform:translateY(100%);transition:transform .25s ease}
+#notes b{color:var(--gold-l);font-weight:600;letter-spacing:2px;text-transform:uppercase;font-size:13px;display:block;margin-bottom:6px}
+body.show-notes #notes{transform:none}
+#help{position:fixed;inset:0;display:none;align-items:center;justify-content:center;background:rgba(11,29,39,.8);z-index:10}
+#help.open{display:flex}
+#help div{background:#F6F3EC;color:#16394B;border-radius:16px;padding:32px 40px;font-size:17px;line-height:1.9;max-width:92vw}
+#help h3{font-family:'Cormorant Garamond',Georgia,serif;font-weight:500;font-size:32px;margin-bottom:8px}
+kbd{display:inline-block;min-width:28px;text-align:center;background:#16394B;color:#F6F3EC;border-radius:6px;padding:0 8px;font:600 14px Manrope,Arial,sans-serif;margin-right:8px}
+#overview{position:fixed;inset:0;overflow:auto;background:var(--ink);z-index:8;display:none;padding:32px;gap:20px;grid-template-columns:repeat(auto-fill,minmax(280px,1fr))}
+#overview.open{display:grid}
+#overview .thumb{position:relative;aspect-ratio:16/9;border-radius:8px;overflow:hidden;cursor:pointer;outline:2px solid transparent;background:#F6F3EC}
+#overview .thumb:hover,#overview .thumb.cur{outline-color:var(--gold-l)}
+#overview .thumb .slide{opacity:1;visibility:visible;transform-origin:0 0;transition:none}
+#overview .thumb span{position:absolute;left:8px;bottom:6px;background:rgba(22,57,75,.9);color:#F6F3EC;font-size:12px;padding:2px 8px;border-radius:4px;z-index:2}
+@media print{
+  @page{size:1920px 1080px;margin:0}
+  html,body{overflow:visible;height:auto;background:#fff}
+  #viewport{position:static;display:block}
+  #stage{transform:none !important;width:auto;height:auto}
+  .slide{position:relative;opacity:1;visibility:visible;page-break-after:always;break-after:page}
+  #bar,#hud,#notes,#help,#overview{display:none !important}
+}
+</style>
+</head>
+<body>
+<div id="viewport"><div id="stage">
+<section class="slide" id="cover" data-transition="fade" style="display:flex; flex-direction:column; justify-content:space-between; padding:128px; background:linear-gradient(160deg, #1b4558 0%, #16394b 45%, #0e2633 100%)">
+  <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9Ii04IC04IDUwMS43IDg4LjAiIHdpZHRoPSI0MDEzIiBoZWlnaHQ9IjcwNCI+PGcgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMC4wMCw1LjA0KSBzY2FsZSgwLjEwMDg0KSIgZmlsbD0iI0IwOEE1NSI+PHBhdGggZD0iTTM2NC4wLDAuMCBMNDU2LjAsMC4wIEw3NjQuMCw2NjQuMCBMNjMyLjAsNjY0LjAgTDQxMC4wLDE4MC4wIEwxODkuMCw2NjQuMCBMNTYuMCw2NjQuMCBaIi8+PHBhdGggZD0iTTI5LjAsNDkyLjAgUTQxMC4wLDI1NC4wIDc5MS4wLDQ5Mi4wIiBmaWxsPSJub25lIiBzdHJva2U9IiNCMDhBNTUiIHN0cm9rZS13aWR0aD0iNTgiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIvPjwvZz48cGF0aCBkPSJNMTQzLjkwNjYwMjQwOTYzODU3IDczLjVRMTM3Ljg1NjYwMjQwOTYzODU1IDczLjUgMTMzLjc4MTYwMjQwOTYzODU0IDcxLjI3NVExMjkuNzA2NjAyNDA5NjM4NTUgNjkuMDUgMTI3LjYzMTYwMjQwOTYzODU2IDY1LjRRMTI1LjU1NjYwMjQwOTYzODU2IDYxLjc1IDEyNS41NTY2MDI0MDk2Mzg1NiA1Ny40UTEyNS41NTY2MDI0MDk2Mzg1NiA1My4xNSAxMjcuMTgxNjAyNDA5NjM4NTcgNTAuMDI1UTEyOC44MDY2MDI0MDk2Mzg1NyA0Ni45IDEzMS43NTY2MDI0MDk2Mzg1NiA0NC44MjVRMTM0LjcwNjYwMjQwOTYzODU1IDQyLjc1IDEzOC44MDY2MDI0MDk2Mzg1NyA0MS41NVExNDIuNjU2NjAyNDA5NjM4NTcgNDAuNSAxNDcuNDMxNjAyNDA5NjM4NTcgMzkuNzI0OTk5OTk5OTk5OTk0UTE1Mi4yMDY2MDI0MDk2Mzg1NSAzOC45NDk5OTk5OTk5OTk5OTYgMTU3LjEwNjYwMjQwOTYzODU1IDM4LjNRMTYyLjAwNjYwMjQwOTYzODU2IDM3LjY1IDE2Ni4yNTY2MDI0MDk2Mzg1NiAzNy4wNUwxNjMuMDU2NjAyNDA5NjM4NTcgMzguOVExNjMuMjA2NjAyNDA5NjM4NTUgMzEuNjk5OTk5OTk5OTk5OTk2IDE2MC4xODE2MDI0MDk2Mzg1NyAyOC4yNDk5OTk5OTk5OTk5OTZRMTU3LjE1NjYwMjQwOTYzODU3IDI0Ljc5OTk5OTk5OTk5OTk5NyAxNDkuNzU2NjAyNDA5NjM4NTYgMjQuNzk5OTk5OTk5OTk5OTk3UTE0NC44NTY2MDI0MDk2Mzg1NSAyNC43OTk5OTk5OTk5OTk5OTcgMTQxLjE4MTYwMjQwOTYzODU3IDI3LjAyNVExMzcuNTA2NjAyNDA5NjM4NTYgMjkuMjUgMTM2LjAwNjYwMjQwOTYzODU2IDM0LjI1TDEyNy41NTY2MDI0MDk2Mzg1NiAzMS42OTk5OTk5OTk5OTk5OTZRMTI5LjUwNjYwMjQwOTYzODU2IDI0LjU5OTk5OTk5OTk5OTk5NCAxMzUuMTA2NjAyNDA5NjM4NTUgMjAuNTQ5OTk5OTk5OTk5OTk3UTE0MC43MDY2MDI0MDk2Mzg1NSAxNi41IDE0OS44NTY2MDI0MDk2Mzg1NSAxNi41UTE1Ny4yMDY2MDI0MDk2Mzg1NSAxNi41IDE2Mi40ODE2MDI0MDk2Mzg1NSAxOS4xMjVRMTY3Ljc1NjYwMjQwOTYzODU2IDIxLjc1IDE3MC4wNTY2MDI0MDk2Mzg1NyAyNy4wNDk5OTk5OTk5OTk5OTdRMTcxLjIwNjYwMjQwOTYzODU1IDI5LjU0OTk5OTk5OTk5OTk5NyAxNzEuNTA2NjAyNDA5NjM4NTYgMzIuNDc0OTk5OTk5OTk5OTk0UTE3MS44MDY2MDI0MDk2Mzg1NyAzNS40IDE3MS44MDY2MDI0MDk2Mzg1NyAzOC42VjcyLjBIMTYzLjkwNjYwMjQwOTYzODU3VjU5LjA1TDE2NS43NTY2MDI0MDk2Mzg1NiA2MC4yNVExNjIuNzA2NjAyNDA5NjM4NTUgNjYuOCAxNTcuMjMxNjAyNDA5NjM4NTUgNzAuMTVRMTUxLjc1NjYwMjQwOTYzODU2IDczLjUgMTQzLjkwNjYwMjQwOTYzODU3IDczLjVaTTE0NS4yNTY2MDI0MDk2Mzg1NiA2Ni4wNVExNTAuMDU2NjAyNDA5NjM4NTcgNjYuMDUgMTUzLjU4MTYwMjQwOTYzODU1IDY0LjMyNVExNTcuMTA2NjAyNDA5NjM4NTUgNjIuNiAxNTkuMjU2NjAyNDA5NjM4NTYgNTkuNzc1MDAwMDAwMDAwMDA2UTE2MS40MDY2MDI0MDk2Mzg1NyA1Ni45NSAxNjIuMDU2NjAyNDA5NjM4NTcgNTMuNTk5OTk5OTk5OTk5OTk0UTE2Mi44MDY2MDI0MDk2Mzg1NyA1MS4wOTk5OTk5OTk5OTk5OTQgMTYyLjg4MTYwMjQwOTYzODU2IDQ4LjAyNVExNjIuOTU2NjAyNDA5NjM4NTUgNDQuOTUgMTYyLjk1NjYwMjQwOTYzODU1IDQzLjNMMTY2LjA1NjYwMjQwOTYzODU3IDQ0LjY1UTE2MS43MDY2MDI0MDk2Mzg1NSA0NS4yNSAxNTcuNTA2NjAyNDA5NjM4NTYgNDUuOFExNTMuMzA2NjAyNDA5NjM4NTcgNDYuMzQ5OTk5OTk5OTk5OTk0IDE0OS41NTY2MDI0MDk2Mzg1NyA0Ni45NzQ5OTk5OTk5OTk5OTRRMTQ1LjgwNjYwMjQwOTYzODU3IDQ3LjU5OTk5OTk5OTk5OTk5NCAxNDIuODA2NjAyNDA5NjM4NTcgNDguNDVRMTQwLjYwNjYwMjQwOTYzODU1IDQ5LjE1IDEzOC42ODE2MDI0MDk2Mzg1NyA1MC4yNVExMzYuNzU2NjAyNDA5NjM4NTYgNTEuMzQ5OTk5OTk5OTk5OTk0IDEzNS41ODE2MDI0MDk2Mzg1NSA1My4wNzQ5OTk5OTk5OTk5OTZRMTM0LjQwNjYwMjQwOTYzODU3IDU0LjggMTM0LjQwNjYwMjQwOTYzODU3IDU3LjM1UTEzNC40MDY2MDI0MDk2Mzg1NyA1OS41NSAxMzUuNTMxNjAyNDA5NjM4NTcgNjEuNTVRMTM2LjY1NjYwMjQwOTYzODU3IDYzLjU1IDEzOS4wMzE2MDI0MDk2Mzg1NyA2NC44UTE0MS40MDY2MDI0MDk2Mzg1NyA2Ni4wNSAxNDUuMjU2NjAyNDA5NjM4NTYgNjYuMDVaIiBmaWxsPSIjRjZGM0VDIi8+PHBhdGggZD0iTTIwNi4wMDY2MDI0MDk2Mzg1NiA3My41UTE5OC40NTY2MDI0MDk2Mzg1OCA3My41IDE5My4wNTY2MDI0MDk2Mzg1NyA2OS43MjVRMTg3LjY1NjYwMjQwOTYzODU3IDY1Ljk1IDE4NC43MzE2MDI0MDk2Mzg1OCA1OS41UTE4MS44MDY2MDI0MDk2Mzg1NyA1My4wNSAxODEuODA2NjAyNDA5NjM4NTcgNDQuOTVRMTgxLjgwNjYwMjQwOTYzODU3IDM2Ljg1IDE4NC43MzE2MDI0MDk2Mzg1OCAzMC40UTE4Ny42NTY2MDI0MDk2Mzg1NyAyMy45NDk5OTk5OTk5OTk5OTYgMTkzLjA1NjYwMjQwOTYzODU3IDIwLjIyNDk5OTk5OTk5OTk5OFExOTguNDU2NjAyNDA5NjM4NTggMTYuNSAyMDUuOTU2NjAyNDA5NjM4NTggMTYuNVEyMTMuNjA2NjAyNDA5NjM4NTggMTYuNSAyMTguODA2NjAyNDA5NjM4NTcgMjAuMlEyMjQuMDA2NjAyNDA5NjM4NTYgMjMuOSAyMjYuNjgxNjAyNDA5NjM4NTcgMzAuMzQ5OTk5OTk5OTk5OTk4UTIyOS4zNTY2MDI0MDk2Mzg1OCAzNi44IDIyOS4zNTY2MDI0MDk2Mzg1OCA0NC45NVEyMjkuMzU2NjAyNDA5NjM4NTggNTMuMCAyMjYuNjgxNjAyNDA5NjM4NTcgNTkuNDc1UTIyNC4wMDY2MDI0MDk2Mzg1NiA2NS45NSAyMTguODA2NjAyNDA5NjM4NTcgNjkuNzI1UTIxMy42MDY2MDI0MDk2Mzg1OCA3My41IDIwNi4wMDY2MDI0MDk2Mzg1NiA3My41Wk0yMDcuMTA2NjAyNDA5NjM4NTggNjUuMzVRMjEyLjU1NjYwMjQwOTYzODU3IDY1LjM1IDIxNi4wNTY2MDI0MDk2Mzg1NyA2Mi43MjQ5OTk5OTk5OTk5OTRRMjE5LjU1NjYwMjQwOTYzODU3IDYwLjEgMjIxLjIzMTYwMjQwOTYzODU4IDU1LjQ3NDk5OTk5OTk5OTk5NFEyMjIuOTA2NjAyNDA5NjM4NTcgNTAuODQ5OTk5OTk5OTk5OTk0IDIyMi45MDY2MDI0MDk2Mzg1NyA0NC45NVEyMjIuOTA2NjAyNDA5NjM4NTcgMzguOTQ5OTk5OTk5OTk5OTk2IDIyMS4yMzE2MDI0MDk2Mzg1OCAzNC4zNzVRMjE5LjU1NjYwMjQwOTYzODU3IDI5Ljc5OTk5OTk5OTk5OTk5NyAyMTYuMTA2NjAyNDA5NjM4NTggMjcuMjI0OTk5OTk5OTk5OTk4UTIxMi42NTY2MDI0MDk2Mzg1NyAyNC42NSAyMDcuMzU2NjAyNDA5NjM4NTggMjQuNjVRMjAxLjg1NjYwMjQwOTYzODU4IDI0LjY1IDE5OC4yODE2MDI0MDk2Mzg2IDI3LjM0OTk5OTk5OTk5OTk5OFExOTQuNzA2NjAyNDA5NjM4NTggMzAuMDQ5OTk5OTk5OTk5OTk3IDE5Mi45ODE2MDI0MDk2Mzg1OCAzNC42NVExOTEuMjU2NjAyNDA5NjM4NTYgMzkuMjUgMTkxLjI1NjYwMjQwOTYzODU2IDQ0Ljk1UTE5MS4yNTY2MDI0MDk2Mzg1NiA1MC43IDE5My4wMDY2MDI0MDk2Mzg1NiA1NS4zMjVRMTk0Ljc1NjYwMjQwOTYzODU2IDU5Ljk1IDE5OC4yODE2MDI0MDk2Mzg1NyA2Mi42NVEyMDEuODA2NjAyNDA5NjM4NTcgNjUuMzUgMjA3LjEwNjYwMjQwOTYzODU4IDY1LjM1Wk0yMjIuOTA2NjAyNDA5NjM4NTcgNzIuMFYzMi4yNUgyMjEuOTA2NjAyNDA5NjM4NTdWMC4wSDIzMC44NTY2MDI0MDk2Mzg1OFY3Mi4wWiIgZmlsbD0iI0Y2RjNFQyIvPjxwYXRoIGQ9Ik0yNDUuODU2NjAyNDA5NjM4NTggOC40NDk5OTk5OTk5OTk5OTZWLTAuNzVIMjU0Ljc1NjYwMjQwOTYzODZWOC40NDk5OTk5OTk5OTk5OTZaTTI0NS44NTY2MDI0MDk2Mzg1OCA3Mi4wVjE4LjBIMjU0Ljc1NjYwMjQwOTYzODZWNzIuMFoiIGZpbGw9IiNGNkYzRUMiLz48cGF0aCBkPSJNMjkwLjI1NjYwMjQwOTYzODU2IDczLjRRMjg1LjA1NjYwMjQwOTYzODYgNzMuNCAyODEuMzMxNjAyNDA5NjM4NTUgNzEuNzVRMjc3LjYwNjYwMjQwOTYzODYgNzAuMSAyNzUuMTU2NjAyNDA5NjM4NiA2Ny4zNVEyNzIuNzA2NjAyNDA5NjM4NTUgNjQuNiAyNzEuMzA2NjAyNDA5NjM4NiA2MS4yNVEyNjkuOTA2NjAyNDA5NjM4NTQgNTcuOSAyNjkuMzMxNjAyNDA5NjM4NTUgNTQuNFEyNjguNzU2NjAyNDA5NjM4NTYgNTAuOSAyNjguNzU2NjAyNDA5NjM4NTYgNDcuODQ5OTk5OTk5OTk5OTk0VjE4LjBIMjc3Ljc1NjYwMjQwOTYzODU2VjQ1LjA1UTI3Ny43NTY2MDI0MDk2Mzg1NiA0OC44NDk5OTk5OTk5OTk5OTQgMjc4LjQ1NjYwMjQwOTYzODU1IDUyLjRRMjc5LjE1NjYwMjQwOTYzODU0IDU1Ljk1IDI4MC44MzE2MDI0MDk2Mzg1NSA1OC44UTI4Mi41MDY2MDI0MDk2Mzg1NiA2MS42NSAyODUuMzMxNjAyNDA5NjM4NTUgNjMuM1EyODguMTU2NjAyNDA5NjM4NTQgNjQuOTUgMjkyLjQwNjYwMjQwOTYzODU0IDY0Ljk1UTI5NS43NTY2MDI0MDk2Mzg1NiA2NC45NSAyOTguNTA2NjAyNDA5NjM4NTYgNjMuOFEzMDEuMjU2NjAyNDA5NjM4NTYgNjIuNjUgMzAzLjIwNjYwMjQwOTYzODU1IDYwLjM3NVEzMDUuMTU2NjAyNDA5NjM4NiA1OC4xIDMwNi4yMDY2MDI0MDk2Mzg1NSA1NC41OTk5OTk5OTk5OTk5OTRRMzA3LjI1NjYwMjQwOTYzODU2IDUxLjA5OTk5OTk5OTk5OTk5NCAzMDcuMjU2NjAyNDA5NjM4NTYgNDYuNDVMMzEzLjEwNjYwMjQwOTYzODYgNDguMjVRMzEzLjEwNjYwMjQwOTYzODYgNTYuMDUgMzEwLjI4MTYwMjQwOTYzODYgNjEuNjk5OTk5OTk5OTk5OTk2UTMwNy40NTY2MDI0MDk2Mzg1NSA2Ny4zNSAzMDIuMzMxNjAyNDA5NjM4NTUgNzAuMzc1UTI5Ny4yMDY2MDI0MDk2Mzg1NSA3My40IDI5MC4yNTY2MDI0MDk2Mzg1NiA3My40Wk0zMDguMjU2NjAyNDA5NjM4NTYgNzIuMFY1Ny41NUgzMDcuMjU2NjAyNDA5NjM4NTZWMTguMEgzMTYuMjA2NjAyNDA5NjM4NTVWNzIuMFoiIGZpbGw9IiNGNkYzRUMiLz48cGF0aCBkPSJNMzQ0LjgwNjYwMjQwOTYzODYgNzIuMCAzMjUuMjA2NjAyNDA5NjM4NTUgMTguMEgzMzQuMjA2NjAyNDA5NjM4NTVMMzQ5LjM1NjYwMjQwOTYzODUgNjAuNjVMMzY0LjQ1NjYwMjQwOTYzODU1IDE4LjBIMzczLjUwNjYwMjQwOTYzODU2TDM1My45MDY2MDI0MDk2Mzg1NCA3Mi4wWiIgZmlsbD0iI0Y2RjNFQyIvPjxwYXRoIGQ9Ik0zODMuNTA2NjAyNDA5NjM4NTYgOC40NDk5OTk5OTk5OTk5OTZWLTAuNzVIMzkyLjQwNjYwMjQwOTYzODU0VjguNDQ5OTk5OTk5OTk5OTk2Wk0zODMuNTA2NjAyNDA5NjM4NTYgNzIuMFYxOC4wSDM5Mi40MDY2MDI0MDk2Mzg1NFY3Mi4wWiIgZmlsbD0iI0Y2RjNFQyIvPjxwYXRoIGQ9Ik00MjIuNzU2NjAyNDA5NjM4NTYgNzMuNVE0MTYuNzA2NjAyNDA5NjM4NTUgNzMuNSA0MTIuNjMxNjAyNDA5NjM4NSA3MS4yNzVRNDA4LjU1NjYwMjQwOTYzODUgNjkuMDUgNDA2LjQ4MTYwMjQwOTYzODUgNjUuNFE0MDQuNDA2NjAyNDA5NjM4NTQgNjEuNzUgNDA0LjQwNjYwMjQwOTYzODU0IDU3LjRRNDA0LjQwNjYwMjQwOTYzODU0IDUzLjE1IDQwNi4wMzE2MDI0MDk2Mzg1NCA1MC4wMjVRNDA3LjY1NjYwMjQwOTYzODU0IDQ2LjkgNDEwLjYwNjYwMjQwOTYzODUgNDQuODI1UTQxMy41NTY2MDI0MDk2Mzg1IDQyLjc1IDQxNy42NTY2MDI0MDk2Mzg1NCA0MS41NVE0MjEuNTA2NjAyNDA5NjM4NTYgNDAuNSA0MjYuMjgxNjAyNDA5NjM4NTQgMzkuNzI0OTk5OTk5OTk5OTk0UTQzMS4wNTY2MDI0MDk2Mzg1IDM4Ljk0OTk5OTk5OTk5OTk5NiA0MzUuOTU2NjAyNDA5NjM4NTUgMzguM1E0NDAuODU2NjAyNDA5NjM4NSAzNy42NSA0NDUuMTA2NjAyNDA5NjM4NSAzNy4wNUw0NDEuOTA2NjAyNDA5NjM4NTQgMzguOVE0NDIuMDU2NjAyNDA5NjM4NiAzMS42OTk5OTk5OTk5OTk5OTYgNDM5LjAzMTYwMjQwOTYzODYgMjguMjQ5OTk5OTk5OTk5OTk2UTQzNi4wMDY2MDI0MDk2Mzg1NiAyNC43OTk5OTk5OTk5OTk5OTcgNDI4LjYwNjYwMjQwOTYzODUgMjQuNzk5OTk5OTk5OTk5OTk3UTQyMy43MDY2MDI0MDk2Mzg1NSAyNC43OTk5OTk5OTk5OTk5OTcgNDIwLjAzMTYwMjQwOTYzODU0IDI3LjAyNVE0MTYuMzU2NjAyNDA5NjM4NSAyOS4yNSA0MTQuODU2NjAyNDA5NjM4NSAzNC4yNUw0MDYuNDA2NjAyNDA5NjM4NTQgMzEuNjk5OTk5OTk5OTk5OTk2UTQwOC4zNTY2MDI0MDk2Mzg1IDI0LjU5OTk5OTk5OTk5OTk5NCA0MTMuOTU2NjAyNDA5NjM4NTUgMjAuNTQ5OTk5OTk5OTk5OTk3UTQxOS41NTY2MDI0MDk2Mzg1IDE2LjUgNDI4LjcwNjYwMjQwOTYzODU1IDE2LjVRNDM2LjA1NjYwMjQwOTYzODUgMTYuNSA0NDEuMzMxNjAyNDA5NjM4NTUgMTkuMTI1UTQ0Ni42MDY2MDI0MDk2Mzg1IDIxLjc1IDQ0OC45MDY2MDI0MDk2Mzg1NCAyNy4wNDk5OTk5OTk5OTk5OTdRNDUwLjA1NjYwMjQwOTYzODYgMjkuNTQ5OTk5OTk5OTk5OTk3IDQ1MC4zNTY2MDI0MDk2Mzg1IDMyLjQ3NDk5OTk5OTk5OTk5NFE0NTAuNjU2NjAyNDA5NjM4NTQgMzUuNCA0NTAuNjU2NjAyNDA5NjM4NTQgMzguNlY3Mi4wSDQ0Mi43NTY2MDI0MDk2Mzg1NlY1OS4wNUw0NDQuNjA2NjAyNDA5NjM4NSA2MC4yNVE0NDEuNTU2NjAyNDA5NjM4NiA2Ni44IDQzNi4wODE2MDI0MDk2Mzg1NSA3MC4xNVE0MzAuNjA2NjAyNDA5NjM4NSA3My41IDQyMi43NTY2MDI0MDk2Mzg1NiA3My41Wk00MjQuMTA2NjAyNDA5NjM4NSA2Ni4wNVE0MjguOTA2NjAyNDA5NjM4NTQgNjYuMDUgNDMyLjQzMTYwMjQwOTYzODYgNjQuMzI1UTQzNS45NTY2MDI0MDk2Mzg1NSA2Mi42IDQzOC4xMDY2MDI0MDk2Mzg1IDU5Ljc3NTAwMDAwMDAwMDAwNlE0NDAuMjU2NjAyNDA5NjM4NTYgNTYuOTUgNDQwLjkwNjYwMjQwOTYzODU0IDUzLjU5OTk5OTk5OTk5OTk5NFE0NDEuNjU2NjAyNDA5NjM4NTQgNTEuMDk5OTk5OTk5OTk5OTk0IDQ0MS43MzE2MDI0MDk2Mzg1IDQ4LjAyNVE0NDEuODA2NjAyNDA5NjM4NiA0NC45NSA0NDEuODA2NjAyNDA5NjM4NiA0My4zTDQ0NC45MDY2MDI0MDk2Mzg1NCA0NC42NVE0NDAuNTU2NjAyNDA5NjM4NiA0NS4yNSA0MzYuMzU2NjAyNDA5NjM4NSA0NS44UTQzMi4xNTY2MDI0MDk2Mzg1NCA0Ni4zNDk5OTk5OTk5OTk5OTQgNDI4LjQwNjYwMjQwOTYzODU0IDQ2Ljk3NDk5OTk5OTk5OTk5NFE0MjQuNjU2NjAyNDA5NjM4NTQgNDcuNTk5OTk5OTk5OTk5OTk0IDQyMS42NTY2MDI0MDk2Mzg1NCA0OC40NVE0MTkuNDU2NjAyNDA5NjM4NTUgNDkuMTUgNDE3LjUzMTYwMjQwOTYzODU0IDUwLjI1UTQxNS42MDY2MDI0MDk2Mzg1IDUxLjM0OTk5OTk5OTk5OTk5NCA0MTQuNDMxNjAyNDA5NjM4NiA1My4wNzQ5OTk5OTk5OTk5OTZRNDEzLjI1NjYwMjQwOTYzODU2IDU0LjggNDEzLjI1NjYwMjQwOTYzODU2IDU3LjM1UTQxMy4yNTY2MDI0MDk2Mzg1NiA1OS41NSA0MTQuMzgxNjAyNDA5NjM4NTYgNjEuNTVRNDE1LjUwNjYwMjQwOTYzODU2IDYzLjU1IDQxNy44ODE2MDI0MDk2Mzg1NiA2NC44UTQyMC4yNTY2MDI0MDk2Mzg1NiA2Ni4wNSA0MjQuMTA2NjAyNDA5NjM4NSA2Ni4wNVoiIGZpbGw9IiNGNkYzRUMiLz48cGF0aCBkPSJNNDY3LjI1NjYwMjQwOTYzODU2IDcyLjBWNjIuMkg0NzcuMDU2NjAyNDA5NjM4NVY3Mi4wWiIgZmlsbD0iI0IwOEE1NSIvPjwvc3ZnPg==" alt="Logo Adiuvia" style="width:400px; height:70px; object-fit:contain">
+  <div style="display:flex; flex-direction:column; gap:32px">
+    <p style="font-family:Manrope, Arial, sans-serif; font-size:24px; font-weight:600; letter-spacing:4px; text-transform:uppercase; color:#c9a877">Business Plan 2026-2027 · Reunião de sócios</p>
+    <h1 style="max-width:1500px; font-family:'Cormorant Garamond', Georgia, serif; font-size:112px; font-weight:500; line-height:1.08; color:#f6f3ec">Da primeira casa atendida a <span style="color:#c9a877">150 clientes em 12 meses.</span></h1>
+  </div>
+  <div style="display:flex; flex-direction:row; align-items:end; justify-content:space-between">
+    <p style="font-family:Manrope, Arial, sans-serif; font-size:28px; color:#d9d3c7">Marco · Diego · Rafael</p>
+    <p style="font-family:Manrope, Arial, sans-serif; font-size:28px; color:#d9d3c7">29 de outubro de 2026</p>
+  </div>
+</section>
+<section class="slide" id="roteiro" style="background:#F6F3EC;color:#16394B;font-family:'Manrope', Arial, sans-serif;padding:128px 128px 160px;display:flex;flex-direction:column;gap:64px">
+<div style="display:flex;flex-direction:column;gap:16px">
+<p style="font-size:24px;letter-spacing:4px;text-transform:uppercase;color:#876233">Roteiro</p>
+<h2 style="font-family:'Cormorant Garamond', Georgia, serif;font-size:72px;font-weight:500;line-height:1.15">Nove blocos, oito decisões no fim.</h2>
+</div>
+<div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:24px 48px">
+<div style="display:flex;flex-direction:column;gap:8px;border-top:1px solid #C7CFD2;padding:24px 0 0 0"><p style="font-size:24px;color:#876233">01 /</p><p style="font-size:32px;font-weight:500">Mercado e concorrência</p></div>
+<div style="display:flex;flex-direction:column;gap:8px;border-top:1px solid #C7CFD2;padding:24px 0 0 0"><p style="font-size:24px;color:#876233">02 /</p><p style="font-size:32px;font-weight:500">Nova oferta e preços</p></div>
+<div style="display:flex;flex-direction:column;gap:8px;border-top:1px solid #C7CFD2;padding:24px 0 0 0"><p style="font-size:24px;color:#876233">03 /</p><p style="font-size:32px;font-weight:500">Charllu, o primeiro case</p></div>
+<div style="display:flex;flex-direction:column;gap:8px;border-top:1px solid #C7CFD2;padding:24px 0 0 0"><p style="font-size:24px;color:#876233">04 /</p><p style="font-size:32px;font-weight:500">Objetivos de 12 e 36 meses</p></div>
+<div style="display:flex;flex-direction:column;gap:8px;border-top:1px solid #C7CFD2;padding:24px 0 0 0"><p style="font-size:24px;color:#876233">05 /</p><p style="font-size:32px;font-weight:500">Papel de cada sócio</p></div>
+<div style="display:flex;flex-direction:column;gap:8px;border-top:1px solid #C7CFD2;padding:24px 0 0 0"><p style="font-size:24px;color:#876233">06 /</p><p style="font-size:32px;font-weight:500">Ganhos dos sócios</p></div>
+<div style="display:flex;flex-direction:column;gap:8px;border-top:1px solid #C7CFD2;padding:24px 0 0 0"><p style="font-size:24px;color:#876233">07 /</p><p style="font-size:32px;font-weight:500">Execução em 90 dias</p></div>
+<div style="display:flex;flex-direction:column;gap:8px;border-top:1px solid #C7CFD2;padding:24px 0 0 0"><p style="font-size:24px;color:#876233">08 /</p><p style="font-size:32px;font-weight:500">Orçamento e projeções</p></div>
+<div style="display:flex;flex-direction:column;gap:8px;border-top:1px solid #C7CFD2;padding:24px 0 0 0"><p style="font-size:24px;color:#876233">09 /</p><p style="font-size:32px;font-weight:500">Riscos, decisões e expansão</p></div>
+</div>
+<p style="position:absolute;left:128px;bottom:64px;width:1664px;font-size:24px;color:#6B7A82">adiuvia. · Business Plan 2026-2027</p>
+<img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9Ii0zMCAtMzAgODgwIDcyNCIgd2lkdGg9IjE3NjAiIGhlaWdodD0iMTQ0OCI+PGcgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMC4wMCwwLjAwKSBzY2FsZSgxLjAwMDAwKSIgZmlsbD0iIzg3NjIzMyI+PHBhdGggZD0iTTM2NC4wLDAuMCBMNDU2LjAsMC4wIEw3NjQuMCw2NjQuMCBMNjMyLjAsNjY0LjAgTDQxMC4wLDE4MC4wIEwxODkuMCw2NjQuMCBMNTYuMCw2NjQuMCBaIi8+PHBhdGggZD0iTTI5LjAsNDkyLjAgUTQxMC4wLDI1NC4wIDc5MS4wLDQ5Mi4wIiBmaWxsPSJub25lIiBzdHJva2U9IiM4NzYyMzMiIHN0cm9rZS13aWR0aD0iNTgiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIvPjwvZz48L3N2Zz4=" alt="Símbolo Adiuvia" style="position:absolute;right:128px;top:52px;width:52px;height:43px;object-fit:contain">
+</section>
+<section class="slide" id="tese" data-transition="fade" style="background:#16394B;color:#F6F3EC;font-family:'Manrope', Arial, sans-serif;padding:128px;display:flex;flex-direction:column;justify-content:center;gap:48px">
+<p style="font-size:24px;letter-spacing:4px;text-transform:uppercase;color:#C9A877">A tese</p>
+<h2 style="font-family:'Cormorant Garamond', Georgia, serif;font-size:88px;font-weight:500;line-height:1.2;max-width:1560px">Temos o atendimento mais personalizado do mercado. Falta uma porta de entrada que o cliente consiga atravessar.</h2>
+<p style="font-size:32px;line-height:1.5;color:#D9D3C7;max-width:1400px">As reuniões com concorrentes confirmaram o diferencial e apontaram a barreira: a mensalidade única de R$ 1.500, sem prova de resultado.</p>
+<img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9Ii0zMCAtMzAgODgwIDcyNCIgd2lkdGg9IjE3NjAiIGhlaWdodD0iMTQ0OCI+PGcgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMC4wMCwwLjAwKSBzY2FsZSgxLjAwMDAwKSIgZmlsbD0iIzg3NjIzMyI+PHBhdGggZD0iTTM2NC4wLDAuMCBMNDU2LjAsMC4wIEw3NjQuMCw2NjQuMCBMNjMyLjAsNjY0LjAgTDQxMC4wLDE4MC4wIEwxODkuMCw2NjQuMCBMNTYuMCw2NjQuMCBaIi8+PHBhdGggZD0iTTI5LjAsNDkyLjAgUTQxMC4wLDI1NC4wIDc5MS4wLDQ5Mi4wIiBmaWxsPSJub25lIiBzdHJva2U9IiM4NzYyMzMiIHN0cm9rZS13aWR0aD0iNTgiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIvPjwvZz48L3N2Zz4=" alt="Símbolo Adiuvia" style="position:absolute;right:128px;top:52px;width:52px;height:43px;object-fit:contain">
+</section>
+<section class="slide" id="mercado" style="background:#F6F3EC;color:#16394B;font-family:'Manrope', Arial, sans-serif;padding:128px 128px 160px;display:flex;flex-direction:column;justify-content:space-between;gap:48px">
+<div style="display:flex;flex-direction:column;gap:16px">
+<p style="font-size:24px;letter-spacing:4px;text-transform:uppercase;color:#876233">01 / Mercado</p>
+<h2 style="font-family:'Cormorant Garamond', Georgia, serif;font-size:72px;font-weight:500;line-height:1.15">1,4 milhão de bares e restaurantes, 30 a 40 mil prontos para pagar.</h2>
+</div>
+<div style="display:flex;gap:24px">
+<div style="flex:1;display:flex;flex-direction:column;gap:16px;background:#FBFAF7;border:1px solid #DCE2E4;border-radius:16px;padding:40px"><p style="font-family:'Cormorant Garamond', Georgia, serif;font-weight:500;font-size:80px;color:#16394B">1,4 mi</p><p style="font-size:26px;line-height:1.4;color:#4A5A63">bares e restaurantes no Brasil</p></div>
+<div style="flex:1.5;display:flex;flex-direction:column;gap:16px;background:#16394B;border-radius:16px;padding:40px"><p style="font-family:'Cormorant Garamond', Georgia, serif;font-weight:500;font-size:80px;color:#F6F3EC">30 a 40 mil</p><p style="font-size:26px;line-height:1.4;color:#D9D3C7">com porte para a Adiuvia: R$ 0,5 a 0,7 bi por ano</p></div>
+<div style="flex:1;display:flex;flex-direction:column;gap:16px;background:#FBFAF7;border:1px solid #DCE2E4;border-radius:16px;padding:40px"><p style="font-family:'Cormorant Garamond', Georgia, serif;font-weight:500;font-size:80px;color:#16394B">97%</p><p style="font-size:26px;line-height:1.4;color:#4A5A63">dos brasileiros conectados usam WhatsApp todo dia</p></div>
+<div style="flex:1;display:flex;flex-direction:column;gap:16px;background:#FBFAF7;border:1px solid #DCE2E4;border-radius:16px;padding:40px"><p style="font-family:'Cormorant Garamond', Georgia, serif;font-weight:500;font-size:80px;color:#16394B">63%</p><p style="font-size:26px;line-height:1.4;color:#4A5A63">só aprovam IA se puderem passar para um humano</p></div>
+</div>
+<p style="font-size:28px;line-height:1.5;color:#4A5A63">O cliente quer ser atendido pelo WhatsApp, a qualquer hora, com uma pessoa por perto. É exatamente o desenho da Adiuvia.</p>
+<p style="position:absolute;left:128px;bottom:64px;width:1664px;font-size:24px;color:#6B7A82">Fontes: Abrasel, Sebrae, Opinion Box 2025, CX Trends 2026 (Octadesk e Opinion Box). Detalhes no Estudo de Mercado.</p>
+<img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9Ii0zMCAtMzAgODgwIDcyNCIgd2lkdGg9IjE3NjAiIGhlaWdodD0iMTQ0OCI+PGcgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMC4wMCwwLjAwKSBzY2FsZSgxLjAwMDAwKSIgZmlsbD0iIzg3NjIzMyI+PHBhdGggZD0iTTM2NC4wLDAuMCBMNDU2LjAsMC4wIEw3NjQuMCw2NjQuMCBMNjMyLjAsNjY0LjAgTDQxMC4wLDE4MC4wIEwxODkuMCw2NjQuMCBMNTYuMCw2NjQuMCBaIi8+PHBhdGggZD0iTTI5LjAsNDkyLjAgUTQxMC4wLDI1NC4wIDc5MS4wLDQ5Mi4wIiBmaWxsPSJub25lIiBzdHJva2U9IiM4NzYyMzMiIHN0cm9rZS13aWR0aD0iNTgiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIvPjwvZz48L3N2Zz4=" alt="Símbolo Adiuvia" style="position:absolute;right:128px;top:52px;width:52px;height:43px;object-fit:contain">
+</section>
+<section class="slide" id="concorrencia" style="background:#F6F3EC;color:#16394B;font-family:'Manrope', Arial, sans-serif;padding:128px 128px 160px;display:flex;flex-direction:column;gap:56px">
+<div style="display:flex;flex-direction:column;gap:16px">
+<p style="font-size:24px;letter-spacing:4px;text-transform:uppercase;color:#876233">01 / Concorrência</p>
+<h2 style="font-family:'Cormorant Garamond', Georgia, serif;font-size:72px;font-weight:500;line-height:1.15">A concorrência é barata e genérica. Nosso preço de entrada estava fora da curva.</h2>
+</div>
+<div style="display:flex;flex-direction:column;gap:20px">
+<div style="display:flex;align-items:center;gap:24px"><p style="width:460px;font-size:28px;color:#4A5A63">Agente gratuito do WhatsApp (Meta)</p><div style="width:6px;height:40px;background:#9FB3BD;border-radius:4px"></div><p style="font-size:28px;font-weight:500">grátis</p></div>
+<div style="display:flex;align-items:center;gap:24px"><p style="width:460px;font-size:28px;color:#4A5A63">Reservas e fila digital (Tagme)</p><div style="width:90px;height:40px;background:#9FB3BD;border-radius:4px"></div><p style="font-size:28px;font-weight:500">a partir de R$ 149</p></div>
+<div style="display:flex;align-items:center;gap:24px"><p style="width:460px;font-size:28px;color:#4A5A63">Atendente de delivery (Anota AI)</p><div style="width:180px;height:40px;background:#9FB3BD;border-radius:4px"></div><p style="font-size:28px;font-weight:500">R$ 300</p></div>
+<div style="display:flex;align-items:center;gap:24px"><p style="width:460px;font-size:28px;color:#4A5A63">Agentes de IA genéricos</p><div style="width:520px;height:40px;background:#9FB3BD;border-radius:4px"></div><p style="font-size:28px;font-weight:500">R$ 97 a R$ 867</p></div>
+<div style="display:flex;align-items:center;gap:24px"><p style="width:460px;font-size:28px;font-weight:700;color:#876233">Adiuvia Essencial (proposta)</p><div style="width:414px;height:40px;background:#876233;border-radius:4px"></div><p style="font-size:28px;font-weight:700;color:#876233">R$ 690</p></div>
+<div style="display:flex;align-items:center;gap:24px"><p style="width:460px;font-size:28px;font-weight:700">Adiuvia hoje</p><div style="width:900px;height:40px;background:#16394B;border-radius:4px"></div><p style="font-size:28px;font-weight:700">R$ 1.500</p></div>
+</div>
+<p style="font-size:28px;line-height:1.5;color:#4A5A63">Referência do cliente: um atendente CLT custa de R$ 3.800 a R$ 4.900 por mês com encargos e cobre 44 das 168 horas da semana.</p>
+<p style="position:absolute;left:128px;bottom:64px;width:1664px;font-size:24px;color:#6B7A82">Preços de entrada mensais, páginas dos fornecedores consultadas em outubro de 2026.</p>
+<img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9Ii0zMCAtMzAgODgwIDcyNCIgd2lkdGg9IjE3NjAiIGhlaWdodD0iMTQ0OCI+PGcgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMC4wMCwwLjAwKSBzY2FsZSgxLjAwMDAwKSIgZmlsbD0iIzg3NjIzMyI+PHBhdGggZD0iTTM2NC4wLDAuMCBMNDU2LjAsMC4wIEw3NjQuMCw2NjQuMCBMNjMyLjAsNjY0LjAgTDQxMC4wLDE4MC4wIEwxODkuMCw2NjQuMCBMNTYuMCw2NjQuMCBaIi8+PHBhdGggZD0iTTI5LjAsNDkyLjAgUTQxMC4wLDI1NC4wIDc5MS4wLDQ5Mi4wIiBmaWxsPSJub25lIiBzdHJva2U9IiM4NzYyMzMiIHN0cm9rZS13aWR0aD0iNTgiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIvPjwvZz48L3N2Zz4=" alt="Símbolo Adiuvia" style="position:absolute;right:128px;top:52px;width:52px;height:43px;object-fit:contain">
+</section>
+<section class="slide" id="oferta" style="display:flex; flex-direction:column; gap:48px; padding:128px 128px 160px; background:#f6f3ec">
+  <div style="display:flex; flex-direction:column; gap:16px">
+    <p style="font-family:Manrope, Arial, sans-serif; font-size:24px; letter-spacing:4px; text-transform:uppercase; color:#876233">02 / Oferta</p>
+    <h2 style="font-family:'Cormorant Garamond', Georgia, serif; font-size:72px; font-weight:500; line-height:1.15; color:#16394b">Três planos: entrar barato, subir pelo resultado.</h2>
+  </div>
+  <div style="display:flex; flex-direction:row; gap:32px">
+    <div style="display:flex; flex-direction:column; gap:20px; flex:1; padding:40px; background:#fbfaf7; border:1px solid #dce2e4; border-radius:16px">
+      <p style="font-family:Manrope, Arial, sans-serif; font-size:24px; letter-spacing:3px; text-transform:uppercase; color:#4a5a63">Essencial</p>
+      <p style="font-family:'Cormorant Garamond', Georgia, serif; font-size:72px; font-weight:500; color:#16394b">R$ 690<span style="color:#6b7a82">/mês</span></p>
+      <p style="font-family:Manrope, Arial, sans-serif; font-size:26px; color:#4a5a63">Setup R$ 990 · até 600 conversas</p>
+      <ul style="font-family:Manrope, Arial, sans-serif; font-size:26px; line-height:1.5; color:#16394b">
+        <li>Conhecimento da casa</li>
+        <li>Equipe assume a conversa</li>
+        <li>Reserva simples</li>
+      </ul>
+    </div>
+    <div style="display:flex; flex-direction:column; gap:20px; flex:1; padding:40px; background:#16394b; border-radius:16px">
+      <p style="font-family:Manrope, Arial, sans-serif; font-size:24px; letter-spacing:3px; text-transform:uppercase; color:#c9a877">Profissional · recomendado</p>
+      <p style="font-family:'Cormorant Garamond', Georgia, serif; font-size:72px; font-weight:500; color:#f6f3ec">R$ 1.390<span style="color:#c9a877">/mês</span></p>
+      <p style="font-family:Manrope, Arial, sans-serif; font-size:26px; color:#d9d3c7">Setup R$ 1.490 · até 1.500 conversas</p>
+      <ul style="font-family:Manrope, Arial, sans-serif; font-size:26px; line-height:1.5; color:#f6f3ec">
+        <li>Reservas com regras e eventos</li>
+        <li>Confirmação e lembrete</li>
+        <li>Painel de receita recuperada</li>
+      </ul>
+    </div>
+    <div style="display:flex; flex-direction:column; gap:20px; flex:1; padding:40px; background:#fbfaf7; border:1px solid #dce2e4; border-radius:16px">
+      <p style="font-family:Manrope, Arial, sans-serif; font-size:24px; letter-spacing:3px; text-transform:uppercase; color:#4a5a63">Casa</p>
+      <p style="font-family:'Cormorant Garamond', Georgia, serif; font-size:72px; font-weight:500; color:#16394b">R$ 2.490<span style="color:#6b7a82">+</span></p>
+      <p style="font-family:Manrope, Arial, sans-serif; font-size:26px; color:#4a5a63">Setup sob proposta · até 4.000 conversas</p>
+      <ul style="font-family:Manrope, Arial, sans-serif; font-size:26px; line-height:1.5; color:#16394b">
+        <li>Multiunidade (limitada a 5 unidades)</li>
+        <li>Integrações sob medida</li>
+        <li>Gerente de conta</li>
+      </ul>
+    </div>
+  </div>
+  <p style="position:absolute; bottom:64px; left:128px; width:1664px; font-family:Manrope, Arial, sans-serif; font-size:24px; color:#6b7a82">Plano anual com 2 meses grátis. Conversas acima da franquia cobradas à parte. Valores a validar com o custo real por conversa.</p>
+  <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9Ii0zMCAtMzAgODgwIDcyNCIgd2lkdGg9IjE3NjAiIGhlaWdodD0iMTQ0OCI+PGcgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMC4wMCwwLjAwKSBzY2FsZSgxLjAwMDAwKSIgZmlsbD0iIzg3NjIzMyI+PHBhdGggZD0iTTM2NC4wLDAuMCBMNDU2LjAsMC4wIEw3NjQuMCw2NjQuMCBMNjMyLjAsNjY0LjAgTDQxMC4wLDE4MC4wIEwxODkuMCw2NjQuMCBMNTYuMCw2NjQuMCBaIi8+PHBhdGggZD0iTTI5LjAsNDkyLjAgUTQxMC4wLDI1NC4wIDc5MS4wLDQ5Mi4wIiBmaWxsPSJub25lIiBzdHJva2U9IiM4NzYyMzMiIHN0cm9rZS13aWR0aD0iNTgiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIvPjwvZz48L3N2Zz4=" alt="Símbolo Adiuvia" style="position:absolute; top:52px; right:128px; width:52px; height:43px; object-fit:contain">
+</section>
+<section class="slide" id="entrada" style="background:#F6F3EC;color:#16394B;font-family:'Manrope', Arial, sans-serif;padding:128px 128px 160px;display:flex;flex-direction:column;gap:56px">
+<div style="display:flex;flex-direction:column;gap:16px">
+<p style="font-size:24px;letter-spacing:4px;text-transform:uppercase;color:#876233">02 / Portas de entrada</p>
+<h2 style="font-family:'Cormorant Garamond', Georgia, serif;font-size:72px;font-weight:500;line-height:1.15">Trocar o risco do dono por prova de resultado.</h2>
+</div>
+<div style="display:flex;gap:32px">
+<div style="flex:1;display:flex;flex-direction:column;gap:20px;border-top:4px solid #16394B;padding:32px 0 0 0">
+<p style="font-size:24px;color:#876233">01 / meses 1 a 3</p>
+<h3 style="font-size:40px;font-weight:700">20 clientes fundadores</h3>
+<p style="font-size:28px;line-height:1.5;color:#4A5A63">Profissional por R$ 890/mês durante 12 meses e setup de R$ 490. Em troca: case com números, vídeo, logo no site e duas indicações.</p>
+</div>
+<div style="flex:1;display:flex;flex-direction:column;gap:20px;border-top:4px solid #16394B;padding:32px 0 0 0">
+<p style="font-size:24px;color:#876233">02 / a partir do mês 3</p>
+<h3 style="font-size:40px;font-weight:700">Piloto abatível</h3>
+<p style="font-size:28px;line-height:1.5;color:#4A5A63">30 dias de operação real por R$ 490, com meta combinada antes. Se assinar, o valor vira desconto no setup.</p>
+</div>
+<div style="flex:1;display:flex;flex-direction:column;gap:20px;border-top:4px solid #16394B;padding:32px 0 0 0">
+<p style="font-size:24px;color:#876233">03 / em todo fechamento</p>
+<h3 style="font-size:40px;font-weight:700">Garantia de resultado</h3>
+<p style="font-size:28px;line-height:1.5;color:#4A5A63">Se a IA não bater a meta em 60 dias, o mês seguinte é grátis. Tira o risco sem devolver dinheiro.</p>
+</div>
+</div>
+<p style="position:absolute;left:128px;bottom:64px;width:1664px;font-size:24px;color:#6B7A82">Vagas de fundador com escassez real: 20 vagas, prazo até 10 de janeiro de 2027, preço de tabela a partir do mês 13.</p>
+<img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9Ii0zMCAtMzAgODgwIDcyNCIgd2lkdGg9IjE3NjAiIGhlaWdodD0iMTQ0OCI+PGcgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMC4wMCwwLjAwKSBzY2FsZSgxLjAwMDAwKSIgZmlsbD0iIzg3NjIzMyI+PHBhdGggZD0iTTM2NC4wLDAuMCBMNDU2LjAsMC4wIEw3NjQuMCw2NjQuMCBMNjMyLjAsNjY0LjAgTDQxMC4wLDE4MC4wIEwxODkuMCw2NjQuMCBMNTYuMCw2NjQuMCBaIi8+PHBhdGggZD0iTTI5LjAsNDkyLjAgUTQxMC4wLDI1NC4wIDc5MS4wLDQ5Mi4wIiBmaWxsPSJub25lIiBzdHJva2U9IiM4NzYyMzMiIHN0cm9rZS13aWR0aD0iNTgiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIvPjwvZz48L3N2Zz4=" alt="Símbolo Adiuvia" style="position:absolute;right:128px;top:52px;width:52px;height:43px;object-fit:contain">
+</section>
+<section class="slide" id="charllu" style="background:#EEE8DD;color:#16394B;font-family:'Manrope', Arial, sans-serif;padding:128px 128px 160px;display:flex;flex-direction:column;gap:56px">
+<div style="display:flex;flex-direction:column;gap:16px">
+<p style="font-size:24px;letter-spacing:4px;text-transform:uppercase;color:#876233">03 / Ponto de partida</p>
+<h2 style="font-family:'Cormorant Garamond', Georgia, serif;font-size:72px;font-weight:500;line-height:1.15">O Charllu já roda a Adiuvia. Ele vira nosso laboratório e primeiro case.</h2>
+</div>
+<div style="display:flex;gap:64px">
+<div style="flex:1.3;display:flex;flex-direction:column;gap:24px">
+<h3 style="font-size:32px;font-weight:700">O que o Charllu entrega ao negócio</h3>
+<div style="display:flex;gap:20px;align-items:baseline"><p style="font-size:24px;color:#876233">01 /</p><p style="font-size:28px;line-height:1.4">Números de antes e depois: mensagens, reservas da IA, receita estimada</p></div>
+<div style="display:flex;gap:20px;align-items:baseline"><p style="font-size:24px;color:#876233">02 /</p><p style="font-size:28px;line-height:1.4">Custo real por conversa, que fecha a conta de preço</p></div>
+<div style="display:flex;gap:20px;align-items:baseline"><p style="font-size:24px;color:#876233">03 /</p><p style="font-size:28px;line-height:1.4">Template de implantação para bares e restaurantes</p></div>
+<div style="display:flex;gap:20px;align-items:baseline"><p style="font-size:24px;color:#876233">04 /</p><p style="font-size:28px;line-height:1.4">Conversas reais para a demo ao vivo e os anúncios</p></div>
+</div>
+<div style="flex:1;display:flex;flex-direction:column;gap:20px;background:#FBFAF7;border:1px solid #D2DADD;border-radius:16px;padding:40px">
+<h3 style="font-size:32px;font-weight:700">Cuidados por ser casa de sócio</h3>
+<p style="font-size:26px;line-height:1.5;color:#4A5A63">Contrato e cobrança formais, nas condições de cliente fundador, iguais às de qualquer outro.</p>
+<p style="font-size:26px;line-height:1.5;color:#4A5A63">Transparência na comunicação, e ao menos 3 cases de casas sem ligação com os sócios até janeiro.</p>
+</div>
+</div>
+<p style="position:absolute;left:128px;bottom:64px;width:1664px;font-size:24px;color:#6B7A82">Responsável pelo relacionamento: Diego. Levantamento dos números: Marco, até 13 de novembro.</p>
+<img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9Ii0zMCAtMzAgODgwIDcyNCIgd2lkdGg9IjE3NjAiIGhlaWdodD0iMTQ0OCI+PGcgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMC4wMCwwLjAwKSBzY2FsZSgxLjAwMDAwKSIgZmlsbD0iIzg3NjIzMyI+PHBhdGggZD0iTTM2NC4wLDAuMCBMNDU2LjAsMC4wIEw3NjQuMCw2NjQuMCBMNjMyLjAsNjY0LjAgTDQxMC4wLDE4MC4wIEwxODkuMCw2NjQuMCBMNTYuMCw2NjQuMCBaIi8+PHBhdGggZD0iTTI5LjAsNDkyLjAgUTQxMC4wLDI1NC4wIDc5MS4wLDQ5Mi4wIiBmaWxsPSJub25lIiBzdHJva2U9IiM4NzYyMzMiIHN0cm9rZS13aWR0aD0iNTgiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIvPjwvZz48L3N2Zz4=" alt="Símbolo Adiuvia" style="position:absolute;right:128px;top:52px;width:52px;height:43px;object-fit:contain">
+</section>
+<section class="slide" id="objetivos" style="background:#f6f3ec">
+  <p id="e1-7wdkdm" style="position:absolute; bottom:64px; left:128px; width:1664px; font-family:Manrope, Arial, sans-serif; font-size:24px; color:#6b7a82">Cenário conservador da planilha de projeções. Metas de qualidade: implantar em até 7 dias e cancelamento mensal abaixo de 3%.</p>
+  <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9Ii0zMCAtMzAgODgwIDcyNCIgd2lkdGg9IjE3NjAiIGhlaWdodD0iMTQ0OCI+PGcgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMC4wMCwwLjAwKSBzY2FsZSgxLjAwMDAwKSIgZmlsbD0iIzg3NjIzMyI+PHBhdGggZD0iTTM2NC4wLDAuMCBMNDU2LjAsMC4wIEw3NjQuMCw2NjQuMCBMNjMyLjAsNjY0LjAgTDQxMC4wLDE4MC4wIEwxODkuMCw2NjQuMCBMNTYuMCw2NjQuMCBaIi8+PHBhdGggZD0iTTI5LjAsNDkyLjAgUTQxMC4wLDI1NC4wIDc5MS4wLDQ5Mi4wIiBmaWxsPSJub25lIiBzdHJva2U9IiM4NzYyMzMiIHN0cm9rZS13aWR0aD0iNTgiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIvPjwvZz48L3N2Zz4=" alt="Símbolo Adiuvia" id="e2-7wdkdm" style="position:absolute; top:52px; right:128px; width:52px; height:43px; object-fit:contain">
+  <div id="p8010ebbdece6r0-ee7de5bc" style="position:absolute; top:128px; left:128px; width:1664px; height:216px; display:flex; flex-direction:column; gap:16px">
+    <p style="font-family:Manrope, Arial, sans-serif; font-size:24px; letter-spacing:4px; text-transform:uppercase; color:#876233">04 / Objetivos</p>
+    <h2 style="font-family:'Cormorant Garamond', Georgia, serif; font-size:72px; font-weight:500; line-height:1.15; color:#16394b">O ano 1 prova o modelo em São Paulo. Os anos 2 e 3 replicam.</h2>
+  </div>
+  <div id="p8010ebbdece6r1-ee7de5bc" style="position:absolute; top:415px; left:128px; width:1664px; height:323px; display:flex; flex-direction:row; gap:32px">
+    <div style="display:flex; flex-direction:column; gap:16px; flex:1; padding:32px 0 0; border-top:4px solid #9fb3bd">
+      <p style="font-family:Manrope, Arial, sans-serif; font-size:24px; letter-spacing:3px; text-transform:uppercase; color:#4a5a63">Mês 3 · jan 2027</p>
+      <p style="font-family:'Cormorant Garamond', Georgia, serif; font-size:80px; font-weight:500; color:#16394b">20</p>
+      <p style="font-family:Manrope, Arial, sans-serif; font-size:26px; line-height:1.4; color:#4a5a63">clientes fundadores, R$ 18 mil de receita recorrente mensal.</p>
+    </div>
+    <div style="display:flex; flex-direction:column; gap:16px; flex:1; padding:32px 0 0; border-top:4px solid #9fb3bd">
+      <p style="font-family:Manrope, Arial, sans-serif; font-size:24px; letter-spacing:3px; text-transform:uppercase; color:#4a5a63">Mês 6 · abr 2027</p>
+      <p style="font-family:'Cormorant Garamond', Georgia, serif; font-size:80px; font-weight:500; color:#16394b">55</p>
+      <p style="font-family:Manrope, Arial, sans-serif; font-size:26px; line-height:1.4; color:#4a5a63">clientes, tabela pública e primeiro pró-labore</p>
+    </div>
+    <div style="display:flex; flex-direction:column; gap:16px; flex:1; padding:32px 0 0; border-top:4px solid #16394b">
+      <p style="font-family:Manrope, Arial, sans-serif; font-size:24px; font-weight:700; letter-spacing:3px; text-transform:uppercase; color:#16394b">Mês 12 · out 2027</p>
+      <p style="font-family:'Cormorant Garamond', Georgia, serif; font-size:80px; font-weight:500; color:#16394b">130</p>
+      <p style="font-family:Manrope, Arial, sans-serif; font-size:26px; line-height:1.4; color:#4a5a63">restaurantes, cerca de R$ 143 mil de receita recorrente mensal, operação lucrativa</p>
+    </div>
+    <div style="display:flex; flex-direction:column; gap:16px; flex:1; padding:32px 0 0; border-top:4px solid #9fb3bd">
+      <p style="font-family:Manrope, Arial, sans-serif; font-size:24px; letter-spacing:3px; text-transform:uppercase; color:#4a5a63">Mês 36 · out 2029</p>
+      <p style="font-family:'Cormorant Garamond', Georgia, serif; font-size:80px; font-weight:500; color:#16394b">600 (1,5% do marketshare)</p>
+      <p style="font-family:Manrope, Arial, sans-serif; font-size:26px; line-height:1.4; color:#4a5a63">restaurantes, cerca de R$ 770 mil por mês, São Paulo e 3 capitais</p>
+    </div>
+  </div>
+</section>
+<section class="slide" id="jornada" style="background:#F6F3EC;color:#16394B;font-family:'Manrope', Arial, sans-serif;padding:128px 128px 160px;display:flex;flex-direction:column;gap:72px">
+<div style="display:flex;flex-direction:column;gap:16px">
+<p style="font-size:24px;letter-spacing:4px;text-transform:uppercase;color:#876233">05 / Sócios</p>
+<h2 style="font-family:'Cormorant Garamond', Georgia, serif;font-size:72px;font-weight:500;line-height:1.15">Cada sócio é dono de uma etapa da jornada do cliente.</h2>
+</div>
+<div style="position:relative;display:flex;align-items:center;gap:48px">
+<div style="flex:1;display:flex;flex-direction:column;gap:12px;background:#FBFAF7;border:1px solid #D2DADD;border-radius:16px;padding:32px"><p style="font-size:24px;letter-spacing:3px;text-transform:uppercase;color:#876233">Rafael</p><h3 style="font-size:32px;font-weight:700">Demanda</h3><p style="font-size:24px;line-height:1.4;color:#4A5A63">Gera o lead e marca a reunião</p></div>
+<div style="flex:1;display:flex;flex-direction:column;gap:12px;background:#FBFAF7;border:1px solid #D2DADD;border-radius:16px;padding:32px"><p style="font-size:24px;letter-spacing:3px;text-transform:uppercase;color:#876233">Diego</p><h3 style="font-size:32px;font-weight:700">Venda</h3><p style="font-size:24px;line-height:1.4;color:#4A5A63">Fecha contrato com setup pago</p></div>
+<div style="flex:1;display:flex;flex-direction:column;gap:12px;background:#16394B;border-radius:16px;padding:32px"><p style="font-size:24px;letter-spacing:3px;text-transform:uppercase;color:#C9A877">Marco</p><h3 style="font-size:32px;font-weight:700;color:#F6F3EC">Entrega</h3><p style="font-size:24px;line-height:1.4;color:#D9D3C7">Implanta até a 1ª reserva da IA</p></div>
+<div style="flex:1;display:flex;flex-direction:column;gap:12px;background:#FBFAF7;border:1px solid #D2DADD;border-radius:16px;padding:32px"><p style="font-size:24px;letter-spacing:3px;text-transform:uppercase;color:#876233">Diego</p><h3 style="font-size:32px;font-weight:700">Expansão</h3><p style="font-size:24px;line-height:1.4;color:#4A5A63">Renova e sobe de plano</p></div>
+<x-connector x1="23.2%" y1="50%" x2="25.3%" y2="50%" head="end" style="color:#6B7A82;border-width:2px"></x-connector>
+<x-connector x1="49%" y1="50%" x2="51%" y2="50%" head="end" style="color:#6B7A82;border-width:2px"></x-connector>
+<x-connector x1="74.7%" y1="50%" x2="76.8%" y2="50%" head="end" style="color:#6B7A82;border-width:2px"></x-connector>
+</div>
+<div style="display:flex;gap:48px">
+<p style="flex:1;font-size:24px;line-height:1.4;color:#4A5A63"><b>Passa adiante quando:</b> casa no perfil e reunião na agenda do Diego</p>
+<p style="flex:1;font-size:24px;line-height:1.4;color:#4A5A63">contrato assinado, setup pago, briefing preenchido</p>
+<p style="flex:1;font-size:24px;line-height:1.4;color:#4A5A63">primeira reserva feita pela IA e painel ligado</p>
+<p style="flex:1;font-size:24px;line-height:1.4;color:#4A5A63">aos 60 dias, vira case e volta para o marketing</p>
+</div>
+<p style="position:absolute;left:128px;bottom:64px;width:1664px;font-size:24px;color:#6B7A82">Critério fixo em cada passagem: nunca há dúvida sobre quem responde por um cliente.</p>
+<img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9Ii0zMCAtMzAgODgwIDcyNCIgd2lkdGg9IjE3NjAiIGhlaWdodD0iMTQ0OCI+PGcgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMC4wMCwwLjAwKSBzY2FsZSgxLjAwMDAwKSIgZmlsbD0iIzg3NjIzMyI+PHBhdGggZD0iTTM2NC4wLDAuMCBMNDU2LjAsMC4wIEw3NjQuMCw2NjQuMCBMNjMyLjAsNjY0LjAgTDQxMC4wLDE4MC4wIEwxODkuMCw2NjQuMCBMNTYuMCw2NjQuMCBaIi8+PHBhdGggZD0iTTI5LjAsNDkyLjAgUTQxMC4wLDI1NC4wIDc5MS4wLDQ5Mi4wIiBmaWxsPSJub25lIiBzdHJva2U9IiM4NzYyMzMiIHN0cm9rZS13aWR0aD0iNTgiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIvPjwvZz48L3N2Zz4=" alt="Símbolo Adiuvia" style="position:absolute;right:128px;top:52px;width:52px;height:43px;object-fit:contain">
+</section>
+<section class="slide" id="marco" style="display:flex; flex-direction:column; gap:48px; padding:128px 128px 160px; background:#f6f3ec">
+  <div style="display:flex; flex-direction:column; gap:16px">
+    <p style="font-family:Manrope, Arial, sans-serif; font-size:24px; letter-spacing:4px; text-transform:uppercase; color:#876233">05 / Sócios · Marco, tecnologia e entrega</p>
+    <h2 style="font-family:'Cormorant Garamond', Georgia, serif; font-size:64px; font-weight:500; line-height:1.15; color:#16394b">Tudo o que o cliente usa e tudo o que custa para operar.</h2>
+  </div>
+  <div style="display:flex; flex-direction:row; gap:64px">
+    <div style="display:flex; flex-direction:column; gap:16px; flex:1.1">
+      <h3 style="font-family:Manrope, Arial, sans-serif; font-size:28px; font-weight:700; color:#876233">Responsabilidades</h3>
+      <ul style="font-family:Manrope, Arial, sans-serif; font-size:26px; line-height:1.45; color:#16394b">
+        <li>Confirmar a taxa da Meta e medir o custo por conversa todo mês (URGENTE)</li>
+        <li>Transformar o Charllu em template por segmento</li>
+        <li>Painel de receita recuperada e demo ao vivo</li>
+        <li>Implantar e ativar cada cliente vendido</li>
+        <li>Estabilidade, segurança e LGPD; liderar analistas (quando houver)</li>
+      </ul>
+      <h3 style="font-family:Manrope, Arial, sans-serif; font-size:28px; font-weight:700; color:#876233">Decide sozinho</h3>
+      <p style="font-family:Manrope, Arial, sans-serif; font-size:26px; line-height:1.45; color:#4a5a63">Arquitetura, fornecedores técnicos dentro do orçamento, prioridade do roteiro no trimestre.</p>
+    </div>
+    <div style="display:flex; flex-direction:column; gap:20px; flex:1; padding:40px; background:#16394b; border-radius:16px">
+      <h3 style="font-family:Manrope, Arial, sans-serif; font-size:28px; font-weight:700; color:#c9a877">Metas que definem o variável</h3>
+      <table style="font-family:Manrope, Arial, sans-serif; font-size:26px; color:#f6f3ec">
+        <tr><th style="width:62%">Indicador</th><th style="width:16%; text-align:right">Peso</th><th style="width:22%; text-align:right">Meta</th></tr>
+        <tr><td>Clientes ativados no prazo</td><td style="text-align:right">40%</td><td style="text-align:right">90%</td></tr>
+        <tr><td>Custo de tecnologia por casa</td><td style="text-align:right">40%</td><td style="text-align:right">até R$ 200</td></tr>
+        <tr><td>Disponibilidade</td><td style="text-align:right">20%</td><td style="text-align:right">99,5%</td></tr>
+      </table>
+      <p style="font-family:Manrope, Arial, sans-serif; font-size:24px; line-height:1.45; color:#d9d3c7">Prazo de ativação: 5 dias no Essencial, 7 no Profissional.</p>
+    </div>
+  </div>
+  <p style="position:absolute; bottom:64px; left:128px; width:1664px; font-family:Manrope, Arial, sans-serif; font-size:24px; color:#6b7a82">Primeiras entregas: taxa da Meta até 6 nov · números do Charllu até 13 nov · template e painel até 27 nov.</p>
+  <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9Ii0zMCAtMzAgODgwIDcyNCIgd2lkdGg9IjE3NjAiIGhlaWdodD0iMTQ0OCI+PGcgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMC4wMCwwLjAwKSBzY2FsZSgxLjAwMDAwKSIgZmlsbD0iIzg3NjIzMyI+PHBhdGggZD0iTTM2NC4wLDAuMCBMNDU2LjAsMC4wIEw3NjQuMCw2NjQuMCBMNjMyLjAsNjY0LjAgTDQxMC4wLDE4MC4wIEwxODkuMCw2NjQuMCBMNTYuMCw2NjQuMCBaIi8+PHBhdGggZD0iTTI5LjAsNDkyLjAgUTQxMC4wLDI1NC4wIDc5MS4wLDQ5Mi4wIiBmaWxsPSJub25lIiBzdHJva2U9IiM4NzYyMzMiIHN0cm9rZS13aWR0aD0iNTgiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIvPjwvZz48L3N2Zz4=" alt="Símbolo Adiuvia" style="position:absolute; top:52px; right:128px; width:52px; height:43px; object-fit:contain">
+</section>
+<section class="slide" id="diego" style="display:flex; flex-direction:column; gap:48px; padding:128px 128px 160px; background:#F6F3EC">
+  <div style="display:flex; flex-direction:column; gap:16px">
+    <p style="font-family:'Manrope', Arial, sans-serif; font-size:24px; letter-spacing:4px; text-transform:uppercase; color:#876233">05 / Sócios · Diego, comercial e clientes</p>
+    <h2 style="font-family:'Cormorant Garamond', Georgia, serif; font-size:64px; font-weight:500; line-height:1.15; color:#16394B">Toda a receita: do primeiro contato à renovação.</h2>
+  </div>
+  <div style="display:flex; flex-direction:row; gap:64px">
+    <div style="display:flex; flex-direction:column; gap:16px; flex:1.1">
+      <h3 style="font-family:'Manrope', Arial, sans-serif; font-size:28px; font-weight:700; color:#876233">Responsabilidades</h3>
+      <ul style="font-family:'Manrope', Arial, sans-serif; font-size:26px; line-height:1.45; color:#16394B">
+        <li>Lista de 300 casas-alvo em São Paulo</li>
+        <li>Fechar os 20 fundadores e a meta mensal</li>
+        <li>Parcerias com Abrasel e associações do setor</li>
+        <li>Renovação, upgrade de plano e cobrança</li>
+        <li>Formalizar o Charllu como cliente</li>
+      </ul>
+      <h3 style="font-family:'Manrope', Arial, sans-serif; font-size:28px; font-weight:700; color:#876233">Decide sozinho</h3>
+      <p style="font-family:'Manrope', Arial, sans-serif; font-size:26px; line-height:1.45; color:#4a5a63">Descontos até 10% sobre a tabela, condições de pagamento dentro da política, prioridade da carteira.</p>
+    </div>
+    <div style="display:flex; flex-direction:column; gap:20px; flex:1; padding:40px; background:#16394b; border-radius:16px">
+      <h3 style="font-family:'Manrope', Arial, sans-serif; font-size:28px; font-weight:700; color:#C9A877">Metas que definem o variável</h3>
+      <table style="font-family:'Manrope', Arial, sans-serif; font-size:26px; color:#F6F3EC">
+        <tr><th style="width:62%">Indicador</th><th style="width:16%; text-align:right">Peso</th><th style="width:22%; text-align:right">Meta</th></tr>
+        <tr><td>Nova receita recorrente</td><td style="text-align:right">50%</td><td style="text-align:right">do plano</td></tr>
+        <tr><td>Cancelamento mensal</td><td style="text-align:right">30%</td><td style="text-align:right">abaixo de 3%</td></tr>
+        <tr><td>Base em Profissional ou Casa</td><td style="text-align:right">20%</td><td style="text-align:right">60%</td></tr>
+      </table>
+      <p style="font-family:'Manrope', Arial, sans-serif; font-size:24px; line-height:1.45; color:#D9D3C7">Inadimplência abaixo de 2% como meta de acompanhamento.</p>
+    </div>
+  </div>
+  <p style="position:absolute; bottom:64px; left:128px; width:1664px; font-family:'Manrope', Arial, sans-serif; font-size:24px; color:#6b7a82">Primeiras entregas: Charllu formalizado até 13 nov · tabela e contrato de fundador até 27 nov · 20 fundadores até 10 jan.</p>
+  <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9Ii0zMCAtMzAgODgwIDcyNCIgd2lkdGg9IjE3NjAiIGhlaWdodD0iMTQ0OCI+PGcgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMC4wMCwwLjAwKSBzY2FsZSgxLjAwMDAwKSIgZmlsbD0iIzg3NjIzMyI+PHBhdGggZD0iTTM2NC4wLDAuMCBMNDU2LjAsMC4wIEw3NjQuMCw2NjQuMCBMNjMyLjAsNjY0LjAgTDQxMC4wLDE4MC4wIEwxODkuMCw2NjQuMCBMNTYuMCw2NjQuMCBaIi8+PHBhdGggZD0iTTI5LjAsNDkyLjAgUTQxMC4wLDI1NC4wIDc5MS4wLDQ5Mi4wIiBmaWxsPSJub25lIiBzdHJva2U9IiM4NzYyMzMiIHN0cm9rZS13aWR0aD0iNTgiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIvPjwvZz48L3N2Zz4=" alt="Símbolo Adiuvia" style="position:absolute;right:128px;top:52px;width:52px;height:43px;object-fit:contain">
+</section>
+<section class="slide" id="rafael" style="background:#F6F3EC;color:#16394B;font-family:'Manrope', Arial, sans-serif;padding:128px 128px 160px;display:flex;flex-direction:column;gap:48px">
+<div style="display:flex;flex-direction:column;gap:16px">
+<p style="font-size:24px;letter-spacing:4px;text-transform:uppercase;color:#876233">05 / Sócios · Rafael, marketing e marca</p>
+<h2 style="font-family:'Cormorant Garamond', Georgia, serif;font-size:64px;font-weight:500;line-height:1.15">Toda a demanda e a forma como o mercado nos enxerga.</h2>
+</div>
+<div style="display:flex;gap:64px">
+<div style="flex:1.1;display:flex;flex-direction:column;gap:16px">
+<h3 style="font-size:28px;font-weight:700;color:#876233">Responsabilidades</h3>
+<ul style="font-size:26px;line-height:1.45;color:#16394B"><li>Trocar a lista de espera pela demo ao vivo</li><li>Gerar reuniões qualificadas para o Diego</li><li>Cases do Charllu e dos fundadores</li><li>Kit de vendas e pesquisa de preço com donos</li><li>Orçamento de marketing e custo por cliente</li></ul>
+<h3 style="font-size:28px;font-weight:700;color:#876233">Decide sozinho</h3>
+<p style="font-size:26px;line-height:1.45;color:#4A5A63">Canais e criativos dentro do orçamento, calendário de conteúdo, identidade e mensagens da marca.</p>
+</div>
+<div style="flex:1;display:flex;flex-direction:column;gap:20px;background:#16394B;border-radius:16px;padding:40px;color:#F6F3EC">
+<h3 style="font-size:28px;font-weight:700;color:#C9A877">Metas que definem o variável</h3>
+<table style="font-size:26px;color:#F6F3EC"><tr><th style="width:62%;text-align:left">Indicador</th><th style="width:16%;text-align:right">Peso</th><th style="width:22%;text-align:right">Meta</th></tr><tr><td>Reuniões qualificadas</td><td style="text-align:right">50%</td><td style="text-align:right">do plano</td></tr><tr><td>Custo por reunião</td><td style="text-align:right">30%</td><td style="text-align:right">até R$ 300</td></tr><tr><td>Cases publicados</td><td style="text-align:right">20%</td><td style="text-align:right">1 por mês</td></tr></table>
+<p style="font-size:24px;line-height:1.45;color:#D9D3C7">Custo de aquisição recuperado em até 3 mensalidades.</p>
+</div>
+</div>
+<p style="position:absolute;left:128px;bottom:64px;width:1664px;font-size:24px;color:#6B7A82">Primeiras entregas: acordo de sócios até 20 nov · 10 entrevistas até 20 nov · demo e site novo até 27 nov.</p>
+<img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9Ii0zMCAtMzAgODgwIDcyNCIgd2lkdGg9IjE3NjAiIGhlaWdodD0iMTQ0OCI+PGcgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMC4wMCwwLjAwKSBzY2FsZSgxLjAwMDAwKSIgZmlsbD0iIzg3NjIzMyI+PHBhdGggZD0iTTM2NC4wLDAuMCBMNDU2LjAsMC4wIEw3NjQuMCw2NjQuMCBMNjMyLjAsNjY0LjAgTDQxMC4wLDE4MC4wIEwxODkuMCw2NjQuMCBMNTYuMCw2NjQuMCBaIi8+PHBhdGggZD0iTTI5LjAsNDkyLjAgUTQxMC4wLDI1NC4wIDc5MS4wLDQ5Mi4wIiBmaWxsPSJub25lIiBzdHJva2U9IiM4NzYyMzMiIHN0cm9rZS13aWR0aD0iNTgiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIvPjwvZz48L3N2Zz4=" alt="Símbolo Adiuvia" style="position:absolute;right:128px;top:52px;width:52px;height:43px;object-fit:contain">
+</section>
+<section class="slide" id="ganhos" style="background:#F6F3EC;color:#16394B;font-family:'Manrope', Arial, sans-serif;padding:128px 128px 160px;display:flex;flex-direction:column;gap:48px">
+<div style="display:flex;flex-direction:column;gap:16px">
+<p style="font-size:24px;letter-spacing:4px;text-transform:uppercase;color:#876233">06 / Ganhos dos sócios</p>
+<h2 style="font-family:'Cormorant Garamond', Georgia, serif;font-size:64px;font-weight:500;line-height:1.15">A mesma régua para os três. Muda só a meta de cada área.</h2>
+</div>
+<div style="display:flex;gap:56px">
+<div style="flex:1;display:flex;flex-direction:column;gap:24px">
+<div style="display:flex;gap:20px;align-items:baseline"><p style="font-size:24px;color:#876233">01 /</p><div style="display:flex;flex-direction:column;gap:6px"><h3 style="font-size:30px;font-weight:700">Participação</h3><p style="font-size:24px;line-height:1.4;color:#4A5A63">Proposta de um terço cada, vesting em 48 meses, primeiro ano liberado aos 12</p></div></div>
+<div style="display:flex;gap:20px;align-items:baseline"><p style="font-size:24px;color:#876233">02 /</p><div style="display:flex;flex-direction:column;gap:6px"><h3 style="font-size:30px;font-weight:700">Pró-labore por gatilho</h3><p style="font-size:24px;line-height:1.4;color:#4A5A63">Ninguém recebe até a receita sustentar; sobe e desce pela régua ao lado</p></div></div>
+<div style="display:flex;gap:20px;align-items:baseline"><p style="font-size:24px;color:#876233">03 /</p><div style="display:flex;flex-direction:column;gap:6px"><h3 style="font-size:30px;font-weight:700">Variável por área</h3><p style="font-size:24px;line-height:1.4;color:#4A5A63">15% do lucro do trimestre, um terço por sócio, pago pelo atingimento da própria meta</p></div></div>
+<div style="display:flex;gap:20px;align-items:baseline"><p style="font-size:24px;color:#876233">04 /</p><div style="display:flex;flex-direction:column;gap:6px"><h3 style="font-size:30px;font-weight:700">Distribuição de lucros</h3><p style="font-size:24px;line-height:1.4;color:#4A5A63">Após reserva de 3 meses de custos: metade reinvestida, metade distribuída</p></div></div>
+</div>
+<div style="flex:1;display:flex;flex-direction:column;gap:24px;background:#16394B;border-radius:16px;padding:40px;color:#F6F3EC">
+<h3 style="font-size:28px;font-weight:700;color:#C9A877">Régua de pró-labore</h3>
+<table style="font-size:26px;color:#F6F3EC"><tr><th style="width:58%;text-align:left">Receita recorrente mensal</th><th style="width:42%;text-align:right">Por sócio</th></tr><tr><td>abaixo de R$ 40 mil</td><td style="text-align:right">R$ 0</td></tr><tr><td>a partir de R$ 40 mil</td><td style="text-align:right">R$ 3.000</td></tr><tr><td>a partir de R$ 100 mil</td><td style="text-align:right">R$ 6.000</td></tr><tr><td>a partir de R$ 175 mil</td><td style="text-align:right">R$ 10.000</td></tr><tr><td>a partir de R$ 400 mil</td><td style="text-align:right">R$ 15.000</td></tr></table>
+<p style="font-size:24px;line-height:1.45;color:#D9D3C7">Variável: abaixo de 70% da meta, nada; de 70% a 99%, proporcional; 100% ou mais, a parte inteira.</p>
+</div>
+</div>
+<p style="position:absolute;left:128px;bottom:64px;width:1664px;font-size:24px;color:#6B7A82">Proposta para discussão. Formalizar em acordo de sócios com advogado e pró-labore com o contador.</p>
+<img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9Ii0zMCAtMzAgODgwIDcyNCIgd2lkdGg9IjE3NjAiIGhlaWdodD0iMTQ0OCI+PGcgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMC4wMCwwLjAwKSBzY2FsZSgxLjAwMDAwKSIgZmlsbD0iIzg3NjIzMyI+PHBhdGggZD0iTTM2NC4wLDAuMCBMNDU2LjAsMC4wIEw3NjQuMCw2NjQuMCBMNjMyLjAsNjY0LjAgTDQxMC4wLDE4MC4wIEwxODkuMCw2NjQuMCBMNTYuMCw2NjQuMCBaIi8+PHBhdGggZD0iTTI5LjAsNDkyLjAgUTQxMC4wLDI1NC4wIDc5MS4wLDQ5Mi4wIiBmaWxsPSJub25lIiBzdHJva2U9IiM4NzYyMzMiIHN0cm9rZS13aWR0aD0iNTgiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIvPjwvZz48L3N2Zz4=" alt="Símbolo Adiuvia" style="position:absolute;right:128px;top:52px;width:52px;height:43px;object-fit:contain">
+</section>
+<section class="slide" id="execucao" style="background:#F6F3EC;color:#16394B;font-family:'Manrope', Arial, sans-serif;padding:128px 128px 160px;display:flex;flex-direction:column;gap:56px">
+<div style="display:flex;flex-direction:column;gap:16px">
+<p style="font-size:24px;letter-spacing:4px;text-transform:uppercase;color:#876233">07 / Execução em 90 dias</p>
+<h2 style="font-family:'Cormorant Garamond', Georgia, serif;font-size:64px;font-weight:500;line-height:1.15">A tabela só vai a público depois de 20 fundadores e 3 cases.</h2>
+</div>
+<div style="display:flex;gap:40px">
+<div style="flex:1;display:flex;flex-direction:column;gap:20px">
+<div style="display:flex;flex-direction:column;gap:12px;background:#FBFAF7;border:1px solid #D2DADD;border-radius:16px;padding:36px"><p style="font-size:24px;color:#876233">1 / 2 nov a 29 nov</p><h3 style="font-size:36px;font-weight:700">Preparar</h3><p style="font-size:24px;line-height:1.5;color:#4A5A63">Taxa da Meta, preços, painel de receita, demo ao vivo, lista de 300 casas, acordo de sócios</p></div>
+<p style="font-size:24px;line-height:1.4"><b>Saída:</b> margem de 50% ou mais e 10 donos aceitam o preço</p>
+</div>
+<div style="flex:1;display:flex;flex-direction:column;gap:20px">
+<div style="display:flex;flex-direction:column;gap:12px;background:#16394B;border-radius:16px;padding:36px"><p style="font-size:24px;color:#C9A877">2 / 30 nov a 10 jan</p><h3 style="font-size:36px;font-weight:700;color:#F6F3EC">Fundadores</h3><p style="font-size:24px;line-height:1.5;color:#D9D3C7">60 reuniões, 20 fundadores, implantação em até 7 dias, painel ativo em cada casa</p></div>
+<p style="font-size:24px;line-height:1.4"><b>Saída:</b> 20 fundadores ativos e 3 cases com números</p>
+</div>
+<div style="flex:1;display:flex;flex-direction:column;gap:20px">
+<div style="display:flex;flex-direction:column;gap:12px;background:#FBFAF7;border:1px solid #D2DADD;border-radius:16px;padding:36px"><p style="font-size:24px;color:#876233">3 / 11 jan a 31 jan</p><h3 style="font-size:36px;font-weight:700">Abrir a tabela</h3><p style="font-size:24px;line-height:1.5;color:#4A5A63">Site com planos e cases, piloto abatível, anúncios, palestra na Abrasel SP</p></div>
+<p style="font-size:24px;line-height:1.4"><b>Saída:</b> custo por cliente abaixo de 3 mensalidades</p>
+</div>
+</div>
+<p style="position:absolute;left:128px;bottom:64px;width:1664px;font-size:24px;color:#6B7A82">Dezembro é alta temporada: reuniões concentradas na primeira quinzena de dezembro e na primeira semana de janeiro.</p>
+<img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9Ii0zMCAtMzAgODgwIDcyNCIgd2lkdGg9IjE3NjAiIGhlaWdodD0iMTQ0OCI+PGcgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMC4wMCwwLjAwKSBzY2FsZSgxLjAwMDAwKSIgZmlsbD0iIzg3NjIzMyI+PHBhdGggZD0iTTM2NC4wLDAuMCBMNDU2LjAsMC4wIEw3NjQuMCw2NjQuMCBMNjMyLjAsNjY0LjAgTDQxMC4wLDE4MC4wIEwxODkuMCw2NjQuMCBMNTYuMCw2NjQuMCBaIi8+PHBhdGggZD0iTTI5LjAsNDkyLjAgUTQxMC4wLDI1NC4wIDc5MS4wLDQ5Mi4wIiBmaWxsPSJub25lIiBzdHJva2U9IiM4NzYyMzMiIHN0cm9rZS13aWR0aD0iNTgiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIvPjwvZz48L3N2Zz4=" alt="Símbolo Adiuvia" style="position:absolute;right:128px;top:52px;width:52px;height:43px;object-fit:contain">
+</section>
+<section class="slide" id="orcamento" style="background:#f6f3ec">
+  <p id="e1-112erd9" style="position:absolute; bottom:64px; left:128px; width:1664px; font-family:Manrope, Arial, sans-serif; font-size:24px; color:#6b7a82">Maiores itens: advogado do acordo de sócios (R$ 3.500, valor a rever), anúncios (R$ 2.000) e contrato social (R$ 1.000). Item a item nos dois slides seguintes.</p>
+  <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9Ii0zMCAtMzAgODgwIDcyNCIgd2lkdGg9IjE3NjAiIGhlaWdodD0iMTQ0OCI+PGcgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMC4wMCwwLjAwKSBzY2FsZSgxLjAwMDAwKSIgZmlsbD0iIzg3NjIzMyI+PHBhdGggZD0iTTM2NC4wLDAuMCBMNDU2LjAsMC4wIEw3NjQuMCw2NjQuMCBMNjMyLjAsNjY0LjAgTDQxMC4wLDE4MC4wIEwxODkuMCw2NjQuMCBMNTYuMCw2NjQuMCBaIi8+PHBhdGggZD0iTTI5LjAsNDkyLjAgUTQxMC4wLDI1NC4wIDc5MS4wLDQ5Mi4wIiBmaWxsPSJub25lIiBzdHJva2U9IiM4NzYyMzMiIHN0cm9rZS13aWR0aD0iNTgiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIvPjwvZz48L3N2Zz4=" alt="Símbolo Adiuvia" id="e2-112erd9" style="position:absolute; top:52px; right:128px; width:52px; height:43px; object-fit:contain">
+  <div id="p7e80ce8c019dr0-dbe1a0bf" style="position:absolute; top:128px; left:128px; width:1664px; height:124px; display:flex; flex-direction:column; gap:16px">
+    <p style="font-family:Manrope, Arial, sans-serif; font-size:24px; letter-spacing:4px; text-transform:uppercase; color:#876233">08 / Orçamento do mês 1</p>
+    <h2 style="font-family:'Cormorant Garamond', Georgia, serif; font-size:64px; font-weight:500; line-height:1.15; color:#16394b">Novembro custa R$ 11,3 mil.</h2>
+  </div>
+  <div id="p7e80ce8c019dr1-dbe1a0bf" style="position:absolute; top:307px; left:128px; width:1664px; height:455px; display:flex; flex-direction:row; gap:64px; align-items:start">
+    <table style="width:985px; font-family:Manrope, Arial, sans-serif; font-size:26px; color:#16394b">
+      <tr><th style="width:34%">Área</th><th style="width:14%">Dono</th><th style="width:17%; text-align:right">Mensal</th><th style="width:17%; text-align:right">Único</th><th style="width:18%; text-align:right">Mês 1</th></tr>
+      <tr><td>Tecnologia</td><td>Marco</td><td style="text-align:right">R$ 1.660</td><td style="text-align:right">R$ 0</td><td style="text-align:right">R$ 1.660</td></tr>
+      <tr><td>Comercial</td><td>Diego</td><td style="text-align:right">R$ 1.150</td><td style="text-align:right">R$ 0</td><td style="text-align:right">R$ 1.150</td></tr>
+      <tr><td>Marketing</td><td>Rafael</td><td style="text-align:right">R$ 2.300</td><td style="text-align:right">R$ 0</td><td style="text-align:right">R$ 2.300</td></tr>
+      <tr><td>Administrativo e reserva</td><td>Sócios</td><td style="text-align:right">R$ 650</td><td style="text-align:right">R$ 5.526</td><td style="text-align:right">R$ 6.176</td></tr>
+      <tr style="background:#ece5d8"><td>Total</td><td></td><td style="text-align:right">R$ 5.760</td><td style="text-align:right">R$ 5.526</td><td style="text-align:right">R$ 11.286</td></tr>
+    </table>
+    <div style="display:flex; flex-direction:column; gap:24px; flex:1">
+      <div style="display:flex; flex-direction:column; gap:8px; padding:36px; background:#16394b; border-radius:16px">
+        <p style="font-family:Manrope, Arial, sans-serif; font-size:24px; letter-spacing:3px; text-transform:uppercase; color:#c9a877">CUSTO MÊS 1</p>
+        <p style="font-family:'Cormorant Garamond', Georgia, serif; font-size:72px; font-weight:500; color:#f6f3ec">R$ 11.286</p>
+      </div>
+      <div style="display:flex; flex-direction:column; gap:8px; padding:36px; background:#fbfaf7; border:1px solid #d2dadd; border-radius:16px">
+        <p style="font-family:Manrope, Arial, sans-serif; font-size:24px; letter-spacing:3px; text-transform:uppercase; color:#4a5a63">Custo fixo a partir do mês 2</p>
+        <p style="font-family:'Cormorant Garamond', Georgia, serif; font-size:72px; font-weight:500; color:#16394b">R$ 5.760</p>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide" id="orcamento-tec-com" style="display:flex; flex-direction:column; gap:40px; padding:128px 128px 160px; background:#f6f3ec">
+  <div style="display:flex; flex-direction:column; gap:16px">
+    <p style="font-family:Manrope, Arial, sans-serif; font-size:24px; letter-spacing:4px; text-transform:uppercase; color:#876233">08 / Orçamento do mês 1 · detalhe 1 de 2</p>
+    <h2 style="font-family:'Cormorant Garamond', Georgia, serif; font-size:64px; font-weight:500; line-height:1.15; color:#16394b">Tecnologia e comercial: R$ 2,8 mil, tudo custo mensal.</h2>
+  </div>
+  <div style="display:flex; flex-direction:row; gap:40px">
+    <div style="display:flex; flex-direction:column; gap:20px; flex:1; padding:36px; background:#fbfaf7; border:1px solid #ddd5c6; border-radius:16px">
+      <div style="display:flex; flex-direction:row; align-items:baseline; justify-content:space-between">
+        <p style="font-family:Manrope, Arial, sans-serif; font-size:24px; font-weight:600; letter-spacing:3px; text-transform:uppercase; color:#876233">Tecnologia · Marco</p>
+        <p style="font-family:'Cormorant Garamond', Georgia, serif; font-size:56px; font-weight:500; color:#16394b">R$ 1.660</p>
+      </div>
+      <table style="font-family:Manrope, Arial, sans-serif; font-size:24px; color:#16394b">
+        <tr><th style="width:60%">Item</th><th style="width:18%">Tipo</th><th style="width:22%; text-align:right">Valor</th></tr>
+        <tr><td>Provedor da API oficial do WhatsApp</td><td>Mensal</td><td style="text-align:right">R$ 300</td></tr>
+        <tr><td>Mensagens da Meta (Charllu e demo)</td><td>Mensal</td><td style="text-align:right">R$ 150</td></tr>
+        <tr><td>Modelo de IA (Charllu, demo e testes)</td><td>Mensal</td><td style="text-align:right">R$ 400</td></tr>
+        <tr><td>Nuvem e banco de dados</td><td>Mensal</td><td style="text-align:right">R$ 500</td></tr>
+        <tr><td>Linha de WhatsApp da demo ao vivo</td><td>Mensal</td><td style="text-align:right">R$ 60</td></tr>
+        <tr><td>Desenvolvimento e monitoramento</td><td>Mensal</td><td style="text-align:right">R$ 250</td></tr>
+      </table>
+      <p style="font-family:Manrope, Arial, sans-serif; font-size:24px; line-height:1.45; color:#4a5a63"><span style="color:#16394b"><b>Por que agora:</b></span> base do produto, e o custo real por conversa que fecha a conta de preço. <i>Valores a validar com o Marco.</i></p>
+    </div>
+    <div style="display:flex; flex-direction:column; gap:20px; flex:1; padding:36px; background:#fbfaf7; border:1px solid #ddd5c6; border-radius:16px">
+      <div style="display:flex; flex-direction:row; align-items:baseline; justify-content:space-between">
+        <p style="font-family:Manrope, Arial, sans-serif; font-size:24px; font-weight:600; letter-spacing:3px; text-transform:uppercase; color:#876233">Comercial · Diego</p>
+        <p style="font-family:'Cormorant Garamond', Georgia, serif; font-size:56px; font-weight:500; color:#16394b">R$ 1.150</p>
+      </div>
+      <table style="font-family:Manrope, Arial, sans-serif; font-size:24px; color:#16394b">
+        <tr><th style="width:60%">Item</th><th style="width:18%">Tipo</th><th style="width:22%; text-align:right">Valor</th></tr>
+        <tr><td>CRM para o funil de vendas (3 usuários)</td><td>Mensal</td><td style="text-align:right">R$ 350</td></tr>
+        <tr><td>Deslocamento para visitas</td><td>Mensal</td><td style="text-align:right">R$ 800</td></tr>
+      </table>
+      <p style="font-family:Manrope, Arial, sans-serif; font-size:24px; line-height:1.45; color:#4a5a63"><span style="color:#16394b"><b>Por que agora:</b></span> a venda presencial é o canal dos 20 fundadores, e o CRM mede o funil desde a primeira reunião. A lista de casas-alvo sai com IA, sem custo.</p>
+    </div>
+  </div>
+  <p style="position:absolute; bottom:64px; left:128px; width:1664px; font-family:Manrope, Arial, sans-serif; font-size:24px; color:#6b7a82">Valores estimados, a trocar por cotações. Planilha de orçamento, aba Orçamento Mês 1.</p>
+  <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9Ii0zMCAtMzAgODgwIDcyNCIgd2lkdGg9IjE3NjAiIGhlaWdodD0iMTQ0OCI+PGcgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMC4wMCwwLjAwKSBzY2FsZSgxLjAwMDAwKSIgZmlsbD0iIzg3NjIzMyI+PHBhdGggZD0iTTM2NC4wLDAuMCBMNDU2LjAsMC4wIEw3NjQuMCw2NjQuMCBMNjMyLjAsNjY0LjAgTDQxMC4wLDE4MC4wIEwxODkuMCw2NjQuMCBMNTYuMCw2NjQuMCBaIi8+PHBhdGggZD0iTTI5LjAsNDkyLjAgUTQxMC4wLDI1NC4wIDc5MS4wLDQ5Mi4wIiBmaWxsPSJub25lIiBzdHJva2U9IiM4NzYyMzMiIHN0cm9rZS13aWR0aD0iNTgiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIvPjwvZz48L3N2Zz4=" alt="Símbolo Adiuvia" style="position:absolute; top:52px; right:128px; width:52px; height:43px; object-fit:contain">
+  <x-shape kind="ellipse" id="d4e6bcb8" style="position:absolute; top:calc(50% + 528px); left:calc(50% + 918px); width:24px; height:24px; background:#f6f3ec; transform:translate(-50%, -50%)"></x-shape>
+</section>
+<section class="slide" id="orcamento-mkt-adm" style="background:#F6F3EC;color:#16394B;font-family:'Manrope', Arial, sans-serif;padding:128px 128px 160px;display:flex;flex-direction:column;gap:40px">
+<div style="display:flex;flex-direction:column;gap:16px">
+<p style="font-size:24px;letter-spacing:4px;text-transform:uppercase;color:#876233">08 / Orçamento do mês 1 · detalhe 2 de 2</p>
+<h2 style="font-family:'Cormorant Garamond', Georgia, serif;font-size:64px;font-weight:500;line-height:1.15">Marketing e administrativo: R$ 8,5 mil, com R$ 5,5 mil de gastos únicos.</h2>
+</div>
+<div style="display:flex;gap:40px;align-items:stretch">
+<div style="flex:1;display:flex;flex-direction:column;gap:20px;background:#FBFAF7;border:1px solid #DDD5C6;border-radius:16px;padding:36px">
+<div style="display:flex;justify-content:space-between;align-items:baseline"><p style="font-size:24px;font-weight:600;letter-spacing:3px;text-transform:uppercase;color:#876233">Marketing · Rafael</p><p style="font-family:'Cormorant Garamond', Georgia, serif;font-size:56px;font-weight:500;color:#16394B">R$ 2.300</p></div>
+<table style="font-size:24px;color:#16394B"><tr><th style="width:60%;text-align:left">Item</th><th style="width:18%;text-align:left">Tipo</th><th style="width:22%;text-align:right">Valor</th></tr><tr><td>Anúncios no Instagram para a demo ao vivo</td><td>Mensal</td><td style="text-align:right">R$ 2.000</td></tr><tr><td>Domínio e e-mail profissional</td><td>Mensal</td><td style="text-align:right">R$ 300</td></tr><tr><td>Conversas com 10 donos da rede do Diego</td><td>Único</td><td style="text-align:right">R$ 0</td></tr></table>
+<p style="font-size:24px;line-height:1.45;color:#4A5A63"><b style="color:#16394B">Por que agora:</b> os anúncios medem o custo por reunião antes de escalar, e as conversas validam o preço sem gastar. Fotos do Charllu vêm do banco de imagens do Diego.</p>
+</div>
+<div style="flex:1;display:flex;flex-direction:column;gap:20px;background:#FBFAF7;border:1px solid #DDD5C6;border-radius:16px;padding:36px">
+<div style="display:flex;justify-content:space-between;align-items:baseline"><p style="font-size:24px;font-weight:600;letter-spacing:3px;text-transform:uppercase;color:#876233">Administrativo · Sócios</p><p style="font-family:'Cormorant Garamond', Georgia, serif;font-size:56px;font-weight:500;color:#16394B">R$ 6.176</p></div>
+<table style="font-size:24px;color:#16394B"><tr><th style="width:60%;text-align:left">Item</th><th style="width:18%;text-align:left">Tipo</th><th style="width:22%;text-align:right">Valor</th></tr><tr><td>Advogado: acordo e contrato (a rever)</td><td>Único</td><td style="text-align:right">R$ 3.500</td></tr><tr><td>Contrato social e registros</td><td>Único</td><td style="text-align:right">R$ 1.000</td></tr><tr><td>Contador</td><td>Mensal</td><td style="text-align:right">R$ 500</td></tr><tr><td>Ferramentas de gestão (3 contas)</td><td>Mensal</td><td style="text-align:right">R$ 150</td></tr><tr><td>Reserva para imprevistos (10%)</td><td>Único</td><td style="text-align:right">R$ 1.026</td></tr></table>
+<p style="font-size:24px;line-height:1.45;color:#4A5A63"><b style="color:#16394B">Por que agora:</b> o acordo de sócios precisa estar assinado até 20 de novembro. O valor do advogado ainda será revisto com outras cotações.</p>
+</div>
+</div>
+<p style="position:absolute;left:128px;bottom:64px;width:1664px;font-size:24px;color:#6B7A82">Site novo publicado no GitHub Pages, sem custo de hospedagem. Valores estimados, a trocar por cotações.</p>
+<img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9Ii0zMCAtMzAgODgwIDcyNCIgd2lkdGg9IjE3NjAiIGhlaWdodD0iMTQ0OCI+PGcgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMC4wMCwwLjAwKSBzY2FsZSgxLjAwMDAwKSIgZmlsbD0iIzg3NjIzMyI+PHBhdGggZD0iTTM2NC4wLDAuMCBMNDU2LjAsMC4wIEw3NjQuMCw2NjQuMCBMNjMyLjAsNjY0LjAgTDQxMC4wLDE4MC4wIEwxODkuMCw2NjQuMCBMNTYuMCw2NjQuMCBaIi8+PHBhdGggZD0iTTI5LjAsNDkyLjAgUTQxMC4wLDI1NC4wIDc5MS4wLDQ5Mi4wIiBmaWxsPSJub25lIiBzdHJva2U9IiM4NzYyMzMiIHN0cm9rZS13aWR0aD0iNTgiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIvPjwvZz48L3N2Zz4=" alt="Símbolo Adiuvia" style="position:absolute;right:128px;top:52px;width:52px;height:43px;object-fit:contain">
+</section>
+<section class="slide" id="aporte-diego" data-transition="fade" style="display:flex; flex-direction:column; gap:32px; padding:128px 128px 160px; background:#f6f3ec">
+  <div style="display:flex; flex-direction:column; gap:16px">
+    <p style="font-family:Manrope, Arial, sans-serif; font-size:24px; font-weight:600; letter-spacing:4px; text-transform:uppercase; color:#876233">08 / Aporte do Diego · ponto de atenção</p>
+    <h2 style="font-family:'Cormorant Garamond', Georgia, serif; font-size:64px; font-weight:500; line-height:1.15; color:#16394b">R$ 50 mil do Diego: metade para operar, metade para a ferramenta que já existe.</h2>
+  </div>
+  <div style="display:flex; flex-direction:row; gap:28px">
+    <div style="display:flex; flex-direction:column; gap:14px; flex:1; padding:32px; background:#fbfaf7; border:1px solid #ddd5c6; border-radius:16px">
+      <p style="font-family:Manrope, Arial, sans-serif; font-size:24px; font-weight:600; letter-spacing:3px; text-transform:uppercase; color:#876233">Para a operação</p>
+      <p style="font-family:'Cormorant Garamond', Georgia, serif; font-size:72px; font-weight:500; color:#16394b">R$ 25.000</p>
+      <p style="font-family:Manrope, Arial, sans-serif; font-size:24px; line-height:1.45; color:#4a5a63">Entra no caixa da Adiuvia. Cobre o mês 1 inteiro (R$ 11,3 mil) e deixa cerca de R$ 14,6 mil de fôlego para os primeiros meses.</p>
+    </div>
+    <div style="display:flex; flex-direction:column; gap:14px; flex:1; padding:32px; background:#fbfaf7; border:1px solid #ddd5c6; border-radius:16px">
+      <p style="font-family:Manrope, Arial, sans-serif; font-size:24px; font-weight:600; letter-spacing:3px; text-transform:uppercase; color:#876233">Para o Marco, pessoa física</p>
+      <p style="font-family:'Cormorant Garamond', Georgia, serif; font-size:72px; font-weight:500; color:#16394b">R$ 25.000</p>
+      <p style="font-family:Manrope, Arial, sans-serif; font-size:24px; line-height:1.45; color:#4a5a63">Pelo desenvolvimento da ferramenta que já roda no Charllu. Em troca, o código passa a ser da empresa, por contrato.</p>
+    </div>
+    <div style="display:flex; flex-direction:column; gap:14px; flex:1.15; padding:32px; background:#16394b; border-radius:16px">
+      <p style="font-family:Manrope, Arial, sans-serif; font-size:24px; font-weight:600; letter-spacing:3px; text-transform:uppercase; color:#c9a877">Devolução pelo capital relacional</p>
+      <p style="font-family:Manrope, Arial, sans-serif; font-size:26px; line-height:1.4; color:#f6f3ec">Quando os clientes trazidos pelo Diego somarem R$ 50 mil pagos à Adiuvia, o aporte volta para ele.</p>
+      <ul style="font-family:Manrope, Arial, sans-serif; font-size:24px; line-height:1.45; color:#d9d3c7">
+        <li>Em parcelas de até 50% do que esses clientes pagaram no mês</li>
+        <li>Sem tocar na reserva mínima de caixa</li>
+        <li>Exemplo: 10 fundadores indicados somam R$ 50 mil em cerca de 5 meses</li>
+      </ul>
+    </div>
+  </div>
+  <div style="display:flex; flex-direction:column; gap:12px">
+    <p style="font-family:Manrope, Arial, sans-serif; font-size:24px; font-weight:600; letter-spacing:3px; text-transform:uppercase; color:#876233">Para decidir na reunião</p>
+    <div style="display:grid; gap:24px; grid-template-columns:1fr 1fr 1fr 1fr">
+      <p style="padding:12px 0 0; font-family:Manrope, Arial, sans-serif; font-size:24px; line-height:1.4; color:#16394b; border-top:1px solid #c9bfae">Capital ou empréstimo: o aporte muda a participação?</p>
+      <p style="padding:12px 0 0; font-family:Manrope, Arial, sans-serif; font-size:24px; line-height:1.4; color:#16394b; border-top:1px solid #c9bfae">Contrato de cessão do código, com recibo e impostos</p>
+      <p style="padding:12px 0 0; font-family:Manrope, Arial, sans-serif; font-size:24px; line-height:1.4; color:#16394b; border-top:1px solid #c9bfae">O que conta como cliente do Diego. O Charllu entra?</p>
+    </div>
+  </div>
+  <p style="position:absolute; bottom:64px; left:128px; width:1664px; font-family:Manrope, Arial, sans-serif; font-size:24px; color:#6b7a82">Proposta para discussão. Formalizar no acordo de sócios, com advogado e contador.</p>
+  <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9Ii0zMCAtMzAgODgwIDcyNCIgd2lkdGg9IjE3NjAiIGhlaWdodD0iMTQ0OCI+PGcgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMC4wMCwwLjAwKSBzY2FsZSgxLjAwMDAwKSIgZmlsbD0iIzg3NjIzMyI+PHBhdGggZD0iTTM2NC4wLDAuMCBMNDU2LjAsMC4wIEw3NjQuMCw2NjQuMCBMNjMyLjAsNjY0LjAgTDQxMC4wLDE4MC4wIEwxODkuMCw2NjQuMCBMNTYuMCw2NjQuMCBaIi8+PHBhdGggZD0iTTI5LjAsNDkyLjAgUTQxMC4wLDI1NC4wIDc5MS4wLDQ5Mi4wIiBmaWxsPSJub25lIiBzdHJva2U9IiM4NzYyMzMiIHN0cm9rZS13aWR0aD0iNTgiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIvPjwvZz48L3N2Zz4=" alt="Símbolo Adiuvia" style="position:absolute; top:52px; right:128px; width:52px; height:43px; object-fit:contain">
+</section>
+<section class="slide" id="projecao" style="background:#F6F3EC;color:#16394B;font-family:'Manrope', Arial, sans-serif;padding:128px 128px 160px;display:flex;flex-direction:column;gap:36px">
+<div style="display:flex;flex-direction:column;gap:16px">
+<p style="font-size:24px;letter-spacing:4px;text-transform:uppercase;color:#876233">08 / Projeção dos anos 1 a 4</p>
+<h2 style="font-family:'Cormorant Garamond', Georgia, serif;font-size:64px;font-weight:500;line-height:1.15">No conservador, de R$ 1 milhão no ano 1 a R$ 13 milhões no ano 4, só com restaurantes.</h2>
+</div>
+<table style="font-size:24px;color:#16394B"><tr><th style="width:22%;text-align:left">Cenário</th><th style="width:18%;text-align:left">Indicador</th><th style="width:15%;text-align:right">Ano 1</th><th style="width:15%;text-align:right">Ano 2</th><th style="width:15%;text-align:right">Ano 3</th><th style="width:15%;text-align:right">Ano 4</th></tr>
+<tr><td>Pessimista</td><td>Clientes</td><td style="text-align:right">80</td><td style="text-align:right">180</td><td style="text-align:right">300</td><td style="text-align:right">420</td></tr>
+<tr><td></td><td>Receita</td><td style="text-align:right">R$ 575 mil</td><td style="text-align:right">R$ 1,8 mi</td><td style="text-align:right">R$ 3,4 mi</td><td style="text-align:right">R$ 5,3 mi</td></tr>
+<tr><td></td><td>Resultado</td><td style="text-align:right">R$ 77 mil</td><td style="text-align:right">R$ 235 mil</td><td style="text-align:right">R$ 591 mil</td><td style="text-align:right">R$ 671 mil</td></tr>
+<tr style="background:#ECE5D8"><td><b>Conservador</b></td><td><b>Clientes</b></td><td style="text-align:right"><b>130</b></td><td style="text-align:right"><b>330</b></td><td style="text-align:right"><b>600</b></td><td style="text-align:right"><b>900</b></td></tr>
+<tr style="background:#ECE5D8"><td></td><td><b>Receita</b></td><td style="text-align:right"><b>R$ 1,0 mi</b></td><td style="text-align:right"><b>R$ 3,6 mi</b></td><td style="text-align:right"><b>R$ 7,6 mi</b></td><td style="text-align:right"><b>R$ 13,0 mi</b></td></tr>
+<tr style="background:#ECE5D8"><td></td><td><b>Resultado</b></td><td style="text-align:right"><b>R$ 298 mil</b></td><td style="text-align:right"><b>R$ 770 mil</b></td><td style="text-align:right"><b>R$ 1,6 mi</b></td><td style="text-align:right"><b>R$ 3,3 mi</b></td></tr>
+<tr><td>Otimista</td><td>Clientes</td><td style="text-align:right">180</td><td style="text-align:right">500</td><td style="text-align:right">950</td><td style="text-align:right">1.500</td></tr>
+<tr><td></td><td>Receita</td><td style="text-align:right">R$ 1,5 mi</td><td style="text-align:right">R$ 5,6 mi</td><td style="text-align:right">R$ 12,9 mi</td><td style="text-align:right">R$ 23,5 mi</td></tr>
+<tr><td></td><td>Resultado</td><td style="text-align:right">R$ 458 mil</td><td style="text-align:right">R$ 1,2 mi</td><td style="text-align:right">R$ 3,5 mi</td><td style="text-align:right">R$ 7,2 mi</td></tr></table>
+<p style="font-size:24px;line-height:1.45;color:#4A5A63">Ano 1 com base nas metas: 20 fundadores em janeiro e 130 clientes em outubro no conservador. Tecnologia calculada por casa ativa, pelo uso real: mesmo o pessimista fica positivo em todos os anos.</p>
+<p style="position:absolute;left:128px;bottom:64px;width:1664px;font-size:24px;color:#6B7A82">Clientes no fim de cada ano. Resultado após impostos, pró-labore e variável dos sócios. Ano 1 = nov/2026 a out/2027.</p>
+<img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9Ii0zMCAtMzAgODgwIDcyNCIgd2lkdGg9IjE3NjAiIGhlaWdodD0iMTQ0OCI+PGcgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMC4wMCwwLjAwKSBzY2FsZSgxLjAwMDAwKSIgZmlsbD0iIzg3NjIzMyI+PHBhdGggZD0iTTM2NC4wLDAuMCBMNDU2LjAsMC4wIEw3NjQuMCw2NjQuMCBMNjMyLjAsNjY0LjAgTDQxMC4wLDE4MC4wIEwxODkuMCw2NjQuMCBMNTYuMCw2NjQuMCBaIi8+PHBhdGggZD0iTTI5LjAsNDkyLjAgUTQxMC4wLDI1NC4wIDc5MS4wLDQ5Mi4wIiBmaWxsPSJub25lIiBzdHJva2U9IiM4NzYyMzMiIHN0cm9rZS13aWR0aD0iNTgiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIvPjwvZz48L3N2Zz4=" alt="Símbolo Adiuvia" style="position:absolute;right:128px;top:52px;width:52px;height:43px;object-fit:contain">
+</section>
+<section class="slide" id="projecao-gastos" style="background:#F6F3EC;color:#16394B;font-family:'Manrope', Arial, sans-serif;padding:128px 128px 160px;display:flex;flex-direction:column;gap:36px">
+<div style="display:flex;flex-direction:column;gap:16px">
+<p style="font-size:24px;letter-spacing:4px;text-transform:uppercase;color:#876233">08 / Para onde vai o dinheiro · ano 1 conservador</p>
+<h2 style="font-family:'Cormorant Garamond', Georgia, serif;font-size:56px;font-weight:500;line-height:1.15">Ano 1: R$ 719 mil de gastos sobre R$ 1 milhão de receita.</h2>
+</div>
+<div style="display:grid;grid-template-columns:1fr 1fr 1fr 1fr;gap:20px">
+<div style="display:flex;flex-direction:column;gap:6px;background:#FBFAF7;border:1px solid #DDD5C6;border-radius:16px;padding:28px"><p style="font-size:24px;font-weight:600;color:#876233">Tecnologia e operação</p><p style="font-family:'Cormorant Garamond', Georgia, serif;font-size:56px;font-weight:500;color:#16394B">R$ 211 mil</p><p style="font-size:24px;line-height:1.4;color:#4A5A63">21% · R$ 200 por casa ao mês e cobrança</p><p style="font-size:24px;color:#6B7A82">Ano 2: R$ 668 mil</p></div>
+<div style="display:flex;flex-direction:column;gap:6px;background:#FBFAF7;border:1px solid #DDD5C6;border-radius:16px;padding:28px"><p style="font-size:24px;font-weight:600;color:#876233">Recursos humanos</p><p style="font-family:'Cormorant Garamond', Georgia, serif;font-size:56px;font-weight:500;color:#16394B">R$ 77 mil</p><p style="font-size:24px;line-height:1.4;color:#4A5A63">8% · 2 analistas, contratados em fev e jun</p><p style="font-size:24px;color:#6B7A82">Ano 2: R$ 757 mil</p></div>
+<div style="display:flex;flex-direction:column;gap:6px;background:#FBFAF7;border:1px solid #DDD5C6;border-radius:16px;padding:28px"><p style="font-size:24px;font-weight:600;color:#876233">Marketing</p><p style="font-family:'Cormorant Garamond', Georgia, serif;font-size:56px;font-weight:500;color:#16394B">R$ 153 mil</p><p style="font-size:24px;line-height:1.4;color:#4A5A63">15% · anúncios, conteúdo, eventos</p><p style="font-size:24px;color:#6B7A82">Ano 2: R$ 534 mil</p></div>
+<div style="display:flex;flex-direction:column;gap:6px;background:#FBFAF7;border:1px solid #DDD5C6;border-radius:16px;padding:28px"><p style="font-size:24px;font-weight:600;color:#876233">Pró-labore dos sócios</p><p style="font-family:'Cormorant Garamond', Georgia, serif;font-size:56px;font-weight:500;color:#16394B">R$ 108 mil</p><p style="font-size:24px;line-height:1.4;color:#4A5A63">11% · R$ 3 mil por sócio na 1ª faixa</p><p style="font-size:24px;color:#6B7A82">Ano 2: R$ 360 mil</p></div>
+<div style="display:flex;flex-direction:column;gap:6px;background:#FBFAF7;border:1px solid #DDD5C6;border-radius:16px;padding:28px"><p style="font-size:24px;font-weight:600;color:#876233">Impostos</p><p style="font-family:'Cormorant Garamond', Georgia, serif;font-size:56px;font-weight:500;color:#16394B">R$ 81 mil</p><p style="font-size:24px;line-height:1.4;color:#4A5A63">8% · Simples Nacional</p><p style="font-size:24px;color:#6B7A82">Ano 2: R$ 285 mil</p></div>
+<div style="display:flex;flex-direction:column;gap:6px;background:#FBFAF7;border:1px solid #DDD5C6;border-radius:16px;padding:28px"><p style="font-size:24px;font-weight:600;color:#876233">Estrutura</p><p style="font-family:'Cormorant Garamond', Georgia, serif;font-size:56px;font-weight:500;color:#16394B">R$ 36 mil</p><p style="font-size:24px;line-height:1.4;color:#4A5A63">4% · contador, jurídico, ferramentas</p><p style="font-size:24px;color:#6B7A82">Ano 2: R$ 50 mil</p></div>
+<div style="display:flex;flex-direction:column;gap:6px;background:#FBFAF7;border:1px solid #DDD5C6;border-radius:16px;padding:28px"><p style="font-size:24px;font-weight:600;color:#876233">Variável dos sócios</p><p style="font-family:'Cormorant Garamond', Georgia, serif;font-size:56px;font-weight:500;color:#16394B">R$ 53 mil</p><p style="font-size:24px;line-height:1.4;color:#4A5A63">5% · 15% do lucro, por meta de área</p><p style="font-size:24px;color:#6B7A82">Ano 2: R$ 136 mil</p></div>
+<div style="display:flex;flex-direction:column;gap:6px;background:#16394B;border-radius:16px;padding:28px"><p style="font-size:24px;font-weight:600;color:#C9A877">Resultado</p><p style="font-family:'Cormorant Garamond', Georgia, serif;font-size:56px;font-weight:500;color:#F6F3EC">R$ 298 mil</p><p style="font-size:24px;line-height:1.4;color:#D9D3C7">29% da receita fica no caixa</p><p style="font-size:24px;color:#C9A877">Ano 2: R$ 770 mil</p></div>
+</div>
+<p style="position:absolute;left:128px;bottom:64px;width:1664px;font-size:24px;color:#6B7A82">Cenário conservador da planilha, aba Projeção. Percentuais sobre a receita total do ano 1 (R$ 1.017 mil), arredondados.</p>
+<img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9Ii0zMCAtMzAgODgwIDcyNCIgd2lkdGg9IjE3NjAiIGhlaWdodD0iMTQ0OCI+PGcgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMC4wMCwwLjAwKSBzY2FsZSgxLjAwMDAwKSIgZmlsbD0iIzg3NjIzMyI+PHBhdGggZD0iTTM2NC4wLDAuMCBMNDU2LjAsMC4wIEw3NjQuMCw2NjQuMCBMNjMyLjAsNjY0LjAgTDQxMC4wLDE4MC4wIEwxODkuMCw2NjQuMCBMNTYuMCw2NjQuMCBaIi8+PHBhdGggZD0iTTI5LjAsNDkyLjAgUTQxMC4wLDI1NC4wIDc5MS4wLDQ5Mi4wIiBmaWxsPSJub25lIiBzdHJva2U9IiM4NzYyMzMiIHN0cm9rZS13aWR0aD0iNTgiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIvPjwvZz48L3N2Zz4=" alt="Símbolo Adiuvia" style="position:absolute;right:128px;top:52px;width:52px;height:43px;object-fit:contain">
+</section>
+<section class="slide" id="projecao-detalhe-1" style="display:flex; flex-direction:column; gap:32px; padding:128px 128px 160px; background:#f6f3ec">
+  <div style="display:flex; flex-direction:column; gap:12px">
+    <p style="font-family:Manrope, Arial, sans-serif; font-size:24px; letter-spacing:4px; text-transform:uppercase; color:#876233">08 / Para onde vai o dinheiro · detalhe 1 de 2</p>
+    <h2 style="font-family:'Cormorant Garamond', Georgia, serif; font-size:52px; font-weight:500; line-height:1.15; color:#16394b">Tecnologia, pessoas e marketing: R$ 441 mil, 43% da receita.</h2>
+  </div>
+  <div style="display:flex; flex-direction:row; gap:32px; align-items:flex-start">
+    <div style="display:flex; flex-direction:column; gap:20px; flex:1"><div style="display:flex; flex-direction:column; gap:10px; padding:22px 30px; background:#fbfaf7; border:1px solid #ddd5c6; border-radius:16px"><div style="display:flex; flex-direction:row; align-items:baseline; justify-content:space-between"><p style="font-family:Manrope, Arial, sans-serif; font-size:24px; font-weight:600; letter-spacing:3px; text-transform:uppercase; color:#876233">Tecnologia e operação · Marco</p><p style="font-family:'Cormorant Garamond', Georgia, serif; font-size:44px; font-weight:500; color:#16394b">R$ 211 mil</p></div><table style="font-family:Manrope, Arial, sans-serif; font-size:24px; color:#16394b"><colgroup><col style="width:44%"><col style="width:36%"><col style="width:20%"></colgroup><tr><td>Mensagens da IA na Meta</td><td style="color:#4a5a63">R$ 91 por casa/mês</td><td style="text-align:right">R$ 71,5 mil</td></tr><tr><td>Modelo de IA</td><td style="color:#4a5a63">R$ 48 por casa/mês</td><td style="text-align:right">R$ 37,7 mil</td></tr><tr><td>Provedor da API</td><td style="color:#4a5a63">R$ 30 por casa/mês</td><td style="text-align:right">R$ 23,6 mil</td></tr><tr><td>Nuvem variável</td><td style="color:#4a5a63">R$ 20 por casa/mês</td><td style="text-align:right">R$ 15,7 mil</td></tr><tr><td>Confirmações e lembretes</td><td style="color:#4a5a63">R$ 10,50 por casa/mês</td><td style="text-align:right">R$ 8,3 mil</td></tr><tr><td>Servidores base</td><td style="color:#4a5a63">R$ 1.000 por mês</td><td style="text-align:right">R$ 12,0 mil</td></tr><tr><td>Monitoramento e segurança</td><td style="color:#4a5a63">R$ 500 por mês</td><td style="text-align:right">R$ 6,0 mil</td></tr><tr><td>Ferramentas de dev</td><td style="color:#4a5a63">R$ 500 por mês</td><td style="text-align:right">R$ 6,0 mil</td></tr><tr><td>Taxas de cobrança (Diego)</td><td style="color:#4a5a63">3% da receita</td><td style="text-align:right">R$ 30,5 mil</td></tr></table><p style="font-family:Manrope, Arial, sans-serif; font-size:24px; line-height:1.4; color:#4a5a63">786 casas-mês no ano: R$ 157 mil variam com o uso, R$ 24 mil são fixos.</p></div></div>
+    <div style="display:flex; flex-direction:column; gap:20px; flex:1"><div style="display:flex; flex-direction:column; gap:10px; padding:22px 30px; background:#fbfaf7; border:1px solid #ddd5c6; border-radius:16px"><div style="display:flex; flex-direction:row; align-items:baseline; justify-content:space-between"><p style="font-family:Manrope, Arial, sans-serif; font-size:24px; font-weight:600; letter-spacing:3px; text-transform:uppercase; color:#876233">Recursos humanos · Marco</p><p style="font-family:'Cormorant Garamond', Georgia, serif; font-size:44px; font-weight:500; color:#16394b">R$ 77 mil</p></div><table style="font-family:Manrope, Arial, sans-serif; font-size:24px; color:#16394b"><colgroup><col style="width:44%"><col style="width:36%"><col style="width:20%"></colgroup><tr><td>Analista 1, implantação</td><td style="color:#4a5a63">Fev a out: 9 × R$ 5.500</td><td style="text-align:right">R$ 49,5 mil</td></tr><tr><td>Analista 2, suporte</td><td style="color:#4a5a63">Jun a out: 5 × R$ 5.500</td><td style="text-align:right">R$ 27,5 mil</td></tr></table><p style="font-family:Manrope, Arial, sans-serif; font-size:24px; line-height:1.4; color:#4a5a63">Salário com encargos. Proposta: só contratar com a meta de clientes do trimestre batida.</p></div><div style="display:flex; flex-direction:column; gap:10px; padding:22px 30px; background:#fbfaf7; border:1px solid #ddd5c6; border-radius:16px"><div style="display:flex; flex-direction:row; align-items:baseline; justify-content:space-between"><p style="font-family:Manrope, Arial, sans-serif; font-size:24px; font-weight:600; letter-spacing:3px; text-transform:uppercase; color:#876233">Marketing · Rafael</p><p style="font-family:'Cormorant Garamond', Georgia, serif; font-size:44px; font-weight:500; color:#16394b">R$ 153 mil</p></div><table style="font-family:Manrope, Arial, sans-serif; font-size:24px; color:#16394b"><colgroup><col style="width:44%"><col style="width:36%"><col style="width:20%"></colgroup><tr><td>Anúncios Meta e Google</td><td style="color:#4a5a63">60% da verba</td><td style="text-align:right">R$ 91,5 mil</td></tr><tr><td>Conteúdo e produção</td><td style="color:#4a5a63">15% da verba</td><td style="text-align:right">R$ 22,9 mil</td></tr><tr><td>Eventos, Abrasel e feiras</td><td style="color:#4a5a63">15% da verba</td><td style="text-align:right">R$ 22,9 mil</td></tr><tr><td>Ferramentas, site e domínio</td><td style="color:#4a5a63">10% da verba</td><td style="text-align:right">R$ 15,3 mil</td></tr></table><p style="font-family:Manrope, Arial, sans-serif; font-size:24px; line-height:1.4; color:#4a5a63">Verba fixa em 15% da receita: cresce só quando a receita cresce.</p></div></div>
+  </div>
+  <p style="position:absolute; bottom:64px; left:128px; width:1664px; font-family:Manrope, Arial, sans-serif; font-size:24px; color:#6b7a82">Cenário conservador, aba Ano 1 Detalhado da planilha. Valores do ano 1 (nov/2026 a out/2027), arredondados.</p>
+  <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9Ii0zMCAtMzAgODgwIDcyNCIgd2lkdGg9IjE3NjAiIGhlaWdodD0iMTQ0OCI+PGcgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMC4wMCwwLjAwKSBzY2FsZSgxLjAwMDAwKSIgZmlsbD0iIzg3NjIzMyI+PHBhdGggZD0iTTM2NC4wLDAuMCBMNDU2LjAsMC4wIEw3NjQuMCw2NjQuMCBMNjMyLjAsNjY0LjAgTDQxMC4wLDE4MC4wIEwxODkuMCw2NjQuMCBMNTYuMCw2NjQuMCBaIi8+PHBhdGggZD0iTTI5LjAsNDkyLjAgUTQxMC4wLDI1NC4wIDc5MS4wLDQ5Mi4wIiBmaWxsPSJub25lIiBzdHJva2U9IiM4NzYyMzMiIHN0cm9rZS13aWR0aD0iNTgiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIvPjwvZz48L3N2Zz4=" alt="Símbolo Adiuvia" style="position:absolute; top:52px; right:128px; width:52px; height:43px; object-fit:contain">
+</section>
+<section class="slide" id="projecao-detalhe-2" style="display:flex; flex-direction:column; gap:32px; padding:128px 128px 160px; background:#f6f3ec">
+  <div style="display:flex; flex-direction:column; gap:12px">
+    <p style="font-family:Manrope, Arial, sans-serif; font-size:24px; letter-spacing:4px; text-transform:uppercase; color:#876233">08 / Para onde vai o dinheiro · detalhe 2 de 2</p>
+    <h2 style="font-family:'Cormorant Garamond', Georgia, serif; font-size:52px; font-weight:500; line-height:1.15; color:#16394b">Sócios, impostos e estrutura: R$ 278 mil, e R$ 298 mil ficam no caixa.</h2>
+  </div>
+  <div style="display:flex; flex-direction:row; gap:32px; align-items:flex-start">
+    <div style="display:flex; flex-direction:column; gap:20px; flex:1"><div style="display:flex; flex-direction:column; gap:10px; padding:22px 30px; background:#fbfaf7; border:1px solid #ddd5c6; border-radius:16px"><div style="display:flex; flex-direction:row; align-items:baseline; justify-content:space-between"><p style="font-family:Manrope, Arial, sans-serif; font-size:24px; font-weight:600; letter-spacing:3px; text-transform:uppercase; color:#876233">Pró-labore · sócios</p><p style="font-family:'Cormorant Garamond', Georgia, serif; font-size:44px; font-weight:500; color:#16394b">R$ 108 mil</p></div><table style="font-family:Manrope, Arial, sans-serif; font-size:24px; color:#16394b"><colgroup><col style="width:44%"><col style="width:36%"><col style="width:20%"></colgroup><tr><td>Faixa 1, mar a jun</td><td style="color:#4a5a63">3 × R$ 3 mil × 4 meses</td><td style="text-align:right">R$ 36,0 mil</td></tr><tr><td>Faixa 2, jul a out</td><td style="color:#4a5a63">3 × R$ 6 mil × 4 meses</td><td style="text-align:right">R$ 72,0 mil</td></tr></table><p style="font-family:Manrope, Arial, sans-serif; font-size:24px; line-height:1.4; color:#4a5a63">Gatilhos: R$ 40 mil de receita mensal (março) e R$ 100 mil (julho). Sem gatilho, sem pró-labore.</p></div><div style="display:flex; flex-direction:column; gap:10px; padding:22px 30px; background:#fbfaf7; border:1px solid #ddd5c6; border-radius:16px"><div style="display:flex; flex-direction:row; align-items:baseline; justify-content:space-between"><p style="font-family:Manrope, Arial, sans-serif; font-size:24px; font-weight:600; letter-spacing:3px; text-transform:uppercase; color:#876233">Impostos · contador</p><p style="font-family:'Cormorant Garamond', Georgia, serif; font-size:44px; font-weight:500; color:#16394b">R$ 81 mil</p></div><table style="font-family:Manrope, Arial, sans-serif; font-size:24px; color:#16394b"><colgroup><col style="width:44%"><col style="width:36%"><col style="width:20%"></colgroup><tr><td>Simples Nacional</td><td style="color:#4a5a63">8% da receita</td><td style="text-align:right">R$ 81,4 mil</td></tr></table></div><div style="display:flex; flex-direction:column; gap:10px; padding:22px 30px; background:#fbfaf7; border:1px solid #ddd5c6; border-radius:16px"><div style="display:flex; flex-direction:row; align-items:baseline; justify-content:space-between"><p style="font-family:Manrope, Arial, sans-serif; font-size:24px; font-weight:600; letter-spacing:3px; text-transform:uppercase; color:#876233">Variável · sócios</p><p style="font-family:'Cormorant Garamond', Georgia, serif; font-size:44px; font-weight:500; color:#16394b">R$ 53 mil</p></div><table style="font-family:Manrope, Arial, sans-serif; font-size:24px; color:#16394b"><colgroup><col style="width:44%"><col style="width:36%"><col style="width:20%"></colgroup><tr><td>Fundo por meta de área</td><td style="color:#4a5a63">15% do resultado</td><td style="text-align:right">R$ 52,6 mil</td></tr></table><p style="font-family:Manrope, Arial, sans-serif; font-size:24px; line-height:1.4; color:#4a5a63">Pago só sobre a parte das metas atingida.</p></div></div>
+    <div style="display:flex; flex-direction:column; gap:20px; flex:1"><div style="display:flex; flex-direction:column; gap:10px; padding:22px 30px; background:#fbfaf7; border:1px solid #ddd5c6; border-radius:16px"><div style="display:flex; flex-direction:row; align-items:baseline; justify-content:space-between"><p style="font-family:Manrope, Arial, sans-serif; font-size:24px; font-weight:600; letter-spacing:3px; text-transform:uppercase; color:#876233">Estrutura e comercial</p><p style="font-family:'Cormorant Garamond', Georgia, serif; font-size:44px; font-weight:500; color:#16394b">R$ 36 mil</p></div><table style="font-family:Manrope, Arial, sans-serif; font-size:24px; color:#16394b"><colgroup><col style="width:44%"><col style="width:36%"><col style="width:20%"></colgroup><tr><td>Deslocamento (Diego)</td><td style="color:#4a5a63">R$ 800 por mês</td><td style="text-align:right">R$ 9,6 mil</td></tr><tr><td>Contador</td><td style="color:#4a5a63">R$ 500 por mês</td><td style="text-align:right">R$ 6,0 mil</td></tr><tr><td>Jurídico e contrato social</td><td style="color:#4a5a63">R$ 3.500 + R$ 1.000</td><td style="text-align:right">R$ 4,5 mil</td></tr><tr><td>CRM de vendas (Diego)</td><td style="color:#4a5a63">R$ 350 por mês</td><td style="text-align:right">R$ 4,2 mil</td></tr><tr><td>Ferramentas de gestão</td><td style="color:#4a5a63">R$ 150 por mês</td><td style="text-align:right">R$ 1,8 mil</td></tr><tr><td>Reserva para imprevistos</td><td style="color:#4a5a63">Saldo da verba</td><td style="text-align:right">R$ 9,9 mil</td></tr></table></div><div style="display:flex; flex-direction:column; gap:10px; padding:22px 30px; background:#16394b; border-radius:16px"><div style="display:flex; flex-direction:row; align-items:baseline; justify-content:space-between"><p style="font-family:Manrope, Arial, sans-serif; font-size:24px; font-weight:600; letter-spacing:3px; text-transform:uppercase; color:#c9a877">Fechamento do ano 1</p><p style="font-family:'Cormorant Garamond', Georgia, serif; font-size:44px; font-weight:500; color:#f6f3ec">R$ 298 mil</p></div><table style="font-family:Manrope, Arial, sans-serif; font-size:24px; color:#f6f3ec"><colgroup><col style="width:44%"><col style="width:36%"><col style="width:20%"></colgroup><tr><td>Receita</td><td style="color:#d9d3c7">130 clientes em out</td><td style="text-align:right">R$ 1,02 mi</td></tr><tr><td>Total de gastos</td><td style="color:#d9d3c7">7 categorias</td><td style="text-align:right">R$ 719 mil</td></tr><tr><td>Resultado no caixa</td><td style="color:#d9d3c7">29% da receita</td><td style="text-align:right">R$ 298 mil</td></tr></table></div></div>
+  </div>
+  <p style="position:absolute; bottom:64px; left:128px; width:1664px; font-family:Manrope, Arial, sans-serif; font-size:24px; color:#6b7a82">Fora desta conta: aporte de R$ 50 mil do Diego e gastos únicos do mês 1. Aba Ano 1 Detalhado da planilha.</p>
+  <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9Ii0zMCAtMzAgODgwIDcyNCIgd2lkdGg9IjE3NjAiIGhlaWdodD0iMTQ0OCI+PGcgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMC4wMCwwLjAwKSBzY2FsZSgxLjAwMDAwKSIgZmlsbD0iIzg3NjIzMyI+PHBhdGggZD0iTTM2NC4wLDAuMCBMNDU2LjAsMC4wIEw3NjQuMCw2NjQuMCBMNjMyLjAsNjY0LjAgTDQxMC4wLDE4MC4wIEwxODkuMCw2NjQuMCBMNTYuMCw2NjQuMCBaIi8+PHBhdGggZD0iTTI5LjAsNDkyLjAgUTQxMC4wLDI1NC4wIDc5MS4wLDQ5Mi4wIiBmaWxsPSJub25lIiBzdHJva2U9IiM4NzYyMzMiIHN0cm9rZS13aWR0aD0iNTgiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIvPjwvZz48L3N2Zz4=" alt="Símbolo Adiuvia" style="position:absolute; top:52px; right:128px; width:52px; height:43px; object-fit:contain">
+</section>
+<section class="slide" id="riscos" style="background:#F6F3EC;color:#16394B;font-family:'Manrope', Arial, sans-serif;padding:128px 128px 160px;display:flex;flex-direction:column;gap:48px">
+<div style="display:flex;flex-direction:column;gap:16px">
+<p style="font-size:24px;letter-spacing:4px;text-transform:uppercase;color:#876233">09 / Riscos</p>
+<h2 style="font-family:'Cormorant Garamond', Georgia, serif;font-size:64px;font-weight:500;line-height:1.15">Quatro riscos, cada um com um dono.</h2>
+</div>
+<table style="font-size:26px;color:#16394B"><tr><th style="width:30%;text-align:left">Risco</th><th style="width:12%;text-align:left">Impacto</th><th style="width:12%;text-align:left">Dono</th><th style="width:46%;text-align:left">Mitigação</th></tr>
+<tr><td>Taxa de IA da Meta se aplicar à Adiuvia</td><td>Alto</td><td>Marco</td><td>Confirmar com o provedor até 6 nov; reduzir mensagens por conversa</td></tr>
+<tr><td>Agente grátis da Meta ou sistemas baratos ganham reserva</td><td>Alto</td><td>Rafael</td><td>Vender resultado medido e implantação feita por nós</td></tr>
+<tr><td>Desalinhamento entre sócios sobre dedicação e ganhos</td><td>Alto</td><td>Rafael</td><td>Acordo de sócios assinado em novembro e conselho trimestral</td></tr>
+<tr><td>Implantação personalizada não escala</td><td>Médio</td><td>Marco</td><td>Templates por segmento e analistas a partir de fevereiro</td></tr></table>
+<p style="position:absolute;left:128px;bottom:64px;width:1664px;font-size:24px;color:#6B7A82">Lista completa, com cancelamento, concentração em um só segmento e o caso Charllu, no Business Plan.</p>
+<img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9Ii0zMCAtMzAgODgwIDcyNCIgd2lkdGg9IjE3NjAiIGhlaWdodD0iMTQ0OCI+PGcgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMC4wMCwwLjAwKSBzY2FsZSgxLjAwMDAwKSIgZmlsbD0iIzg3NjIzMyI+PHBhdGggZD0iTTM2NC4wLDAuMCBMNDU2LjAsMC4wIEw3NjQuMCw2NjQuMCBMNjMyLjAsNjY0LjAgTDQxMC4wLDE4MC4wIEwxODkuMCw2NjQuMCBMNTYuMCw2NjQuMCBaIi8+PHBhdGggZD0iTTI5LjAsNDkyLjAgUTQxMC4wLDI1NC4wIDc5MS4wLDQ5Mi4wIiBmaWxsPSJub25lIiBzdHJva2U9IiM4NzYyMzMiIHN0cm9rZS13aWR0aD0iNTgiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIvPjwvZz48L3N2Zz4=" alt="Símbolo Adiuvia" style="position:absolute;right:128px;top:52px;width:52px;height:43px;object-fit:contain">
+</section>
+<section class="slide" id="decisoes" style="background:#16394B;color:#F6F3EC;font-family:'Manrope', Arial, sans-serif;padding:128px 128px 160px;display:flex;flex-direction:column;gap:56px">
+<div style="display:flex;flex-direction:column;gap:16px">
+<p style="font-size:24px;letter-spacing:4px;text-transform:uppercase;color:#C9A877">09 / Decisões de hoje</p>
+<h2 style="font-family:'Cormorant Garamond', Georgia, serif;font-size:64px;font-weight:500;line-height:1.15;color:#F6F3EC">Saímos desta reunião com oito pontos fechados.</h2>
+</div>
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:28px 72px">
+<div style="display:flex;gap:20px;align-items:baseline"><p style="font-size:24px;color:#C9A877">01 /</p><p style="font-size:30px;line-height:1.35">Divisão da participação e vesting</p></div>
+<div style="display:flex;gap:20px;align-items:baseline"><p style="font-size:24px;color:#C9A877">02 /</p><p style="font-size:30px;line-height:1.35">Régua de pró-labore e fundo de variável</p></div>
+<div style="display:flex;gap:20px;align-items:baseline"><p style="font-size:24px;color:#C9A877">03 /</p><p style="font-size:30px;line-height:1.35">Metas e pesos de cada área no 1º trimestre</p></div>
+<div style="display:flex;gap:20px;align-items:baseline"><p style="font-size:24px;color:#C9A877">04 /</p><p style="font-size:30px;line-height:1.35">Escopo e alçadas de cada sócio</p></div>
+<div style="display:flex;gap:20px;align-items:baseline"><p style="font-size:24px;color:#C9A877">05 /</p><p style="font-size:30px;line-height:1.35">Condição comercial do Charllu</p></div>
+<div style="display:flex;gap:20px;align-items:baseline"><p style="font-size:24px;color:#C9A877">06 /</p><p style="font-size:30px;line-height:1.35">Escada de planos e 20 fundadores</p></div>
+<div style="display:flex;gap:20px;align-items:baseline"><p style="font-size:24px;color:#C9A877">07 /</p><p style="font-size:30px;line-height:1.35">Aporte de R$ 50 mil do Diego e orçamento do mês 1</p></div>
+<div style="display:flex;gap:20px;align-items:baseline"><p style="font-size:24px;color:#C9A877">08 /</p><p style="font-size:30px;line-height:1.35">Foco só em restaurantes; clínicas em estudo para o mês 13</p></div>
+</div>
+<p style="position:absolute;left:128px;bottom:64px;width:1664px;font-size:24px;color:#D9D3C7">Próximo passo: acordo de sócios com advogado até 20 de novembro.</p>
+<img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9Ii0zMCAtMzAgODgwIDcyNCIgd2lkdGg9IjE3NjAiIGhlaWdodD0iMTQ0OCI+PGcgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMC4wMCwwLjAwKSBzY2FsZSgxLjAwMDAwKSIgZmlsbD0iIzg3NjIzMyI+PHBhdGggZD0iTTM2NC4wLDAuMCBMNDU2LjAsMC4wIEw3NjQuMCw2NjQuMCBMNjMyLjAsNjY0LjAgTDQxMC4wLDE4MC4wIEwxODkuMCw2NjQuMCBMNTYuMCw2NjQuMCBaIi8+PHBhdGggZD0iTTI5LjAsNDkyLjAgUTQxMC4wLDI1NC4wIDc5MS4wLDQ5Mi4wIiBmaWxsPSJub25lIiBzdHJva2U9IiM4NzYyMzMiIHN0cm9rZS13aWR0aD0iNTgiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIvPjwvZz48L3N2Zz4=" alt="Símbolo Adiuvia" style="position:absolute;right:128px;top:52px;width:52px;height:43px;object-fit:contain">
+</section>
+<section class="slide" id="expansao" data-transition="fade" style="background:#EEE8DD;color:#16394B;font-family:'Manrope', Arial, sans-serif;padding:128px 128px 160px;display:flex;flex-direction:column;gap:40px">
+<div style="display:flex;flex-direction:column;gap:16px">
+<p style="font-size:24px;font-weight:600;letter-spacing:4px;text-transform:uppercase;color:#876233">Anexo · Expansão a partir do mês 13</p>
+<h2 style="font-family:'Cormorant Garamond', Georgia, serif;font-size:64px;font-weight:500;line-height:1.15">Clínicas odontológicas e de estética: ticket alto e agenda que vive no WhatsApp.</h2>
+</div>
+<div style="display:flex;gap:40px;align-items:stretch">
+<div style="flex:1.25;display:grid;grid-template-columns:1fr 1fr;gap:20px">
+<div style="display:flex;flex-direction:column;gap:8px;background:#FBFAF7;border:1px solid #DDD5C6;border-radius:16px;padding:28px"><p style="font-family:'Cormorant Garamond', Georgia, serif;font-size:64px;font-weight:500;color:#16394B">450 mil</p><p style="font-size:24px;line-height:1.4;color:#4A5A63">dentistas no Brasil, o maior número do mundo (CFO, 2026)</p></div>
+<div style="display:flex;flex-direction:column;gap:8px;background:#FBFAF7;border:1px solid #DDD5C6;border-radius:16px;padding:28px"><p style="font-family:'Cormorant Garamond', Georgia, serif;font-size:64px;font-weight:500;color:#16394B">3,1 mi</p><p style="font-size:24px;line-height:1.4;color:#4A5A63">procedimentos estéticos não cirúrgicos em 2024, 2º do mundo (ISAPS)</p></div>
+<div style="display:flex;flex-direction:column;gap:8px;background:#FBFAF7;border:1px solid #DDD5C6;border-radius:16px;padding:28px"><p style="font-family:'Cormorant Garamond', Georgia, serif;font-size:64px;font-weight:500;color:#876233">R$ 9.100</p><p style="font-size:24px;line-height:1.4;color:#4A5A63">ticket médio por tratamento numa rede de clínicas, contra R$ 480 de uma mesa</p></div>
+<div style="display:flex;flex-direction:column;gap:8px;background:#FBFAF7;border:1px solid #DDD5C6;border-radius:16px;padding:28px"><p style="font-family:'Cormorant Garamond', Georgia, serif;font-size:64px;font-weight:500;color:#16394B">33% a 43%</p><p style="font-size:24px;line-height:1.4;color:#4A5A63">de faltas a consultas em estudos com adultos no serviço público</p></div>
+</div>
+<div style="flex:1;display:flex;flex-direction:column;gap:20px;background:#16394B;border-radius:16px;padding:36px;color:#F6F3EC">
+<p style="font-size:24px;font-weight:600;letter-spacing:3px;text-transform:uppercase;color:#C9A877">Projeção apartada · conservador</p>
+<table style="font-size:26px;color:#F6F3EC"><tr><th style="width:40%;text-align:left"></th><th style="width:20%;text-align:right">Ano 2</th><th style="width:20%;text-align:right">Ano 3</th><th style="width:20%;text-align:right">Ano 4</th></tr><tr><td>Clínicas</td><td style="text-align:right">60</td><td style="text-align:right">180</td><td style="text-align:right">350</td></tr><tr><td>Receita</td><td style="text-align:right">R$ 0,6 mi</td><td style="text-align:right">R$ 2,3 mi</td><td style="text-align:right">R$ 5,3 mi</td></tr><tr><td>Contribuição</td><td style="text-align:right">R$ 98 mil</td><td style="text-align:right">R$ 962 mil</td><td style="text-align:right">R$ 2,4 mi</td></tr></table>
+<p style="font-size:24px;line-height:1.45;color:#D9D3C7">Mensalidade média de R$ 1.300 e R$ 180 mil de investimento de entrada no ano 2.</p>
+</div>
+</div>
+<div style="display:flex;gap:40px">
+<p style="flex:1;font-size:24px;line-height:1.45;color:#4A5A63"><b style="color:#16394B">Concorrência:</b> secretárias com IA de R$ 297 a R$ 997, já integradas a sistemas como Clinicorp; a Simples Dental tem copiloto no WhatsApp.</p>
+<p style="flex:1;font-size:24px;line-height:1.45;color:#4A5A63"><b style="color:#16394B">Antes de entrar:</b> integração com a agenda das clínicas, adequação à LGPD para dados de saúde e um piloto com 3 clínicas.</p>
+</div>
+<p style="position:absolute;left:128px;bottom:64px;width:1664px;font-size:24px;color:#6B7A82">Fontes: CFO via Bip (abr 2026), ISAPS 2024 via CNN Brasil, Oral Brasil via Portal do Franchising, SciELO (2019), sites de Cloudia e Secretária Odonto. Fora das projeções de restaurantes.</p>
+<img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9Ii0zMCAtMzAgODgwIDcyNCIgd2lkdGg9IjE3NjAiIGhlaWdodD0iMTQ0OCI+PGcgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMC4wMCwwLjAwKSBzY2FsZSgxLjAwMDAwKSIgZmlsbD0iIzg3NjIzMyI+PHBhdGggZD0iTTM2NC4wLDAuMCBMNDU2LjAsMC4wIEw3NjQuMCw2NjQuMCBMNjMyLjAsNjY0LjAgTDQxMC4wLDE4MC4wIEwxODkuMCw2NjQuMCBMNTYuMCw2NjQuMCBaIi8+PHBhdGggZD0iTTI5LjAsNDkyLjAgUTQxMC4wLDI1NC4wIDc5MS4wLDQ5Mi4wIiBmaWxsPSJub25lIiBzdHJva2U9IiM4NzYyMzMiIHN0cm9rZS13aWR0aD0iNTgiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIvPjwvZz48L3N2Zz4=" alt="Símbolo Adiuvia" style="position:absolute;right:128px;top:52px;width:52px;height:43px;object-fit:contain">
+</section>
+<section class="slide" id="fim" data-transition="fade" style="background:#F6F3EC;color:#16394B;font-family:'Manrope', Arial, sans-serif;padding:128px;display:flex;flex-direction:column;justify-content:center;align-items:center;gap:48px">
+<img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9Ii04IC04IDUwMS43IDg4LjAiIHdpZHRoPSI0MDEzIiBoZWlnaHQ9IjcwNCI+PGcgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMC4wMCw1LjA0KSBzY2FsZSgwLjEwMDg0KSIgZmlsbD0iIzg3NjIzMyI+PHBhdGggZD0iTTM2NC4wLDAuMCBMNDU2LjAsMC4wIEw3NjQuMCw2NjQuMCBMNjMyLjAsNjY0LjAgTDQxMC4wLDE4MC4wIEwxODkuMCw2NjQuMCBMNTYuMCw2NjQuMCBaIi8+PHBhdGggZD0iTTI5LjAsNDkyLjAgUTQxMC4wLDI1NC4wIDc5MS4wLDQ5Mi4wIiBmaWxsPSJub25lIiBzdHJva2U9IiM4NzYyMzMiIHN0cm9rZS13aWR0aD0iNTgiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIvPjwvZz48cGF0aCBkPSJNMTQzLjkwNjYwMjQwOTYzODU3IDczLjVRMTM3Ljg1NjYwMjQwOTYzODU1IDczLjUgMTMzLjc4MTYwMjQwOTYzODU0IDcxLjI3NVExMjkuNzA2NjAyNDA5NjM4NTUgNjkuMDUgMTI3LjYzMTYwMjQwOTYzODU2IDY1LjRRMTI1LjU1NjYwMjQwOTYzODU2IDYxLjc1IDEyNS41NTY2MDI0MDk2Mzg1NiA1Ny40UTEyNS41NTY2MDI0MDk2Mzg1NiA1My4xNSAxMjcuMTgxNjAyNDA5NjM4NTcgNTAuMDI1UTEyOC44MDY2MDI0MDk2Mzg1NyA0Ni45IDEzMS43NTY2MDI0MDk2Mzg1NiA0NC44MjVRMTM0LjcwNjYwMjQwOTYzODU1IDQyLjc1IDEzOC44MDY2MDI0MDk2Mzg1NyA0MS41NVExNDIuNjU2NjAyNDA5NjM4NTcgNDAuNSAxNDcuNDMxNjAyNDA5NjM4NTcgMzkuNzI0OTk5OTk5OTk5OTk0UTE1Mi4yMDY2MDI0MDk2Mzg1NSAzOC45NDk5OTk5OTk5OTk5OTYgMTU3LjEwNjYwMjQwOTYzODU1IDM4LjNRMTYyLjAwNjYwMjQwOTYzODU2IDM3LjY1IDE2Ni4yNTY2MDI0MDk2Mzg1NiAzNy4wNUwxNjMuMDU2NjAyNDA5NjM4NTcgMzguOVExNjMuMjA2NjAyNDA5NjM4NTUgMzEuNjk5OTk5OTk5OTk5OTk2IDE2MC4xODE2MDI0MDk2Mzg1NyAyOC4yNDk5OTk5OTk5OTk5OTZRMTU3LjE1NjYwMjQwOTYzODU3IDI0Ljc5OTk5OTk5OTk5OTk5NyAxNDkuNzU2NjAyNDA5NjM4NTYgMjQuNzk5OTk5OTk5OTk5OTk3UTE0NC44NTY2MDI0MDk2Mzg1NSAyNC43OTk5OTk5OTk5OTk5OTcgMTQxLjE4MTYwMjQwOTYzODU3IDI3LjAyNVExMzcuNTA2NjAyNDA5NjM4NTYgMjkuMjUgMTM2LjAwNjYwMjQwOTYzODU2IDM0LjI1TDEyNy41NTY2MDI0MDk2Mzg1NiAzMS42OTk5OTk5OTk5OTk5OTZRMTI5LjUwNjYwMjQwOTYzODU2IDI0LjU5OTk5OTk5OTk5OTk5NCAxMzUuMTA2NjAyNDA5NjM4NTUgMjAuNTQ5OTk5OTk5OTk5OTk3UTE0MC43MDY2MDI0MDk2Mzg1NSAxNi41IDE0OS44NTY2MDI0MDk2Mzg1NSAxNi41UTE1Ny4yMDY2MDI0MDk2Mzg1NSAxNi41IDE2Mi40ODE2MDI0MDk2Mzg1NSAxOS4xMjVRMTY3Ljc1NjYwMjQwOTYzODU2IDIxLjc1IDE3MC4wNTY2MDI0MDk2Mzg1NyAyNy4wNDk5OTk5OTk5OTk5OTdRMTcxLjIwNjYwMjQwOTYzODU1IDI5LjU0OTk5OTk5OTk5OTk5NyAxNzEuNTA2NjAyNDA5NjM4NTYgMzIuNDc0OTk5OTk5OTk5OTk0UTE3MS44MDY2MDI0MDk2Mzg1NyAzNS40IDE3MS44MDY2MDI0MDk2Mzg1NyAzOC42VjcyLjBIMTYzLjkwNjYwMjQwOTYzODU3VjU5LjA1TDE2NS43NTY2MDI0MDk2Mzg1NiA2MC4yNVExNjIuNzA2NjAyNDA5NjM4NTUgNjYuOCAxNTcuMjMxNjAyNDA5NjM4NTUgNzAuMTVRMTUxLjc1NjYwMjQwOTYzODU2IDczLjUgMTQzLjkwNjYwMjQwOTYzODU3IDczLjVaTTE0NS4yNTY2MDI0MDk2Mzg1NiA2Ni4wNVExNTAuMDU2NjAyNDA5NjM4NTcgNjYuMDUgMTUzLjU4MTYwMjQwOTYzODU1IDY0LjMyNVExNTcuMTA2NjAyNDA5NjM4NTUgNjIuNiAxNTkuMjU2NjAyNDA5NjM4NTYgNTkuNzc1MDAwMDAwMDAwMDA2UTE2MS40MDY2MDI0MDk2Mzg1NyA1Ni45NSAxNjIuMDU2NjAyNDA5NjM4NTcgNTMuNTk5OTk5OTk5OTk5OTk0UTE2Mi44MDY2MDI0MDk2Mzg1NyA1MS4wOTk5OTk5OTk5OTk5OTQgMTYyLjg4MTYwMjQwOTYzODU2IDQ4LjAyNVExNjIuOTU2NjAyNDA5NjM4NTUgNDQuOTUgMTYyLjk1NjYwMjQwOTYzODU1IDQzLjNMMTY2LjA1NjYwMjQwOTYzODU3IDQ0LjY1UTE2MS43MDY2MDI0MDk2Mzg1NSA0NS4yNSAxNTcuNTA2NjAyNDA5NjM4NTYgNDUuOFExNTMuMzA2NjAyNDA5NjM4NTcgNDYuMzQ5OTk5OTk5OTk5OTk0IDE0OS41NTY2MDI0MDk2Mzg1NyA0Ni45NzQ5OTk5OTk5OTk5OTRRMTQ1LjgwNjYwMjQwOTYzODU3IDQ3LjU5OTk5OTk5OTk5OTk5NCAxNDIuODA2NjAyNDA5NjM4NTcgNDguNDVRMTQwLjYwNjYwMjQwOTYzODU1IDQ5LjE1IDEzOC42ODE2MDI0MDk2Mzg1NyA1MC4yNVExMzYuNzU2NjAyNDA5NjM4NTYgNTEuMzQ5OTk5OTk5OTk5OTk0IDEzNS41ODE2MDI0MDk2Mzg1NSA1My4wNzQ5OTk5OTk5OTk5OTZRMTM0LjQwNjYwMjQwOTYzODU3IDU0LjggMTM0LjQwNjYwMjQwOTYzODU3IDU3LjM1UTEzNC40MDY2MDI0MDk2Mzg1NyA1OS41NSAxMzUuNTMxNjAyNDA5NjM4NTcgNjEuNTVRMTM2LjY1NjYwMjQwOTYzODU3IDYzLjU1IDEzOS4wMzE2MDI0MDk2Mzg1NyA2NC44UTE0MS40MDY2MDI0MDk2Mzg1NyA2Ni4wNSAxNDUuMjU2NjAyNDA5NjM4NTYgNjYuMDVaIiBmaWxsPSIjMTYzOTRCIi8+PHBhdGggZD0iTTIwNi4wMDY2MDI0MDk2Mzg1NiA3My41UTE5OC40NTY2MDI0MDk2Mzg1OCA3My41IDE5My4wNTY2MDI0MDk2Mzg1NyA2OS43MjVRMTg3LjY1NjYwMjQwOTYzODU3IDY1Ljk1IDE4NC43MzE2MDI0MDk2Mzg1OCA1OS41UTE4MS44MDY2MDI0MDk2Mzg1NyA1My4wNSAxODEuODA2NjAyNDA5NjM4NTcgNDQuOTVRMTgxLjgwNjYwMjQwOTYzODU3IDM2Ljg1IDE4NC43MzE2MDI0MDk2Mzg1OCAzMC40UTE4Ny42NTY2MDI0MDk2Mzg1NyAyMy45NDk5OTk5OTk5OTk5OTYgMTkzLjA1NjYwMjQwOTYzODU3IDIwLjIyNDk5OTk5OTk5OTk5OFExOTguNDU2NjAyNDA5NjM4NTggMTYuNSAyMDUuOTU2NjAyNDA5NjM4NTggMTYuNVEyMTMuNjA2NjAyNDA5NjM4NTggMTYuNSAyMTguODA2NjAyNDA5NjM4NTcgMjAuMlEyMjQuMDA2NjAyNDA5NjM4NTYgMjMuOSAyMjYuNjgxNjAyNDA5NjM4NTcgMzAuMzQ5OTk5OTk5OTk5OTk4UTIyOS4zNTY2MDI0MDk2Mzg1OCAzNi44IDIyOS4zNTY2MDI0MDk2Mzg1OCA0NC45NVEyMjkuMzU2NjAyNDA5NjM4NTggNTMuMCAyMjYuNjgxNjAyNDA5NjM4NTcgNTkuNDc1UTIyNC4wMDY2MDI0MDk2Mzg1NiA2NS45NSAyMTguODA2NjAyNDA5NjM4NTcgNjkuNzI1UTIxMy42MDY2MDI0MDk2Mzg1OCA3My41IDIwNi4wMDY2MDI0MDk2Mzg1NiA3My41Wk0yMDcuMTA2NjAyNDA5NjM4NTggNjUuMzVRMjEyLjU1NjYwMjQwOTYzODU3IDY1LjM1IDIxNi4wNTY2MDI0MDk2Mzg1NyA2Mi43MjQ5OTk5OTk5OTk5OTRRMjE5LjU1NjYwMjQwOTYzODU3IDYwLjEgMjIxLjIzMTYwMjQwOTYzODU4IDU1LjQ3NDk5OTk5OTk5OTk5NFEyMjIuOTA2NjAyNDA5NjM4NTcgNTAuODQ5OTk5OTk5OTk5OTk0IDIyMi45MDY2MDI0MDk2Mzg1NyA0NC45NVEyMjIuOTA2NjAyNDA5NjM4NTcgMzguOTQ5OTk5OTk5OTk5OTk2IDIyMS4yMzE2MDI0MDk2Mzg1OCAzNC4zNzVRMjE5LjU1NjYwMjQwOTYzODU3IDI5Ljc5OTk5OTk5OTk5OTk5NyAyMTYuMTA2NjAyNDA5NjM4NTggMjcuMjI0OTk5OTk5OTk5OTk4UTIxMi42NTY2MDI0MDk2Mzg1NyAyNC42NSAyMDcuMzU2NjAyNDA5NjM4NTggMjQuNjVRMjAxLjg1NjYwMjQwOTYzODU4IDI0LjY1IDE5OC4yODE2MDI0MDk2Mzg2IDI3LjM0OTk5OTk5OTk5OTk5OFExOTQuNzA2NjAyNDA5NjM4NTggMzAuMDQ5OTk5OTk5OTk5OTk3IDE5Mi45ODE2MDI0MDk2Mzg1OCAzNC42NVExOTEuMjU2NjAyNDA5NjM4NTYgMzkuMjUgMTkxLjI1NjYwMjQwOTYzODU2IDQ0Ljk1UTE5MS4yNTY2MDI0MDk2Mzg1NiA1MC43IDE5My4wMDY2MDI0MDk2Mzg1NiA1NS4zMjVRMTk0Ljc1NjYwMjQwOTYzODU2IDU5Ljk1IDE5OC4yODE2MDI0MDk2Mzg1NyA2Mi42NVEyMDEuODA2NjAyNDA5NjM4NTcgNjUuMzUgMjA3LjEwNjYwMjQwOTYzODU4IDY1LjM1Wk0yMjIuOTA2NjAyNDA5NjM4NTcgNzIuMFYzMi4yNUgyMjEuOTA2NjAyNDA5NjM4NTdWMC4wSDIzMC44NTY2MDI0MDk2Mzg1OFY3Mi4wWiIgZmlsbD0iIzE2Mzk0QiIvPjxwYXRoIGQ9Ik0yNDUuODU2NjAyNDA5NjM4NTggOC40NDk5OTk5OTk5OTk5OTZWLTAuNzVIMjU0Ljc1NjYwMjQwOTYzODZWOC40NDk5OTk5OTk5OTk5OTZaTTI0NS44NTY2MDI0MDk2Mzg1OCA3Mi4wVjE4LjBIMjU0Ljc1NjYwMjQwOTYzODZWNzIuMFoiIGZpbGw9IiMxNjM5NEIiLz48cGF0aCBkPSJNMjkwLjI1NjYwMjQwOTYzODU2IDczLjRRMjg1LjA1NjYwMjQwOTYzODYgNzMuNCAyODEuMzMxNjAyNDA5NjM4NTUgNzEuNzVRMjc3LjYwNjYwMjQwOTYzODYgNzAuMSAyNzUuMTU2NjAyNDA5NjM4NiA2Ny4zNVEyNzIuNzA2NjAyNDA5NjM4NTUgNjQuNiAyNzEuMzA2NjAyNDA5NjM4NiA2MS4yNVEyNjkuOTA2NjAyNDA5NjM4NTQgNTcuOSAyNjkuMzMxNjAyNDA5NjM4NTUgNTQuNFEyNjguNzU2NjAyNDA5NjM4NTYgNTAuOSAyNjguNzU2NjAyNDA5NjM4NTYgNDcuODQ5OTk5OTk5OTk5OTk0VjE4LjBIMjc3Ljc1NjYwMjQwOTYzODU2VjQ1LjA1UTI3Ny43NTY2MDI0MDk2Mzg1NiA0OC44NDk5OTk5OTk5OTk5OTQgMjc4LjQ1NjYwMjQwOTYzODU1IDUyLjRRMjc5LjE1NjYwMjQwOTYzODU0IDU1Ljk1IDI4MC44MzE2MDI0MDk2Mzg1NSA1OC44UTI4Mi41MDY2MDI0MDk2Mzg1NiA2MS42NSAyODUuMzMxNjAyNDA5NjM4NTUgNjMuM1EyODguMTU2NjAyNDA5NjM4NTQgNjQuOTUgMjkyLjQwNjYwMjQwOTYzODU0IDY0Ljk1UTI5NS43NTY2MDI0MDk2Mzg1NiA2NC45NSAyOTguNTA2NjAyNDA5NjM4NTYgNjMuOFEzMDEuMjU2NjAyNDA5NjM4NTYgNjIuNjUgMzAzLjIwNjYwMjQwOTYzODU1IDYwLjM3NVEzMDUuMTU2NjAyNDA5NjM4NiA1OC4xIDMwNi4yMDY2MDI0MDk2Mzg1NSA1NC41OTk5OTk5OTk5OTk5OTRRMzA3LjI1NjYwMjQwOTYzODU2IDUxLjA5OTk5OTk5OTk5OTk5NCAzMDcuMjU2NjAyNDA5NjM4NTYgNDYuNDVMMzEzLjEwNjYwMjQwOTYzODYgNDguMjVRMzEzLjEwNjYwMjQwOTYzODYgNTYuMDUgMzEwLjI4MTYwMjQwOTYzODYgNjEuNjk5OTk5OTk5OTk5OTk2UTMwNy40NTY2MDI0MDk2Mzg1NSA2Ny4zNSAzMDIuMzMxNjAyNDA5NjM4NTUgNzAuMzc1UTI5Ny4yMDY2MDI0MDk2Mzg1NSA3My40IDI5MC4yNTY2MDI0MDk2Mzg1NiA3My40Wk0zMDguMjU2NjAyNDA5NjM4NTYgNzIuMFY1Ny41NUgzMDcuMjU2NjAyNDA5NjM4NTZWMTguMEgzMTYuMjA2NjAyNDA5NjM4NTVWNzIuMFoiIGZpbGw9IiMxNjM5NEIiLz48cGF0aCBkPSJNMzQ0LjgwNjYwMjQwOTYzODYgNzIuMCAzMjUuMjA2NjAyNDA5NjM4NTUgMTguMEgzMzQuMjA2NjAyNDA5NjM4NTVMMzQ5LjM1NjYwMjQwOTYzODUgNjAuNjVMMzY0LjQ1NjYwMjQwOTYzODU1IDE4LjBIMzczLjUwNjYwMjQwOTYzODU2TDM1My45MDY2MDI0MDk2Mzg1NCA3Mi4wWiIgZmlsbD0iIzE2Mzk0QiIvPjxwYXRoIGQ9Ik0zODMuNTA2NjAyNDA5NjM4NTYgOC40NDk5OTk5OTk5OTk5OTZWLTAuNzVIMzkyLjQwNjYwMjQwOTYzODU0VjguNDQ5OTk5OTk5OTk5OTk2Wk0zODMuNTA2NjAyNDA5NjM4NTYgNzIuMFYxOC4wSDM5Mi40MDY2MDI0MDk2Mzg1NFY3Mi4wWiIgZmlsbD0iIzE2Mzk0QiIvPjxwYXRoIGQ9Ik00MjIuNzU2NjAyNDA5NjM4NTYgNzMuNVE0MTYuNzA2NjAyNDA5NjM4NTUgNzMuNSA0MTIuNjMxNjAyNDA5NjM4NSA3MS4yNzVRNDA4LjU1NjYwMjQwOTYzODUgNjkuMDUgNDA2LjQ4MTYwMjQwOTYzODUgNjUuNFE0MDQuNDA2NjAyNDA5NjM4NTQgNjEuNzUgNDA0LjQwNjYwMjQwOTYzODU0IDU3LjRRNDA0LjQwNjYwMjQwOTYzODU0IDUzLjE1IDQwNi4wMzE2MDI0MDk2Mzg1NCA1MC4wMjVRNDA3LjY1NjYwMjQwOTYzODU0IDQ2LjkgNDEwLjYwNjYwMjQwOTYzODUgNDQuODI1UTQxMy41NTY2MDI0MDk2Mzg1IDQyLjc1IDQxNy42NTY2MDI0MDk2Mzg1NCA0MS41NVE0MjEuNTA2NjAyNDA5NjM4NTYgNDAuNSA0MjYuMjgxNjAyNDA5NjM4NTQgMzkuNzI0OTk5OTk5OTk5OTk0UTQzMS4wNTY2MDI0MDk2Mzg1IDM4Ljk0OTk5OTk5OTk5OTk5NiA0MzUuOTU2NjAyNDA5NjM4NTUgMzguM1E0NDAuODU2NjAyNDA5NjM4NSAzNy42NSA0NDUuMTA2NjAyNDA5NjM4NSAzNy4wNUw0NDEuOTA2NjAyNDA5NjM4NTQgMzguOVE0NDIuMDU2NjAyNDA5NjM4NiAzMS42OTk5OTk5OTk5OTk5OTYgNDM5LjAzMTYwMjQwOTYzODYgMjguMjQ5OTk5OTk5OTk5OTk2UTQzNi4wMDY2MDI0MDk2Mzg1NiAyNC43OTk5OTk5OTk5OTk5OTcgNDI4LjYwNjYwMjQwOTYzODUgMjQuNzk5OTk5OTk5OTk5OTk3UTQyMy43MDY2MDI0MDk2Mzg1NSAyNC43OTk5OTk5OTk5OTk5OTcgNDIwLjAzMTYwMjQwOTYzODU0IDI3LjAyNVE0MTYuMzU2NjAyNDA5NjM4NSAyOS4yNSA0MTQuODU2NjAyNDA5NjM4NSAzNC4yNUw0MDYuNDA2NjAyNDA5NjM4NTQgMzEuNjk5OTk5OTk5OTk5OTk2UTQwOC4zNTY2MDI0MDk2Mzg1IDI0LjU5OTk5OTk5OTk5OTk5NCA0MTMuOTU2NjAyNDA5NjM4NTUgMjAuNTQ5OTk5OTk5OTk5OTk3UTQxOS41NTY2MDI0MDk2Mzg1IDE2LjUgNDI4LjcwNjYwMjQwOTYzODU1IDE2LjVRNDM2LjA1NjYwMjQwOTYzODUgMTYuNSA0NDEuMzMxNjAyNDA5NjM4NTUgMTkuMTI1UTQ0Ni42MDY2MDI0MDk2Mzg1IDIxLjc1IDQ0OC45MDY2MDI0MDk2Mzg1NCAyNy4wNDk5OTk5OTk5OTk5OTdRNDUwLjA1NjYwMjQwOTYzODYgMjkuNTQ5OTk5OTk5OTk5OTk3IDQ1MC4zNTY2MDI0MDk2Mzg1IDMyLjQ3NDk5OTk5OTk5OTk5NFE0NTAuNjU2NjAyNDA5NjM4NTQgMzUuNCA0NTAuNjU2NjAyNDA5NjM4NTQgMzguNlY3Mi4wSDQ0Mi43NTY2MDI0MDk2Mzg1NlY1OS4wNUw0NDQuNjA2NjAyNDA5NjM4NSA2MC4yNVE0NDEuNTU2NjAyNDA5NjM4NiA2Ni44IDQzNi4wODE2MDI0MDk2Mzg1NSA3MC4xNVE0MzAuNjA2NjAyNDA5NjM4NSA3My41IDQyMi43NTY2MDI0MDk2Mzg1NiA3My41Wk00MjQuMTA2NjAyNDA5NjM4NSA2Ni4wNVE0MjguOTA2NjAyNDA5NjM4NTQgNjYuMDUgNDMyLjQzMTYwMjQwOTYzODYgNjQuMzI1UTQzNS45NTY2MDI0MDk2Mzg1NSA2Mi42IDQzOC4xMDY2MDI0MDk2Mzg1IDU5Ljc3NTAwMDAwMDAwMDAwNlE0NDAuMjU2NjAyNDA5NjM4NTYgNTYuOTUgNDQwLjkwNjYwMjQwOTYzODU0IDUzLjU5OTk5OTk5OTk5OTk5NFE0NDEuNjU2NjAyNDA5NjM4NTQgNTEuMDk5OTk5OTk5OTk5OTk0IDQ0MS43MzE2MDI0MDk2Mzg1IDQ4LjAyNVE0NDEuODA2NjAyNDA5NjM4NiA0NC45NSA0NDEuODA2NjAyNDA5NjM4NiA0My4zTDQ0NC45MDY2MDI0MDk2Mzg1NCA0NC42NVE0NDAuNTU2NjAyNDA5NjM4NiA0NS4yNSA0MzYuMzU2NjAyNDA5NjM4NSA0NS44UTQzMi4xNTY2MDI0MDk2Mzg1NCA0Ni4zNDk5OTk5OTk5OTk5OTQgNDI4LjQwNjYwMjQwOTYzODU0IDQ2Ljk3NDk5OTk5OTk5OTk5NFE0MjQuNjU2NjAyNDA5NjM4NTQgNDcuNTk5OTk5OTk5OTk5OTk0IDQyMS42NTY2MDI0MDk2Mzg1NCA0OC40NVE0MTkuNDU2NjAyNDA5NjM4NTUgNDkuMTUgNDE3LjUzMTYwMjQwOTYzODU0IDUwLjI1UTQxNS42MDY2MDI0MDk2Mzg1IDUxLjM0OTk5OTk5OTk5OTk5NCA0MTQuNDMxNjAyNDA5NjM4NiA1My4wNzQ5OTk5OTk5OTk5OTZRNDEzLjI1NjYwMjQwOTYzODU2IDU0LjggNDEzLjI1NjYwMjQwOTYzODU2IDU3LjM1UTQxMy4yNTY2MDI0MDk2Mzg1NiA1OS41NSA0MTQuMzgxNjAyNDA5NjM4NTYgNjEuNTVRNDE1LjUwNjYwMjQwOTYzODU2IDYzLjU1IDQxNy44ODE2MDI0MDk2Mzg1NiA2NC44UTQyMC4yNTY2MDI0MDk2Mzg1NiA2Ni4wNSA0MjQuMTA2NjAyNDA5NjM4NSA2Ni4wNVoiIGZpbGw9IiMxNjM5NEIiLz48cGF0aCBkPSJNNDY3LjI1NjYwMjQwOTYzODU2IDcyLjBWNjIuMkg0NzcuMDU2NjAyNDA5NjM4NVY3Mi4wWiIgZmlsbD0iIzg3NjIzMyIvPjwvc3ZnPg==" alt="Logo Adiuvia" style="width:880px;height:154px;object-fit:contain">
+<p style="font-size:36px;color:#4A5A63">Inteligência a serviço do seu negócio.</p>
+</section>
+</div></div>
+<div id="bar"></div>
+<div id="notes"><b>Notas do apresentador</b><div id="notes-text"></div></div>
+<div id="hud">
+  <button id="prev" aria-label="Slide anterior">‹</button>
+  <span id="count"></span>
+  <button id="next" aria-label="Próximo slide">›</button>
+  <button id="btn-grid" title="Visão geral (G)">Slides</button>
+  <button id="btn-notes" title="Notas (N)">Notas</button>
+  <button id="btn-full" title="Tela cheia (F)">Tela cheia</button>
+  <a href="orcamento.html" id="btn-orc" style="text-decoration:none"><button title="Orçamento detalhado">Orçamento</button></a>
+  <button id="btn-help" title="Atalhos (?)">?</button>
+</div>
+<div id="overview"></div>
+<div id="help"><div>
+  <h3>Atalhos</h3>
+  <p><kbd>→</kbd><kbd>espaço</kbd>próximo slide</p>
+  <p><kbd>←</kbd>slide anterior</p>
+  <p><kbd>N</kbd>mostrar ou esconder as notas</p>
+  <p><kbd>G</kbd>visão geral de todos os slides</p>
+  <p><kbd>F</kbd>tela cheia</p>
+  <p><kbd>Home</kbd><kbd>End</kbd>primeiro e último slide</p>
+</div></div>
+<script>
+const NOTES=["Rafael abre. Objetivo da reunião: alinhar o plano de negócio dos próximos 12 meses e sair com sete decisões tomadas, listadas no fim. Duração sugerida: 60 minutos de apresentação e 30 de discussão. Pedir que as perguntas de números fiquem para o bloco de projeções.", "Rafael. Apresentar o roteiro e combinar o formato: blocos 1 a 4 são contexto e o que já foi discutido; blocos 5 e 6 são a parte mais sensível (papéis e ganhos), por isso cada sócio lê a própria página com calma; blocos 7 a 9 fecham com números e decisões. O último slide é um anexo: a expansão para clínicas, apresentada à parte do plano.", "Rafael. Este é o ponto de partida de tudo: não estamos baixando o valor do produto, estamos mudando a forma de o cliente entrar. Reforçar o que vimos nas reuniões com concorrentes: uns entregam agente de atendimento, outros só direcionam links, ninguém personaliza como nós. O problema é a rampa de entrada.", "Rafael. Não vender o número grande: o foco agora é só bares e restaurantes; o que importa é o recorte de 30 a 40 mil casas com porte para pagar entre R$ 700 e R$ 1.500 por mês. Os dois dados de consumidor sustentam a mensagem de venda: atendimento fora do horário (54% compram à noite ou de madrugada) e humano no controle (63%).", "Diego. Contar o que vimos nas reuniões com concorrentes. A leitura: eles vendem software para o dono configurar; nós vendemos atendimento pronto, personalizado e que conclui a reserva. Isso justifica cobrar mais, mas não 5 a 30 vezes mais sem prova. Por isso a nova porta de entrada de R$ 690.", "Rafael e Diego. Lógica da escada: o Essencial abre a porta, o Casa ancora o preço para cima e faz o Profissional parecer o meio sensato. O setup paga a personalização, que é o nosso diferencial e tem custo. A franquia de conversas protege a margem e puxa o upgrade quando o cliente cresce.", "Diego. Ponto-chave: desconto sem contrapartida e sem prazo vira o novo preço. O fundador paga menos porque nos dá prova pública. A garantia é o argumento de fechamento quando o dono diz que vai pensar.", "Diego conduz este slide, já que é sócio do Charllu. Pontos para alinhar: há quanto tempo roda, em qual configuração e quais números já existem. Deixar claro que formalizar o Charllu como cliente protege os três sócios e testa nossa cobrança de ponta a ponta.", "Rafael. Os marcos de 3 e 6 meses são os que importam para a reunião de hoje, porque definem o trabalho de cada um. O mês 12 é a meta do plano. O mês 36 vem do cenário conservador da planilha; o otimista leva a 950 restaurantes. Clínicas ficam fora destes números (anexo no fim).", "Rafael. Este é o slide mais importante sobre papéis: cada passagem tem um critério objetivo. Exemplo: o Marco só recebe um cliente com setup pago e briefing completo; o Diego só recebe de volta quando a IA já fez a primeira reserva. Isso evita cobrança cruzada entre sócios.", "Marco lê o próprio slide e confirma ou ajusta. Pergunta para fechar: a meta de custo de tecnologia de até R$ 200 por casa ativa por mês é realista com os números do Charllu? Se não, ela muda antes de aprovarmos os preços.", "Diego lê o próprio slide. Ponto para alinhar: ele aceita a meta de 60 reuniões e 20 fundadores até 10 de janeiro, considerando que dezembro é alta temporada para restaurantes? Se não, ajustar o prazo agora.", "Rafael lê o próprio slide. Destacar a dependência: as metas de reunião do marketing só fazem sentido com a demo ao vivo pronta (Marco) e com a agenda do Diego aberta para receber os leads.", "Rafael. Bloco mais sensível: apresentar como proposta, não decisão. Princípio: ganhos ligados a resultado protegem o caixa e premiam quem entrega. Primeiro gatilho previsto para março de 2027. A faixa de R$ 400 mil é extensão para os anos 3 e 4. Abrir para cada sócio comentar: dedicação atual e se consegue esperar o primeiro gatilho.", "Diego e Marco. Cada fase só termina quando o critério de saída é cumprido; se não for, a fase se estende e a seguinte espera. Lista completa de entregas, com dono e prazo, está no Business Plan.", "Rafael. Revisado em 29 out: saíram base de casas-alvo e material impresso (a lista sai com IA), vídeo e fotos do Charllu (o Diego tem banco de imagens) e ferramentas de edição; entrevistas viraram conversas sem custo; anúncios subiram para R$ 2.000 e domínio e e-mail para R$ 300. Metade do mês 1 são gastos únicos (advogado, contrato social e reserva). O custo recorrente a partir de dezembro fica em R$ 5.760, e as mensalidades dos fundadores cobrem esse valor a partir do sétimo cliente. Com os R$ 25 mil do Diego para a operação, o aporte por sócio pode não ser necessário (ver slide do aporte). Todos os valores são estimativas a trocar por cotações; a planilha tem item a item.", "Marco e Diego apresentam cada um a própria coluna. Tecnologia é 100% custo mensal: segue de dezembro em diante e cresce com o número de clientes, por isso o Marco mede o custo por conversa já no Charllu. Os valores de tecnologia ainda precisam ser validados com o Marco. No comercial, saíram a base de casas-alvo (a lista será montada com IA) e o material impresso; ficam o CRM e o deslocamento, que é o maior item porque a fase de fundadores é venda presencial.", "Rafael. Dos R$ 8,5 mil destas duas áreas, R$ 5,5 mil são gastos únicos: advogado, contrato social e a reserva. Marketing ficou todo mensal: anúncios de R$ 2.000 e domínio e e-mail de R$ 300. As entrevistas pagas viraram conversas com 10 donos da rede do Diego e do Charllu, sem custo: em 30 minutos testamos os três planos e o preço, e a contrapartida é a condição de fundador. A reserva de 10% foi recalculada sobre os novos itens (R$ 1.026); o que sobrar fica no caixa. O valor do advogado ainda será revisto.", "Rafael conduz, Diego e Marco complementam. Este é o ponto mais sensível da reunião depois dos ganhos, então vale ir devagar. O combinado: o Diego entra com R$ 50 mil além do trabalho; R$ 25 mil vão para o caixa da operação e R$ 25 mil para o Marco, pessoa física, pelo desenvolvimento da ferramenta que já funciona no Charllu. Conta de caixa: R$ 25.000 menos R$ 11.286 do mês 1, mais R$ 890 da mensalidade do Charllu, deixa R$ 14.604. Com custo fixo de R$ 5.760 por mês e as primeiras mensalidades dos fundadores, isso cobre dezembro, janeiro e parte de fevereiro. Devolução: a ideia é que o Diego recupere o aporte com o que o próprio capital relacional dele gera, sem tirar dinheiro de outros clientes. Gatilho: quando os clientes trazidos por ele tiverem pago R$ 50 mil acumulados (mensalidades e setups). Forma sugerida: parcelas mensais limitadas a 50% do que esses clientes pagaram no mês, respeitando a reserva mínima de caixa. Exemplo: 10 fundadores a R$ 890 por mês, mais R$ 490 de setup cada, somam cerca de R$ 50 mil em 5 meses. Pontos para fechar: (1) se o aporte é capital, ele normalmente aumenta a participação do Diego; se é empréstimo do sócio para a empresa, ele é devolvido e não muda a participação; os dois juntos não combinam. (2) Os R$ 25 mil do Marco precisam de contrato que transfira o código e a ferramenta para a Adiuvia, com recibo ou nota e os impostos de pessoa física; sem isso, a empresa paga e não é dona do produto. Vale discutir também se esse valor pesa na divisão da participação. (3) Definir como um cliente é atribuído ao Diego, por exemplo registro de origem no CRM no primeiro contato, e se o Charllu conta, já que é casa de sócio. (4) Com os R$ 25 mil no caixa, o aporte de R$ 3,5 mil por sócio do slide de orçamento pode deixar de ser necessário. Nada disso substitui a orientação do advogado e do contador.", "Marco ou Rafael. O ano 1 segue as metas do plano: 20 fundadores até janeiro e 130 restaurantes em outubro de 2027 no conservador; 80 no pessimista e 180 no otimista. O que muda entre cenários: clientes, mensalidade média (R$ 1.000, R$ 1.100 e R$ 1.150 no ano 1), cancelamento (4%, 3%, 2%) e custo de tecnologia por casa (R$ 240, R$ 200 e R$ 180 por mês). Revisado em 29 out: tecnologia deixou de ser 45% da receita e passou a ser calculada por casa ativa e uso real, o que dá cerca de 21% no ano 1 já com taxas de cobrança. A partir de R$ 4,8 milhões por ano a empresa sai do Simples e o imposto sobe, por isso a margem do ano 3 conservador cresce menos. Risco fora do modelo: a taxa de provedor de IA da Meta; se ela se aplicar, o custo por casa vai de cerca de R$ 200 para R$ 1.300 por mês e o modelo de cobrança precisa mudar (aba Custo por Cliente). Números só de bares e restaurantes; a expansão para clínicas está no anexo e na aba própria da planilha. O próximo slide abre para onde vai o dinheiro do ano 1.", "Rafael. Leitura dos big numbers: tecnologia e operação agora é calculada por casa ativa, pelo uso real, e não como percentual da receita. Uma casa com 600 conversas por mês (40% da franquia) custa cerca de R$ 200: R$ 91 de mensagens da IA na Meta, R$ 11 de confirmações e lembretes, R$ 48 de modelo de IA, R$ 30 de provedor e R$ 20 de nuvem. Somam-se R$ 24 mil por ano de plataforma fixa e 3% de taxas de cobrança. Isso dá 21% da receita no ano 1, perto do que é normal em software por assinatura. Os números de uso serão confirmados no Charllu até 13 de novembro. Se a taxa de provedor de IA da Meta se aplicar, o custo por casa sobe para cerca de R$ 1.300 e esta conta muda. Recursos humanos no ano 1 são 2 analistas de implantação e suporte, pagos só a partir da contratação: o primeiro em fevereiro e o segundo em junho, 14 meses de salário no total; no ano 2 a linha passa a incluir vendas, sucesso do cliente e gestão, por isso sobe para R$ 757 mil. Marketing fica em 15% da receita. O pró-labore segue a régua: R$ 3 mil por sócio de março a junho e R$ 6 mil de julho a outubro, quando a receita mensal passa de R$ 100 mil. Os dois slides seguintes abrem cada categoria linha a linha. Estrutura cobre contador, jurídico e ferramentas. O aporte do Diego e os gastos únicos do mês 1 não entram nesta conta, que é de operação recorrente.", "Rafael. Cada linha tem dono e fórmula, para ninguém precisar confiar em número solto. Tecnologia: cinco linhas variam com o número de casas ativas (786 casas-mês no ano conservador, somando os clientes de cada mês) e três são a plataforma fixa de R$ 24 mil. As taxas de cobrança ficam com o Diego porque dependem do meio de pagamento que ele negocia. Valores por casa a confirmar com os números do Charllu até 13 de novembro. Recursos humanos: o primeiro analista entra em fevereiro e o segundo em junho, 14 meses de salário; se a meta de clientes atrasar, a contratação atrasa junto. Marketing: 15% da receita, com 60% em anúncios; a divisão pode mudar ao longo do ano conforme o custo por cliente de cada canal, mas o total não passa de 15%.", "Rafael. Pró-labore não é salário fixo: só começa quando a receita mensal passa de R$ 40 mil, previsto para março, e dobra acima de R$ 100 mil, previsto para julho. Se a receita atrasar, o pró-labore atrasa junto, e isso protege o caixa. O variável é 15% do resultado operacional, dividido em três partes iguais e liberado conforme as metas de cada área. Impostos pelo Simples a 8%, a confirmar com o contador. Estrutura: o jurídico de R$ 3.500 ainda será revisto; a reserva é o que sobra dos R$ 3 mil por mês da verba de estrutura. Fechamento: R$ 1.017 mil de receita, R$ 719 mil de gastos e R$ 298 mil de resultado, que é o caixa para o ano 2.", "Marco. O primeiro risco decide se os preços propostos se sustentam: se a taxa se aplicar, o custo por cliente passa da mensalidade e o modelo de franquia é refeito antes do lançamento.", "Rafael. Passar ponto a ponto e registrar em ata: aprovado, aprovado com ajuste ou para a próxima reunião. Os pontos 1, 2 e 4 vão para o acordo de sócios; os pontos 6 e 7 liberam o início da fase 1 na segunda, 2 de novembro.", "Rafael. Este slide é um anexo, à parte do plano: não entra nos números de restaurantes nem nas decisões de hoje. A tese: o ticket de uma clínica é muito maior que o de uma mesa (R$ 9.100 é a média de uma rede de alto padrão, a Oral Brasil, então é teto, não média do setor) e a falta a consultas é a dor central, que a IA resolve com confirmação e lembrete. Cuidados: os dados de faltas vêm de estudos no serviço público; no particular tende a ser menor. Há cerca de 144 mil CNPJs com atividade odontológica na Receita Federal, incluindo inativos; o recorte de 20 a 30 mil clínicas particulares com 2 ou mais dentistas é estimativa a validar. A concorrência é mais barata e já integrada a sistemas odontológicos, então a Adiuvia entra pela personalização e por planos de clínica. Dados de saúde são sensíveis na LGPD: consentimento específico, cuidado com hospedagem e encarregado de dados. Outros cenários: pessimista com 150 clínicas e R$ 1,9 mi no ano 4; otimista com 600 clínicas e R$ 10,3 mi. Proposta: decidir a entrada no mês 10, com base em 3 entrevistas por semana com donos de clínica a partir de julho de 2027.", "Encerramento. Agradecer e confirmar a próxima reunião de números: segunda-feira de manhã, 30 minutos, conduzida pelo Diego."];
+const stage=document.getElementById('stage');
+const slides=[...stage.querySelectorAll('.slide')];
+let cur=0;
+// conectores (setas entre caixas)
+function drawConnectors(root){
+  root.querySelectorAll('x-connector').forEach(c=>{
+    if(c.querySelector('svg'))return;
+    const col=getComputedStyle(c).color||'#6B7A82';
+    const w=parseFloat(c.style.borderWidth)||2;
+    const a=n=>c.getAttribute(n);
+    const id='m'+Math.random().toString(36).slice(2,8);
+    c.innerHTML=`<svg><defs><marker id="${id}" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="5" markerHeight="5" orient="auto"><path d="M0,0L10,5L0,10z" fill="${col}"/></marker></defs><line x1="${a('x1')}" y1="${a('y1')}" x2="${a('x2')}" y2="${a('y2')}" stroke="${col}" stroke-width="${w}" ${a('head')==='end'?`marker-end="url(#${id})"`:''}/></svg>`;
+  });
+}
+drawConnectors(stage);
+function fit(){
+  const s=Math.min(innerWidth/1920,innerHeight/1080);
+  stage.style.transform=`scale(${s})`;
+}
+addEventListener('resize',fit);fit();
+function go(i,push=true){
+  cur=Math.max(0,Math.min(slides.length-1,i));
+  slides.forEach((s,k)=>s.classList.toggle('active',k===cur));
+  document.getElementById('count').textContent=`${cur+1} / ${slides.length}`;
+  document.getElementById('bar').style.width=`${(cur+1)/slides.length*100}%`;
+  document.getElementById('notes-text').textContent=NOTES[cur]||'Sem notas neste slide.';
+  if(push)history.replaceState(null,'','#'+(cur+1));
+}
+const fromHash=()=>{const n=parseInt(location.hash.slice(1));return isNaN(n)?0:n-1};
+go(fromHash(),false);
+addEventListener('hashchange',()=>go(fromHash(),false));
+const toggle=c=>document.body.classList.toggle(c);
+function full(){document.fullscreenElement?document.exitFullscreen():document.documentElement.requestFullscreen().catch(()=>{})}
+const ov=document.getElementById('overview');
+function grid(){
+  if(ov.classList.contains('open')){ov.classList.remove('open');return}
+  if(!ov.childElementCount){
+    slides.forEach((s,k)=>{
+      const t=document.createElement('div');t.className='thumb';
+      const c=s.cloneNode(true);c.classList.remove('active');t.appendChild(c);
+      const l=document.createElement('span');l.textContent=k+1;t.appendChild(l);
+      t.onclick=()=>{go(k);ov.classList.remove('open')};ov.appendChild(t);
+    });
+    drawConnectors(ov);
+  }
+  ov.classList.add('open');
+  requestAnimationFrame(()=>ov.querySelectorAll('.thumb').forEach((t,k)=>{
+    t.firstChild.style.transform=`scale(${t.clientWidth/1920})`;t.classList.toggle('cur',k===cur);
+  }));
+}
+addEventListener('keydown',e=>{
+  if(e.metaKey||e.ctrlKey||e.altKey)return;
+  const k=e.key;
+  if(k==='Escape'){ov.classList.remove('open');document.getElementById('help').classList.remove('open');return}
+  if(['ArrowRight','ArrowDown','PageDown',' ','Enter'].includes(k)){e.preventDefault();go(cur+1)}
+  else if(['ArrowLeft','ArrowUp','PageUp','Backspace'].includes(k)){e.preventDefault();go(cur-1)}
+  else if(k==='Home')go(0);
+  else if(k==='End')go(slides.length-1);
+  else if(k==='n'||k==='N')toggle('show-notes');
+  else if(k==='f'||k==='F')full();
+  else if(k==='g'||k==='G')grid();
+  else if(k==='?')document.getElementById('help').classList.toggle('open');
+});
+document.getElementById('prev').onclick=()=>go(cur-1);
+document.getElementById('next').onclick=()=>go(cur+1);
+document.getElementById('btn-notes').onclick=()=>toggle('show-notes');
+document.getElementById('btn-full').onclick=full;
+document.getElementById('btn-grid').onclick=grid;
+document.getElementById('btn-help').onclick=()=>document.getElementById('help').classList.toggle('open');
+document.getElementById('help').onclick=e=>{if(e.target.id==='help')e.currentTarget.classList.remove('open')};
+// toque: deslizar para os lados
+let tx=null;
+addEventListener('touchstart',e=>{tx=e.touches[0].clientX},{passive:true});
+addEventListener('touchend',e=>{if(tx===null)return;const d=e.changedTouches[0].clientX-tx;if(Math.abs(d)>50)go(cur+(d<0?1:-1));tx=null});
+// clique no slide avança
+document.getElementById('viewport').addEventListener('click',e=>{if(e.clientX>innerWidth*0.33)go(cur+1);else go(cur-1)});
+let t;addEventListener('mousemove',()=>{document.body.classList.add('ui');clearTimeout(t);t=setTimeout(()=>document.body.classList.remove('ui'),1800)});
+</script>
+</body>
+</html>
